@@ -1,0 +1,33 @@
+%%
+%% Miscellaneous settings, that are usually used.
+%%
+
+%% Identification
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{miscellaneous}[2019/08/08 Miscellaneous settings]
+
+%% Options
+\DeclareOption*{
+	\PackageWarning{miscellaneous}{Unknown option '\CurrentOption'}
+}
+
+\ProcessOptions*
+
+%% Colors
+\RequirePackage[dvipsnames,svgnames]{xcolor}
+
+%% Use shortcuts for specifying the labelling of enumerations.
+\RequirePackage[shortlabels]{enumitem}
+
+%% Lists and enumerations with multiple rows or columns
+\RequirePackage{multirow}
+\RequirePackage{multicol}
+
+%% Integration of PDF files
+\RequirePackage{pdfpages}
+
+%% To put pages in landscape
+\RequirePackage{pdflscape}
+
+%% Integration of graphics
+\RequirePackage{graphicx}

@@ -1,0 +1,27 @@
+%%
+%% Footer, that shows the page number.
+%%
+
+%% Identification
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{footer.d/page_number}[2019/08/08 Page number as footer]
+
+%% Options
+\DeclareOption*{
+	\PackageWarning{footer.d/page_number}{Unknown option '\CurrentOption'}
+}
+
+\ProcessOptions*
+
+%% Determine the language to generate language specific output.
+\RequirePackage{iflang}
+
+%% Get the number of the last page.
+\RequirePackage{lastpage}
+
+%% Different languages.
+\fancyfoot[C]{
+	\IfLanguageName{ngerman}{Seite:~\thepage~von~\pageref{LastPage}}    % German
+							{Page:~\thepage~of~\pageref{LastPage}}      % English
+}
+

@@ -1,0 +1,73 @@
+%%
+%% Integration of source code with the listings package.
+%%
+
+%% Identification
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{sourcecode}[2019/08/08 Source code integration configuration]
+
+%% Basic package
+\RequirePackage{listings}
+
+%% Default settings
+\lstset{
+	columns=fixed
+	numberstyle = \tiny\color{Gray},
+	numbersep = 5pt,
+	captionpos = b,
+	extendedchars = true, % Use ä, ö and ü
+	tabsize = 4,
+	breaklines = true,
+	breakatwhitespace = true,
+	basicstyle = \ttfamily\footnotesize,
+	keywordstyle = \color{BrickRed},
+	stringstyle = \color{Green},
+	showstringspaces = false,
+	commentstyle = \itshape\color{Gray},
+	emphstyle = \color{NavyBlue}
+}
+
+%% Options
+\DeclareOption{style=context}{
+	\lstset{
+		backgroundcolor = \color{gray!10},
+		numbers = left,
+		numberstyle = \tiny\color{Gray},
+		title = \lstname,
+		frame = lines,
+	}
+}
+\DeclareOption{style=nocontext}{
+	\lstset{
+		backgroundcolor = {},
+		numbers = none,
+		caption = {},
+		frame = none,
+	}
+}
+\DeclareOption*{
+	\lstset{\CurrentOption}
+}
+
+\ProcessOptions*
+
+%% Style with context information
+\lstdefinestyle{context}{
+	backgroundcolor = \color{gray!10},
+	numbers = left,
+	numberstyle = \tiny\color{Gray},
+	title = \lstname,
+	frame = lines,
+}
+
+%% Style without context information
+\lstdefinestyle{nocontext}{
+	backgroundcolor = {},
+	numbers = none,
+	caption = {},
+	frame = none,
+}
+
+%% Custom language definitions
+\RequirePackage{sourcecode.d/mips}
+\RequirePackage{sourcecode.d/haskell}

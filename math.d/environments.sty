@@ -1,0 +1,147 @@
+%%
+%% Theorem environments
+%%
+%% There are environments defined for:
+%%   Conjecture
+%%   Corollary
+%%   Definition
+%%   Example
+%%   Lemma
+%%   Proposition
+%%   Remark
+%%   Theorem
+%% In terms of numbering, all environments are on the same level, so they share the same counter.
+%% Furthermore, for every environment there is a variant without numbering. This variant differs
+%% from the original by an appended asterisk, e.g. 'theorem*' is the unnumbered variant of
+%% 'theorem'. For the 'example' and 'remark' environment, there is a plural variant available, this
+%% means it is named 'examples' instead of 'example'. For further details see below.
+%%
+
+%% Identification
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{math.d/environments}[2019/08/08 Math environments definition]
+
+%% Options
+\DeclareOption{filledqed}{                  % Filled square as qed symbol
+	\renewcommand{\qedsymbol}{\blacksquare}
+}
+\DeclareOption{numbersinfront}{             % Put the numbers in front
+	\swapnumbers
+}
+\DeclareOption*{
+	\PassOptionsToPackage{\CurrentOption}{amsthm}
+}
+
+\ProcessOptions*
+
+%% Determine the language to generate language specific output
+\RequirePackage{iflang}
+
+%% Pull in the AMS theorems package
+\RequirePackage{amsthm}
+
+%% Theorem ------------------------------------------------------------------------------------ {{{1
+\theoremstyle{plain}
+\newtheorem{theorem}{
+	\IfLanguageName{ngerman}{Satz}          % German
+							{Theorem}       % English
+}
+\newtheorem*{theorem*}{
+	\IfLanguageName{ngerman}{Satz}          % German
+							{Theorem}       % English
+}
+
+%% Conjecture --------------------------------------------------------------------------------- {{{1
+\theoremstyle{plain}
+\newtheorem{conjecture}[theorem]{
+	\IfLanguageName{ngerman}{Vermutung}     % German
+							{Conjecture}    % English
+}
+\newtheorem*{conjecture*}{
+	\IfLanguageName{ngerman}{Vermutung}     % German
+							{Conjecture}    % English
+}
+
+%% Corollary ---------------------------------------------------------------------------------- {{{1
+\theoremstyle{plain}
+\newtheorem{corollary}[theorem]{
+	\IfLanguageName{ngerman}{Korollar}      % German
+							{Corollary}     % English
+}
+\newtheorem*{corollary*}{
+	\IfLanguageName{ngerman}{Korollar}      % German
+							{Corollary}     % English
+}
+
+%% Definiion ---------------------------------------------------------------------------------- {{{1
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{
+	\IfLanguageName{ngerman}{Definition}    % German
+							{Definition}    % English
+}
+\newtheorem*{definition*}{
+	\IfLanguageName{ngerman}{Definition}    % German
+							{Definition}    % English
+}
+
+%% Example ------------------------------------------------------------------------------------ {{{1
+\theoremstyle{definition}
+\newtheorem{example}[theorem]{
+	\IfLanguageName{ngerman}{Beispiel}      % German
+							{Example}       % English
+}
+\newtheorem*{example*}{
+	\IfLanguageName{ngerman}{Beispiel}      % German
+							{Example}       % English
+}
+\newtheorem{examples}[theorem]{
+	\IfLanguageName{ngerman}{Beispiele}     % German
+							{Examples}      % English
+}
+\newtheorem*{examples*}{
+	\IfLanguageName{ngerman}{Beispiele}     % German
+							{Examples}      % English
+}
+
+%% Lemma -------------------------------------------------------------------------------------- {{{1
+\theoremstyle{plain}
+\newtheorem{lemma}[theorem]{
+	\IfLanguageName{ngerman}{Lemma}         % German
+							{Lemma}         % English
+}
+\newtheorem*{lemma*}{
+	\IfLanguageName{ngerman}{Lemma}         % German
+							{Lemma}         % English
+}
+
+%% Proposition -------------------------------------------------------------------------------- {{{1
+\theoremstyle{plain}
+\newtheorem{proposition}[theorem]{
+	\IfLanguageName{ngerman}{Proposition}   % German
+							{Proposition}   % English
+}
+\newtheorem*{proposition*}{
+	\IfLanguageName{ngerman}{Proposition}   % German
+							{Proposition}   % English
+}
+
+%% Remark ------------------------------------------------------------------------------------- {{{1
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{
+	\IfLanguageName{ngerman}{Anmerkung}     % German
+							{Remark}        % English
+}
+\newtheorem*{remark*}{
+	\IfLanguageName{ngerman}{Anmerkung}     % German
+							{Remark}        % English
+}
+\newtheorem{remarks}[theorem]{
+	\IfLanguageName{ngerman}{Anmerkungen}   % German
+							{Remarks}       % English
+}
+\newtheorem*{remarks*}{
+	\IfLanguageName{ngerman}{Anmerkungen}   % German
+							{Remarks}       % English
+}
+
+%% }}}1

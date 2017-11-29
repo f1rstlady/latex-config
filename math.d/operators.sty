@@ -1,0 +1,90 @@
+%%
+%% Operator definitins for different branches.
+%%
+
+%% Identification
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{math.d/operators}[2019/08/08 Math operators definition]
+
+%% Options
+\DeclareOption*{
+	\PackageWarning{math.d/operators}{Unknown option '\CurrentOption'}
+}
+
+\ProcessOptions*
+
+%% For the \ifblank macro
+\RequirePackage{etoolbox}
+
+%% Algebra
+\newcommand{\one}{\mathbb{1}}           % Unit
+\DeclareMathOperator{\sgn}{sgn}         % Signum
+\DeclareMathOperator{\Hom}{Hom}         % Homomorphism algebra
+\newcommand{\tensor}{\otimes}           % Tensor product
+\newcommand{\bigtensor}{\bigotimes}     % Tensor product
+\DeclarePairedDelimiterX{\iprod}[2]{\langle}{\rangle}{ % Inner product
+	\ifblank{#1}{
+		\ifblank{#2}{
+			\cdot,\cdot
+		}{#1,#2}
+	}{#1,#2}
+}
+\DeclareMathOperator{\Tor}{Tor}         % Tor group
+\DeclareMathOperator{\Ext}{Ext}         % Ext group
+\DeclareMathOperator{\rk}{rk}           % Rank
+\DeclareMathOperator{\Span}{span}       % Span
+\DeclareMathOperator{\coker}{coker}     % Cokernel
+\DeclareMathOperator{\GL}{GL}           % General linear group
+\DeclareMathOperator{\SL}{SL}           % Special linear group
+\let\O\relax                            % Orthogonal group
+\DeclareMathOperator{\O}{O}
+\DeclareMathOperator{\SO}{SO}           % Special orthogonal group
+\DeclareMathOperator{\U}{U}             % Unitary group
+\DeclareMathOperator{\SU}{SU}           % Special unitary group
+
+%% Analysis
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert} % Absolute
+\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{ % Norm
+	\ifblank{#1}{\:\cdot\:}{#1}
+}
+\newcommand{\del}{\partial}             % Del
+\let\d\relax                            % Derivation sign d
+\DeclareMathOperator{\d}{d}
+\DeclareMathOperator{\D}{D}             % Big derivation sign D
+\newcommand{\deldelt}[1][t]{            % Partial derivation in t
+	\frac{\del}{\del#1}
+}
+\newcommand{\ddt}[1][t]{                % Derivation in t
+	\frac{\d}{\d\!#1}
+}
+\DeclareMathOperator{\grad}{grad}       % Gradient
+\newcommand{\lapl}{\Delta}              % Laplace Operator
+\newcommand{\integral}{\int}            % Alias for the integral
+
+%% Category theory
+\DeclareMathOperator*{\colim}{colim}    % Colimes
+
+%% Set theory
+\newcommand{\blank}{-}                  % Blank
+\DeclareMathOperator{\id}{id}           % Identity map
+\DeclareMathOperator{\img}{im}          % Image of a map
+\DeclareMathOperator{\pr}{pr}           % Projection map
+\newcommand{\union}{\cup}               % Union
+\newcommand{\intersection}{\cap}        % Intersection
+\newcommand{\bigunion}{\bigcup}         % Big union
+\newcommand{\bigintersection}{\bigcap}  % Big intersection
+\DeclarePairedDelimiterX{\set}[1]\{\}{  % A \set command to draw sets with adjusted \mid
+	\providecommand{\given}{}
+	\renewcommand{\given}{
+		\nonscript\:\delimsize\vert
+		\allowbreak
+		\nonscript\:
+		\mathopen{}
+	}
+	#1
+}
+
+%% Topology
+\DeclareMathOperator{\pt}{pt}           % One-point set
+\DeclareMathOperator{\interior}{int}    % Interior of a set
+\DeclareMathOperator{\supp}{supp}       % Support

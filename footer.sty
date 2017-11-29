@@ -1,0 +1,29 @@
+%%
+%% Custom footer.
+%%
+
+%% Identification
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{footer}[2019/08/08 Custom footer configuration]
+
+%% Options
+\DeclareOption*{
+	\PackageWarning{footer}{Unknown option '\CurrentOption'}
+}
+
+\ProcessOptions*
+
+%% Enable the package for custom headers and footers
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+
+%% Set width of footrule to 0.4pt
+\renewcommand{\footrulewidth}{0.4pt}
+
+%% Redefine the \geometry command to update the footer
+\renewcommand{\geometry}[1]{
+	\Gm@clean
+	\setkeys{Gm}{#1}%
+	\Gm@process
+	\f@nch@setoffs
+}

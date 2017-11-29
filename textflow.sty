@@ -1,0 +1,41 @@
+%%
+%% Text flow.
+%%
+
+%% Identification
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{textflow}[2019/08/08 Custom textflow configuration]
+
+%% Options
+\DeclareOption{noindent}{                       % No paragraph indentation
+	\setlength{\parindent}{0pt}
+}
+\DeclareOption{parskip}{                        % Gap between paragraphs
+	\setlength{\parskip}{1.7\medskipamount}
+}
+\DeclareOption{linespacing=single}{             % Single line spacing
+	\PassOptionsToPackage{singlespacing}{setspace}
+}
+\DeclareOption{linespacing=onehalf}{            % Onehalf line spacing
+	\PassOptionsToPackage{onehalfspacing}{setspace}
+}
+\DeclareOption{linespacing=double}{             % Double line spacing
+	\PassOptionsToPackage{doublespacing}{setspace}
+}
+\DeclareOption{linebreak=fussy}{                % Fussy line breaking
+	\fussy
+}
+\DeclareOption{linebreak=sloppy}{               % Sloppy line breaking
+	\sloppy
+}
+\DeclareOption*{
+	\PackageWarning{textflow}{Unknown option '\CurrentOption'}
+}
+
+%% By default fussy line break and single line spacing.
+\ExecuteOptions{linebreak=fussy,linespacing=single}
+
+\ProcessOptions*
+
+%% Set the line spacing
+\RequirePackage{setspace}

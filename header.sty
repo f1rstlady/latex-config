@@ -1,0 +1,32 @@
+%%
+%% Customised header.
+%%
+
+%% Identification
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{header}[2019/08/08 Custom header configuration]
+
+%% Options
+\DeclareOption*{
+	\PackageWarning{header}{Unknown option '\CurrentOption'}
+}
+
+\ProcessOptions*
+
+%% Enable the package for fancy headers and footers
+\RequirePackage{fancyhdr}
+\pagestyle{fancy}
+
+%% Set header height and gap to body
+\geometry{head=12pt,headsep=25pt}
+
+%% Set width of the headrule to 0.4pt
+\renewcommand{\headrulewidth}{0.4pt}
+
+%% Redefine the \geometry command to update the header
+\renewcommand{\geometry}[1]{
+	\Gm@clean
+	\setkeys{Gm}{#1}%
+	\Gm@process
+	\f@nch@setoffs
+}

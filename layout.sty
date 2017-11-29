@@ -1,0 +1,22 @@
+%%
+%% Custom layout.
+%%
+%% See https://en.wikibooks.org/wiki/LaTeX/Page_Layout for more information.
+%%
+
+%% Identification
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{layout}[2019/08/08 Custom layout configuration]
+
+%% Options
+\DeclareOption*{
+	\PassOptionsToPackage{\CurrentOption}{geometry}
+}
+
+%% A4 as paper and layout by default
+\ExecuteOptions{a4paper,layout=a4paper}
+
+\ProcessOptions*
+
+%% Use the geometry package to set the layout
+\RequirePackage{geometry}
