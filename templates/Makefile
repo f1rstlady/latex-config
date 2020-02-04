@@ -12,13 +12,13 @@ endif
 # Halt on errors during compilation
 PDFTEXOPTS=-halt-on-error
 
-.PHONY: default clean
+.PHONY : all clean
 
-default: example.pdf
+all : example.pdf
 
-%.pdf: %.tex
+%.pdf : %.tex
 	$(COMPILER) $(PDFTEXOPTS) $<
 	$(COMPILER) $(PDFTEXOPTS) $<
 
-clean:
+clean :
 	rm -f *.acn *.acr *.alg *.aux *.bbl *.blg *.dvi *.glg *.glo *.gls *.ist *.lof *.log *.lol *.lot *.out *.pdf *.toc *.pdfsync *.gz *.tdo *.xml *.gz *.bcf *.nav *.snm

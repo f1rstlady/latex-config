@@ -42,7 +42,7 @@
 \RequirePackage{math.d/environments}
 
 %% Source code integration
-\usepackage[style=context]{sourcecode}
+\RequirePackage[style=context]{sourcecode}
 
 %% Page number as footer
 \RequirePackage{footer}
