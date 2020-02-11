@@ -1,12 +1,19 @@
 TARGET?=main
-LUALATEX=$(shell lualatex -v 2>/dev/null)
-BIBER=$(shell biber -v 2>/dev/null)
+LUALATEX=$(shell which lualatex &>/dev/null; echo $?)
+BIBER=$(shell which biber &>/dev/null; echo $?)
 
 # Use lualatex if available, pdflatex otherwise
-ifneq ($(LUALATEX),)
+ifeq ($(LUALATEX),0)
 	COMPILER=lualatex
 else
 	COMPILER=pdflatex
+endif
+
+# Use biber if available, bibtex otherwise
+ifeq ($(BIBER),0)
+	BIBTEX=biber
+else
+	BIBTEX=bibtex
 endif
 
 # Halt on errors during compilation
