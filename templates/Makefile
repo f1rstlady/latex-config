@@ -10,7 +10,7 @@ else
 endif
 
 # Halt on errors during compilation
-PDFTEXOPTS=-halt-on-error
+PDFTEXOPTS=-halt-on-error -file-line-error -synctex=1
 
 .PHONY : all clean
 
