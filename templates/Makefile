@@ -21,7 +21,7 @@ PDFTEXOPTS=-halt-on-error -file-line-error -synctex=1
 
 .PHONY : all clean
 
-all : example.pdf
+all : main.pdf
 
 %.pdf : %.tex
 	$(COMPILER) $(PDFTEXOPTS) $<
