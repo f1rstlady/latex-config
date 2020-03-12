@@ -1,15 +1,15 @@
-%%
-%% Integration of source code with the listings package.
-%%
+%
+% Integration of source code with the listings package.
+%
 
-%% Identification
+% Identification
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{sourcecode}[2019/08/08 Source code integration configuration]
 
-%% Basic package
+% Basic package
 \RequirePackage{listings}
 
-%% Default settings
+% Default settings
 \lstset{
 	columns=fixed
 	numberstyle = \tiny\color{Gray},
@@ -27,7 +27,7 @@
 	emphstyle = \color{NavyBlue}
 }
 
-%% Options
+% Options
 \DeclareOption{style=context}{
 	\lstset{
 		backgroundcolor = \color{gray!10},
@@ -51,7 +51,7 @@
 
 \ProcessOptions*
 
-%% Style with context information
+% Style with context information
 \lstdefinestyle{context}{
 	backgroundcolor = \color{gray!10},
 	numbers = left,
@@ -60,7 +60,7 @@
 	frame = lines,
 }
 
-%% Style without context information
+% Style without context information
 \lstdefinestyle{nocontext}{
 	backgroundcolor = {},
 	numbers = none,
@@ -68,6 +68,6 @@
 	frame = none,
 }
 
-%% Custom language definitions
+% Custom language definitions
 \RequirePackage{sourcecode.d/mips}
 \RequirePackage{sourcecode.d/haskell}

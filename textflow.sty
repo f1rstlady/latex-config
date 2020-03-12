@@ -1,12 +1,12 @@
-%%
-%% Text flow.
-%%
+%
+% Text flow.
+%
 
-%% Identification
+% Identification
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{textflow}[2019/08/08 Custom textflow configuration]
 
-%% Options
+% Options
 \DeclareOption{noindent}{                       % No paragraph indentation
 	\setlength{\parindent}{0pt}
 }
@@ -32,13 +32,13 @@
 	\PackageWarning{textflow}{Unknown option '\CurrentOption'}
 }
 
-%% By default fussy line break and single line spacing.
+% By default fussy line break and single line spacing.
 \ExecuteOptions{linebreak=fussy,linespacing=single}
 
 \ProcessOptions*
 
-%% Set the line spacing
+% Set the line spacing
 \RequirePackage{setspace}
 
-%% Hyphenation
+% Hyphenation
 \usepackage{hyphenat}

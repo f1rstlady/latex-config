@@ -1,27 +1,27 @@
-%%
-%% Theorem environments
-%%
-%% There are environments defined for:
-%%   Conjecture
-%%   Corollary
-%%   Definition
-%%   Example
-%%   Lemma
-%%   Proposition
-%%   Remark
-%%   Theorem
-%% In terms of numbering, all environments are on the same level, so they share the same counter.
-%% Furthermore, for every environment there is a variant without numbering. This variant differs
-%% from the original by an appended asterisk, e.g. 'theorem*' is the unnumbered variant of
-%% 'theorem'. For the 'example' and 'remark' environment, there is a plural variant available, this
-%% means it is named 'examples' instead of 'example'. For further details see below.
-%%
+%
+% Theorem environments
+%
+% There are environments defined for:
+%   Conjecture
+%   Corollary
+%   Definition
+%   Example
+%   Lemma
+%   Proposition
+%   Remark
+%   Theorem
+% In terms of numbering, all environments are on the same level, so they share the same counter.
+% Furthermore, for every environment there is a variant without numbering. This variant differs
+% from the original by an appended asterisk, e.g. 'theorem*' is the unnumbered variant of
+% 'theorem'. For the 'example' and 'remark' environment, there is a plural variant available, this
+% means it is named 'examples' instead of 'example'. For further details see below.
+%
 
-%% Identification
+% Identification
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{math.d/environments}[2019/08/08 Math environments definition]
 
-%% Options
+% Options
 \DeclareOption{filledqed}{                  % Filled square as qed symbol
 	\renewcommand{\qedsymbol}{\blacksquare}
 }
@@ -34,13 +34,13 @@
 
 \ProcessOptions*
 
-%% Determine the language to generate language specific output
+% Determine the language to generate language specific output
 \RequirePackage{iflang}
 
-%% Pull in the AMS theorems package
+% Pull in the AMS theorems package
 \RequirePackage{amsthm}
 
-%% Theorem ------------------------------------------------------------------------------------ {{{1
+% Theorem ------------------------------------------------------------------------------------ {{{1
 \theoremstyle{plain}
 \newtheorem{theorem}{
 	\IfLanguageName{ngerman}{Satz}          % German
@@ -51,7 +51,7 @@
 							{Theorem}       % English
 }
 
-%% Conjecture --------------------------------------------------------------------------------- {{{1
+% Conjecture --------------------------------------------------------------------------------- {{{1
 \theoremstyle{plain}
 \newtheorem{conjecture}[theorem]{
 	\IfLanguageName{ngerman}{Vermutung}     % German
@@ -62,7 +62,7 @@
 							{Conjecture}    % English
 }
 
-%% Corollary ---------------------------------------------------------------------------------- {{{1
+% Corollary ---------------------------------------------------------------------------------- {{{1
 \theoremstyle{plain}
 \newtheorem{corollary}[theorem]{
 	\IfLanguageName{ngerman}{Korollar}      % German
@@ -73,7 +73,7 @@
 							{Corollary}     % English
 }
 
-%% Definiion ---------------------------------------------------------------------------------- {{{1
+% Definiion ---------------------------------------------------------------------------------- {{{1
 \theoremstyle{definition}
 \newtheorem{definition}[theorem]{
 	\IfLanguageName{ngerman}{Definition}    % German
@@ -84,7 +84,7 @@
 							{Definition}    % English
 }
 
-%% Example ------------------------------------------------------------------------------------ {{{1
+% Example ------------------------------------------------------------------------------------ {{{1
 \theoremstyle{definition}
 \newtheorem{example}[theorem]{
 	\IfLanguageName{ngerman}{Beispiel}      % German
@@ -103,7 +103,7 @@
 							{Examples}      % English
 }
 
-%% Lemma -------------------------------------------------------------------------------------- {{{1
+% Lemma -------------------------------------------------------------------------------------- {{{1
 \theoremstyle{plain}
 \newtheorem{lemma}[theorem]{
 	\IfLanguageName{ngerman}{Lemma}         % German
@@ -114,7 +114,7 @@
 							{Lemma}         % English
 }
 
-%% Proposition -------------------------------------------------------------------------------- {{{1
+% Proposition -------------------------------------------------------------------------------- {{{1
 \theoremstyle{plain}
 \newtheorem{proposition}[theorem]{
 	\IfLanguageName{ngerman}{Proposition}   % German
@@ -125,7 +125,7 @@
 							{Proposition}   % English
 }
 
-%% Remark ------------------------------------------------------------------------------------- {{{1
+% Remark ------------------------------------------------------------------------------------- {{{1
 \theoremstyle{remark}
 \newtheorem{remark}[theorem]{
 	\IfLanguageName{ngerman}{Anmerkung}     % German
@@ -144,4 +144,4 @@
 							{Remarks}       % English
 }
 
-%% }}}1
+% }}}1

@@ -1,12 +1,12 @@
-%%
-%% Math configuration
-%%
+%
+% Math configuration
+%
 
-%% Identification
+% Identification
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{math}[2019/08/08 Custom math configuration]
 
-%% Save the values of possibly changed letters
+% Save the values of possibly changed letters
 \let\@epsilon\epsilon
 \let\@varepsilon\varepsilon
 \let\@kappa\kappa
@@ -20,7 +20,7 @@
 \let\@theta\theta
 \let\@vartheta\vartheta
 
-%% Options
+% Options
 \DeclareOption{varepsilon}{             % Change \varepsilon and \epsilon
 	\let\epsilon\@varepsilon
 	\let\varepsilon\@epsilon
@@ -79,12 +79,12 @@
 	\PackageWarning{math}{Unknown option '\CurrentOption'}
 }
 
-%% Change epsilon's and phi's by default
+% Change epsilon's and phi's by default
 \ExecuteOptions{varepsilon,varphi}
 
 \ProcessOptions*
 
-%% Basic AMS packages
+% Basic AMS packages
 \RequirePackage[intlimits]{amsmath} % intlimits: boundaries in integrals are placed under
 									% respectively above the integral sign
 \RequirePackage{amsfonts}
@@ -94,24 +94,24 @@
 \mathtoolsset{centercolon}
 \RequirePackage{mathdots}           % Improved dots
 
-%% Draw split-level fractions
+% Draw split-level fractions
 \RequirePackage{xfrac}
 
-%% Double struck fonts
+% Double struck fonts
 \RequirePackage{dsfont}
 \RequirePackage{bbm}
 
-%% For commutative diagrams
+% For commutative diagrams
 \RequirePackage[all]{xy}                    % Commutative diagrams with the xy package
 \RequirePackage{tikz-cd}                    % Commutative diagrams with the tikz-cd package
 
-%% Shortcut for epsilon
+% Shortcut for epsilon
 \newcommand{\eps}{\epsilon}
 
-%% Long \to arrow
+% Long \to arrow
 \newcommand{\longto}{\longrightarrow}
 
-%% Real and imaginary part
+% Real and imaginary part
 \let\Re\relax
 \DeclareMathOperator{\Re}{Re}
 \let\Im\relax
@@ -124,7 +124,7 @@
 \renewcommand{\le}{\leqslant}
 \renewcommand{\ge}{\geqslant}
 
-%% Aliases for frequently used sets
+% Aliases for frequently used sets
 \newcommand{\N}{\mathbb{N}} % Natural numbers
 \newcommand{\Z}{\mathbb{Z}} % Integers
 \newcommand{\Q}{\mathbb{Q}} % Rational numbers

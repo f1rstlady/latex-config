@@ -1,28 +1,28 @@
-%%
-%% Fonts.
-%%
+%
+% Fonts.
+%
 
-%% Identification
+% Identification
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{font}[2019/08/08 Custom font configuration]
 
-%% The default font is Latin Modern
+% The default font is Latin Modern
 \def\@font{latinmodern}
 
-%% Save the option in \@font
+% Save the option in \@font
 \DeclareOption*{
 	\let\@font\CurrentOption
 }
 
 \ProcessOptions*
 
-%% Load the xstring package for string comparison
+% Load the xstring package for string comparison
 \RequirePackage{xstring}
 
-%% Driver specific code
+% Driver specific code
 \RequirePackage{iftex}
 
-%% Match against the \@font variable
+% Match against the \@font variable
 \IfStrEqCase{\@font}{
 	{concrete}{
 		% Concrete.
@@ -74,7 +74,7 @@
 		\RequirePackage{\@font}
 	]
 
-%% Use Fira Code as typewriter if compiled via XeTeX or LuaTeX
+% Use Fira Code as typewriter if compiled via XeTeX or LuaTeX
 \ifXeTeX
 	\def\@fontspec{~}
 \else\ifLuaTeX

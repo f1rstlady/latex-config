@@ -1,14 +1,14 @@
-%%
-%% Languages.
-%%
+%
+% Languages.
+%
 
-%% Identification
+% Identification
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{language}[2019/08/08 Custom language configuration]
 
-%% DEFAULT: English as first, German as second language
+% DEFAULT: English as first, German as second language
 
-%% Options
+% Options
 \DeclareOption{english}{                            % English (british)
 	\PassOptionsToPackage{british}{babel}
 }
@@ -19,11 +19,11 @@
 	\PassOptionsToPackage{\CurrentOption}{babel}
 }
 
-%% By default English as first and German as second language.
+% By default English as first and German as second language.
 \ExecuteOptions{german,english}
 
 \ProcessOptions*
 
-%% The language package. Precedence increases from the first to the last argument. The language also
-%% determines the hyphenation rules.
+% The language package. Precedence increases from the first to the last argument. The language also
+% determines the hyphenation rules.
 \RequirePackage{babel}

@@ -1,22 +1,22 @@
-%%
-%% Operator definitins for different branches.
-%%
+%
+% Operator definitins for different branches.
+%
 
-%% Identification
+% Identification
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{math.d/operators}[2019/08/08 Math operators definition]
 
-%% Options
+% Options
 \DeclareOption*{
 	\PackageWarning{math.d/operators}{Unknown option '\CurrentOption'}
 }
 
 \ProcessOptions*
 
-%% For the \ifblank macro
+% For the \ifblank macro
 \RequirePackage{etoolbox}
 
-%% Algebra
+% Algebra
 \newcommand{\one}{\mathbb{1}}           % Unit
 \DeclareMathOperator{\sgn}{sgn}         % Signum
 \DeclareMathOperator{\Hom}{Hom}         % Homomorphism algebra
@@ -42,7 +42,7 @@
 \DeclareMathOperator{\U}{U}             % Unitary group
 \DeclareMathOperator{\SU}{SU}           % Special unitary group
 
-%% Analysis
+% Analysis
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert} % Absolute
 \DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{ % Norm
 	\ifblank{#1}{\:\cdot\:}{#1}
@@ -61,10 +61,10 @@
 \newcommand{\lapl}{\Delta}              % Laplace Operator
 \newcommand{\integral}{\int}            % Alias for the integral
 
-%% Category theory
+% Category theory
 \DeclareMathOperator*{\colim}{colim}    % Colimes
 
-%% Set theory
+% Set theory
 \newcommand{\blank}{-}                  % Blank
 \DeclareMathOperator{\id}{id}           % Identity map
 \DeclareMathOperator{\img}{im}          % Image of a map
@@ -84,7 +84,7 @@
 	#1
 }
 
-%% Topology
+% Topology
 \DeclareMathOperator{\pt}{pt}           % One-point set
 \DeclareMathOperator{\interior}{int}    % Interior of a set
 \DeclareMathOperator{\supp}{supp}       % Support

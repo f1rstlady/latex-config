@@ -1,10 +1,10 @@
-%% The assignment class is a collection of settings used to submit assignments at university.
+% The assignment class is a collection of settings used to submit assignments at university.
 
-%% Identification
+% Identification
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{assignment}[2020/03/12 Assignment submission class]
 
-%% Options
+% Options
 \DeclareOption{english}{
 	\PassOptionsToPackage{english}{language}
 }
@@ -18,15 +18,15 @@
 	\PassOptionsToClass{\CurrentOption}{article}
 }
 
-%% Use A4 layout by default and English as language
+% Use A4 layout by default and English as language
 \ExecuteOptions{a4paper,english}
 
 \ProcessOptions*
 
-%% Base class
+% Base class
 \LoadClass{article}
 
-%% Dependencies
+% Dependencies
 \RequirePackage{encoding}
 \RequirePackage{font}
 \RequirePackage{language}
@@ -34,19 +34,19 @@
 \RequirePackage{textflow}
 \RequirePackage{miscellaneous}
 
-%% Mathematical environment
+% Mathematical environment
 \RequirePackage{math}
 \RequirePackage{math.d/operators}
 \RequirePackage{math.d/environments}
 
-%% Source code integration
+% Source code integration
 \RequirePackage[style=context]{sourcecode}
 
-%% Page number as footer
+% Page number as footer
 \RequirePackage{footer}
 \RequirePackage{footer.d/page_number}
 
-%% Custom header holding university, course, author and title
+% Custom header holding university, course, author and title
 \RequirePackage{header}
 \geometry{head=28pt}
 
@@ -63,4 +63,4 @@
 \fancyhead[C]{\large\textbf{\@title}}
 \fancyhead[R]{\@author}
 
-%% vi: ft=tex
+% vi: ft=tex

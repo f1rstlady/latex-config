@@ -1,21 +1,21 @@
-%%
-%% Encoding.
-%%
+%
+% Encoding.
+%
 
-%% Identification
+% Identification
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{encoding}[2019/08/08 Custom encoding configuration]
 
-%% Options
+% Options
 \DeclareOption*{
 	\PackageWarning{encoding}{Unknown option '\CurrentOption'}
 }
 
 \ProcessOptions*
 
-%% Encoding of the font (default: T1, recommended in wetstern regions).
+% Encoding of the font (default: T1, recommended in wetstern regions).
 \RequirePackage[T1]{fontenc}
 
-%% Encoding of the input (default: UTF-8).
+% Encoding of the input (default: UTF-8).
 \RequirePackage[utf8]{inputenc}
 

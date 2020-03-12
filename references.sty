@@ -1,20 +1,20 @@
-%%
-%% References, using the hyperref and nameref packages
-%%
+%
+% References, using the hyperref and nameref packages
+%
 
-%% Identification
+% Identification
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{references}[2019/08/08 Custom references configuration]
 
-%% Options
+% Options
 \DeclareOption*{
 	\PackageWarning{references}{Unknown option '\CurrentOption'}
 }
 
 \ProcessOptions*
 
-%% Create references, inner and outer ones
+% Create references, inner and outer ones
 \RequirePackage{hyperref}
 
-%% Reference the name, too
+% Reference the name, too
 \RequirePackage{nameref}
