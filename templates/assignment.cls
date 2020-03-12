@@ -1,10 +1,8 @@
-%%
-%% The submission class is a collection of settings used to submit assignments at university.
-%%
+%% The assignment class is a collection of settings used to submit assignments at university.
 
 %% Identification
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{submission}[2019/08/08 Assignment submission class]
+\ProvidesClass{assignment}[2020/03/12 Assignment submission class]
 
 %% Options
 \DeclareOption{english}{
