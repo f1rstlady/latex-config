@@ -16,8 +16,14 @@
 % Colors
 \RequirePackage[svgnames]{xcolor}
 
-% Use shortcuts for specifying the labelling of enumerations.
-\RequirePackage[shortlabels]{enumitem}
+% Use shortcuts for specifying the labelling of enumerations. When the beamer class is used, do not
+% activate this since it uses the enumitem package which conflicts which beamer's bulleting and
+% enumeration style.
+\makeatletter
+\@ifclassloaded{beamer}
+  {}
+  {\RequirePackage[shortlabels]{enumitem}}
+\makeatother
 
 % Lists and enumerations with multiple rows or columns
 \RequirePackage{multirow}
