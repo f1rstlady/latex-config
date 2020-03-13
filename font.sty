@@ -33,8 +33,8 @@
 	{euler}{
 		% AMS Euler virtual math font by Hermann Zapf.
 		%
-		% eulervm fixes some problems that occured with the original euler font. Fits well to Concrete,
-		% Palatino, Melior or Aldus.
+        % eulervm fixes some problems that occured with the original euler font. Fits well to
+        % Concrete, Palatino, Melior or Aldus.
 		%
 		% Options:
 		%   small               Load the Euler fonts at 95% of their normal size.
@@ -51,15 +51,15 @@
 	{libertine}{
 		% Libertine.
 		%
-		% You might want to employ it with the newtxmath font. In this case include the package with the
-		% 'libertine' option for improved consistency.
+        % You might want to employ it with the newtxmath font. In this case include the package with
+        % the 'libertine' option for improved consistency.
 		\RequirePackage{libertine}
 	}
 	{palatino}{
 		% Palatino by Hermann Zapf.
 		%
-		% newpx is a Palatino with reworked metrics and Helvetica as sans serif font. Fits well to the AMS
-		% Euler math font.
+        % newpx is a Palatino with reworked metrics and Helvetica as sans serif font. Fits well to
+        % the AMS Euler math font.
 		\RequirePackage{newpxtext}
 		\RequirePackage{newpxmath}
 	}
@@ -74,14 +74,11 @@
 		\RequirePackage{\@font}
 	]
 
-% Use Fira Code as typewriter if compiled via XeTeX or LuaTeX
-\ifXeTeX
-	\def\@fontspec{~}
-\else\ifLuaTeX
-	\def\@fontspec{~}
-\else\fi\fi
-
-\ifdefined\@fontspec
+% If compiled with LuaTeX, use the fontspec package and Fira Code as typewriter. Otherwise use T1
+% font encoding.
+\ifLuaTeX
 	\RequirePackage{fontspec}
 	\setmonofont{Fira Code}
-\else\fi
+\else
+    \RequirePackage[T1]{fontenc}
+\fi

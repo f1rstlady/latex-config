@@ -1,4 +1,6 @@
+%
 % The assignment class is a collection of settings used to submit assignments at university.
+%
 
 % Identification
 \NeedsTeXFormat{LaTeX2e}

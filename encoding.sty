@@ -13,9 +13,7 @@
 
 \ProcessOptions*
 
-% Encoding of the font (default: T1, recommended in wetstern regions).
-\RequirePackage[T1]{fontenc}
-
-% Encoding of the input (default: UTF-8).
-\RequirePackage[utf8]{inputenc}
-
+% When compiling with PDFTeX, set the encoding to UTF-8 with the inputenc package
+\ifPDFTeX
+    \RequirePackage[utf8]{inputenc}
+\else\fi
