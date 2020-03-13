@@ -4,16 +4,16 @@ BIBER=$(shell which biber &>/dev/null; echo $?)
 
 # Use lualatex if available, pdflatex otherwise
 ifeq ($(LUALATEX),0)
-	COMPILER=lualatex
+    COMPILER=lualatex
 else
-	COMPILER=pdflatex
+    COMPILER=pdflatex
 endif
 
 # Use biber if available, bibtex otherwise
 ifeq ($(BIBER),0)
-	BIBTEX=biber
+    BIBTEX=biber
 else
-	BIBTEX=bibtex
+    BIBTEX=bibtex
 endif
 
 # Halt on errors during compilation
@@ -24,8 +24,8 @@ PDFTEXOPTS=-halt-on-error -file-line-error -synctex=1
 all : main.pdf
 
 %.pdf : %.tex
-	$(COMPILER) $(PDFTEXOPTS) $<
-	$(COMPILER) $(PDFTEXOPTS) $<
+    $(COMPILER) $(PDFTEXOPTS) $<
+    $(COMPILER) $(PDFTEXOPTS) $<
 
 clean :
-	rm -f *.acn *.acr *.alg *.aux *.bbl *.blg *.dvi *.glg *.glo *.gls *.ist *.lof *.log *.lol *.lot *.out *.pdf *.toc *.pdfsync *.gz *.tdo *.xml *.gz *.bcf *.nav *.snm
+    rm -f *.acn *.acr *.alg *.aux *.bbl *.blg *.dvi *.glg *.glo *.gls *.ist *.lof *.log *.lol *.lot *.out *.pdf *.toc *.pdfsync *.gz *.tdo *.xml *.gz *.bcf *.nav *.snm

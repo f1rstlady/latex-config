@@ -8,7 +8,7 @@
 
 % Options
 \DeclareOption*{
-	\PackageWarning{math.d/operators}{Unknown option '\CurrentOption'}
+    \PackageWarning{math.d/operators}{Unknown option '\CurrentOption'}
 }
 
 \ProcessOptions*
@@ -23,11 +23,11 @@
 \newcommand{\tensor}{\otimes}           % Tensor product
 \newcommand{\bigtensor}{\bigotimes}     % Tensor product
 \DeclarePairedDelimiterX{\iprod}[2]{\langle}{\rangle}{ % Inner product
-	\ifblank{#1}{
-		\ifblank{#2}{
-			\cdot,\cdot
-		}{#1,#2}
-	}{#1,#2}
+    \ifblank{#1}{
+        \ifblank{#2}{
+            \cdot,\cdot
+        }{#1,#2}
+    }{#1,#2}
 }
 \DeclareMathOperator{\Tor}{Tor}         % Tor group
 \DeclareMathOperator{\Ext}{Ext}         % Ext group
@@ -45,17 +45,17 @@
 % Analysis
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert} % Absolute
 \DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{ % Norm
-	\ifblank{#1}{\:\cdot\:}{#1}
+    \ifblank{#1}{\:\cdot\:}{#1}
 }
 \newcommand{\del}{\partial}             % Del
 \let\d\relax                            % Derivation sign d
 \DeclareMathOperator{\d}{d}
 \DeclareMathOperator{\D}{D}             % Big derivation sign D
 \newcommand{\deldelt}[1][t]{            % Partial derivation in t
-	\frac{\del}{\del#1}
+    \frac{\del}{\del#1}
 }
 \newcommand{\ddt}[1][t]{                % Derivation in t
-	\frac{\d}{\d\!#1}
+    \frac{\d}{\d\!#1}
 }
 \DeclareMathOperator{\grad}{grad}       % Gradient
 \newcommand{\lapl}{\Delta}              % Laplace Operator
@@ -74,14 +74,14 @@
 \newcommand{\bigunion}{\bigcup}         % Big union
 \newcommand{\bigintersection}{\bigcap}  % Big intersection
 \DeclarePairedDelimiterX{\set}[1]\{\}{  % A \set command to draw sets with adjusted \mid
-	\providecommand{\given}{}
-	\renewcommand{\given}{
-		\nonscript\:\delimsize\vert
-		\allowbreak
-		\nonscript\:
-		\mathopen{}
-	}
-	#1
+    \providecommand{\given}{}
+    \renewcommand{\given}{
+        \nonscript\:\delimsize\vert
+        \allowbreak
+        \nonscript\:
+        \mathopen{}
+    }
+    #1
 }
 
 % Topology

@@ -8,7 +8,7 @@
 
 % Options
 \DeclareOption*{
-	\PackageWarning{header}{Unknown option '\CurrentOption'}
+    \PackageWarning{header}{Unknown option '\CurrentOption'}
 }
 
 \ProcessOptions*
@@ -25,8 +25,8 @@
 
 % Redefine the \geometry command to update the header
 \renewcommand{\geometry}[1]{
-	\Gm@clean
-	\setkeys{Gm}{#1}%
-	\Gm@process
-	\f@nch@setoffs
+    \Gm@clean
+    \setkeys{Gm}{#1}%
+    \Gm@process
+    \f@nch@setoffs
 }

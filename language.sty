@@ -10,13 +10,13 @@
 
 % Options
 \DeclareOption{english}{                            % English (british)
-	\PassOptionsToPackage{british}{babel}
+    \PassOptionsToPackage{british}{babel}
 }
 \DeclareOption{german}{                             % German
-	\PassOptionsToPackage{ngerman}{babel}
+    \PassOptionsToPackage{ngerman}{babel}
 }
 \DeclareOption*{                                    % Other languages
-	\PassOptionsToPackage{\CurrentOption}{babel}
+    \PassOptionsToPackage{\CurrentOption}{babel}
 }
 
 % By default English as first and German as second language.

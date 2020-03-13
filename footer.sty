@@ -8,7 +8,7 @@
 
 % Options
 \DeclareOption*{
-	\PackageWarning{footer}{Unknown option '\CurrentOption'}
+    \PackageWarning{footer}{Unknown option '\CurrentOption'}
 }
 
 \ProcessOptions*
@@ -22,8 +22,8 @@
 
 % Redefine the \geometry command to update the footer
 \renewcommand{\geometry}[1]{
-	\Gm@clean
-	\setkeys{Gm}{#1}%
-	\Gm@process
-	\f@nch@setoffs
+    \Gm@clean
+    \setkeys{Gm}{#1}%
+    \Gm@process
+    \f@nch@setoffs
 }

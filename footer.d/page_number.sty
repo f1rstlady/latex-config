@@ -8,7 +8,7 @@
 
 % Options
 \DeclareOption*{
-	\PackageWarning{footer.d/page_number}{Unknown option '\CurrentOption'}
+    \PackageWarning{footer.d/page_number}{Unknown option '\CurrentOption'}
 }
 
 \ProcessOptions*
@@ -21,7 +21,7 @@
 
 % Different languages.
 \fancyfoot[C]{
-	\IfLanguageName{ngerman}{Seite:~\thepage~von~\pageref{LastPage}}    % German
-							{Page:~\thepage~of~\pageref{LastPage}}      % English
+    \IfLanguageName{ngerman}{Seite:~\thepage~von~\pageref{LastPage}}    % German
+                            {Page:~\thepage~of~\pageref{LastPage}}      % English
 }
 

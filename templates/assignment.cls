@@ -8,16 +8,16 @@
 
 % Options
 \DeclareOption{english}{
-	\PassOptionsToPackage{english}{language}
+    \PassOptionsToPackage{english}{language}
 }
 \DeclareOption{german}{
-	\PassOptionsToPackage{german}{language}
+    \PassOptionsToPackage{german}{language}
 }
 \DeclareOption{a4paper}{
-	\PassOptionsToClass{\CurrentOption}{article}
+    \PassOptionsToClass{\CurrentOption}{article}
 }
 \DeclareOption*{
-	\PassOptionsToClass{\CurrentOption}{article}
+    \PassOptionsToClass{\CurrentOption}{article}
 }
 
 % Use A4 layout by default and English as language

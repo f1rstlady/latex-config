@@ -11,61 +11,61 @@
 
 % Default settings
 \lstset{
-	columns=fixed,
-	numberstyle = \tiny\color{Gray},
-	numbersep = 5pt,
-	captionpos = b,
-	extendedchars = true, % Use ä, ö and ü
-	tabsize = 4,
-	breaklines = true,
-	breakatwhitespace = true,
-	basicstyle = \ttfamily\footnotesize,
-	keywordstyle = \color{FireBrick},
-	stringstyle = \color{Green},
-	showstringspaces = false,
-	commentstyle = \itshape\color{Gray},
-	emphstyle = \color{NavyBlue}
+    columns=fixed,
+    numberstyle = \tiny\color{Gray},
+    numbersep = 5pt,
+    captionpos = b,
+    extendedchars = true, % Use ä, ö and ü
+    tabsize = 4,
+    breaklines = true,
+    breakatwhitespace = true,
+    basicstyle = \ttfamily\footnotesize,
+    keywordstyle = \color{FireBrick},
+    stringstyle = \color{Green},
+    showstringspaces = false,
+    commentstyle = \itshape\color{Gray},
+    emphstyle = \color{NavyBlue}
 }
 
 % Options
 \DeclareOption{style=context}{
-	\lstset{
-		backgroundcolor = \color{gray!10},
-		numbers = left,
-		numberstyle = \tiny\color{Gray},
-		title = \lstname,
-		frame = lines,
-	}
+    \lstset{
+        backgroundcolor = \color{gray!10},
+        numbers = left,
+        numberstyle = \tiny\color{Gray},
+        title = \lstname,
+        frame = lines,
+    }
 }
 \DeclareOption{style=nocontext}{
-	\lstset{
-		backgroundcolor = {},
-		numbers = none,
-		caption = {},
-		frame = none,
-	}
+    \lstset{
+        backgroundcolor = {},
+        numbers = none,
+        caption = {},
+        frame = none,
+    }
 }
 \DeclareOption*{
-	\lstset{\CurrentOption}
+    \lstset{\CurrentOption}
 }
 
 \ProcessOptions*
 
 % Style with context information
 \lstdefinestyle{context}{
-	backgroundcolor = \color{gray!10},
-	numbers = left,
-	numberstyle = \tiny\color{Gray},
-	title = \lstname,
-	frame = lines,
+    backgroundcolor = \color{gray!10},
+    numbers = left,
+    numberstyle = \tiny\color{Gray},
+    title = \lstname,
+    frame = lines,
 }
 
 % Style without context information
 \lstdefinestyle{nocontext}{
-	backgroundcolor = {},
-	numbers = none,
-	caption = {},
-	frame = none,
+    backgroundcolor = {},
+    numbers = none,
+    caption = {},
+    frame = none,
 }
 
 % Custom language definitions
