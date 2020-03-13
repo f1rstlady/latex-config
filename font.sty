@@ -22,6 +22,19 @@
 % Driver specific code
 \RequirePackage{iftex}
 
+% If compiled with LuaTeX, use the fontspec package and Fira Code as typewriter. Otherwise use T1
+% font encoding.
+\ifLuaTeX
+    \RequirePackage{fontspec}
+    \setmonofont{Fira Code}
+
+\else
+    \RequirePackage[T1]{fontenc}
+\fi
+
+% Micro-typographic extensions
+\RequirePackage{microtype}
+
 % Match against the \@font variable
 \IfStrEqCase{\@font}{
     {concrete}{
@@ -73,12 +86,3 @@
     [
         \RequirePackage{\@font}
     ]
-
-% If compiled with LuaTeX, use the fontspec package and Fira Code as typewriter. Otherwise use T1
-% font encoding.
-\ifLuaTeX
-    \RequirePackage{fontspec}
-    \setmonofont{Fira Code}
-\else
-    \RequirePackage[T1]{fontenc}
-\fi
