@@ -19,18 +19,8 @@
 % For string comparison
 \RequirePackage{xstring}
 
-% Driver specific code
-\RequirePackage{iftex}
-
-% If compiled with LuaTeX, use the fontspec package and Fira Code as typewriter. Otherwise use T1
-% font encoding.
-\ifLuaTeX
-    \RequirePackage{fontspec}
-    \setmonofont{Fira Code}
-
-\else
-    \RequirePackage[T1]{fontenc}
-\fi
+% Set the font via fontspec
+\RequirePackage{fontspec}
 
 % Micro-typographic extensions
 \RequirePackage{microtype}

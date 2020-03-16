@@ -29,7 +29,6 @@
 \LoadClass{article}
 
 % Dependencies
-\RequirePackage{encoding}
 \RequirePackage{font}
 \RequirePackage{language}
 \RequirePackage{layout}
