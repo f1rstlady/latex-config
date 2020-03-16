@@ -6,33 +6,18 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{font}[2019/08/08 Custom font configuration]
 
-% The default font is Latin Modern
-\def\@font{latinmodern}
-
-% Save the option in \@font
-\DeclareOption*{
-    \let\@font\CurrentOption
-}
-
-\ProcessOptions*
-
-% For string comparison
-\RequirePackage{xstring}
-
 % Set the font via fontspec
 \RequirePackage{fontspec}
 
 % Micro-typographic extensions
 \RequirePackage{microtype}
 
-% Match against the \@font variable
-\IfStrEqCase{\@font}{
-    {latinmodern}{
-        % Latin Modern.
-        %
-        % An advance of Computer Modern.
-        \RequirePackage{lmodern}
-    }
-}[
-    \RequirePackage{\@font}
-]
+% Optional arguments are set as font
+\DeclareOption*{
+    \setmainfont{\CurrentOption}
+}
+
+% Latin Modern as default
+\ExecuteOptions{Latin Modern}
+
+\ProcessOptions*
