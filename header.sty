@@ -6,9 +6,9 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{header}[2019/08/08 Custom header configuration]
 
-% Options
+% Pass options to the fancyhdr package
 \DeclareOption*{
-    \PackageWarning{header}{Unknown option '\CurrentOption'}
+    \PassOptionsToPackage{\CurentOption}{fancyhdr}
 }
 
 \ProcessOptions*

@@ -6,9 +6,9 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage{footer}[2019/08/08 Custom footer configuration]
 
-% Options
+% Pass options to the fancyhdr package
 \DeclareOption*{
-    \PackageWarning{footer}{Unknown option '\CurrentOption'}
+    \PassOptionsToPackage{\CurentOption}{fancyhdr}
 }
 
 \ProcessOptions*
