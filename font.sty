@@ -37,52 +37,12 @@
 
 % Match against the \@font variable
 \IfStrEqCase{\@font}{
-    {concrete}{
-        % Concrete.
-        %
-        % Fits well to the AMS Euler math font.
-        \RequirePackage{concrete}
-    }
-    {euler}{
-        % AMS Euler virtual math font by Hermann Zapf.
-        %
-        % eulervm fixes some problems that occured with the original euler font. Fits well to
-        % Concrete, Palatino, Melior or Aldus.
-        %
-        % Options:
-        %   small               Load the Euler fonts at 95% of their normal size.
-        %   euler-hat-accents   Take numerals, comma and period from Euler Roman in math mode.
-        %   euler-digits        Use the \hat accent from Euler Fraktur (bigger).
-        \RequirePackage[euler-digits]{eulervm}
-    }
     {latinmodern}{
         % Latin Modern.
         %
         % An advance of Computer Modern.
         \RequirePackage{lmodern}
     }
-    {libertine}{
-        % Libertine.
-        %
-        % You might want to employ it with the newtxmath font. In this case include the package with
-        % the 'libertine' option for improved consistency.
-        \RequirePackage{libertine}
-    }
-    {palatino}{
-        % Palatino by Hermann Zapf.
-        %
-        % newpx is a Palatino with reworked metrics and Helvetica as sans serif font. Fits well to
-        % the AMS Euler math font.
-        \RequirePackage{newpxtext}
-        \RequirePackage{newpxmath}
-    }
-    {times}{
-        % Times.
-        %
-        % newtx is a Times clone with reworked metrics and Helvetica as sans serif font.
-        \RequirePackage{newtxtext}
-        \RequirePackage{newtxmath}
-    }}
-    [
-        \RequirePackage{\@font}
-    ]
+}[
+    \RequirePackage{\@font}
+]
