@@ -10,4 +10,7 @@ all : main.pdf
 	$(COMPILER) $(FLAGS) $<
 
 clean :
-	rm -f *.acn *.acr *.alg *.aux *.bbl *.blg *.dvi *.glg *.glo *.gls *.ist *.lof *.log *.lol *.lot *.out *.pdf *.toc *.pdfsync *.gz *.tdo *.xml *.gz *.bcf *.nav *.snm
+	rm -f *.acn *.acr *.alg *.aux *.bbl *.blg *.dvi *.glg *.glo *.gls *.ist *.lof *.log *.lol *.lot *.out *.toc *.pdfsync *.gz *.tdo *.xml *.gz *.bcf *.nav *.snm
+
+cleanall : clean
+	rm -f *.pdf
