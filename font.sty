@@ -8,9 +8,17 @@
 % Micro-typographic extensions
 \RequirePackage{microtype}
 
+% When using the beamer class, this workaround is necessary to set fonts (via fontspec)
+\@ifclassloaded{beamer}{
+    \usefonttheme{professionalfonts}
+    \def\set@font #1{\setmainfont{#1}\setsansfont{#1}}
+}{
+    \def\set@font{\setmainfont}
+}
+
 % Optional arguments are set as font
 \DeclareOption*{
-    \setmainfont{\CurrentOption}
+    \set@font{\CurrentOption}
 }
 
 % Latin Modern as default
