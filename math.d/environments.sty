@@ -32,112 +32,36 @@
 
 % Determine the language to generate language specific output
 \RequirePackage{iflang}
+\def\if@de{\IfLanguageName{ngerman}}
 
 % Pull in the AMS theorems package
 \RequirePackage{amsthm}
 
-% Theorem ------------------------------------------------------------------------------------ {{{1
+% Theorem, conjecture, corollary, lemma and proposition
 \theoremstyle{plain}
-\newtheorem{theorem}{
-    \IfLanguageName{ngerman}{Satz}          % German
-                            {Theorem}       % English
-}
-\newtheorem*{theorem*}{
-    \IfLanguageName{ngerman}{Satz}          % German
-                            {Theorem}       % English
-}
+\newtheorem {theorem} {\if@de{Satz}{Theorem}}
+\newtheorem*{theorem*}{\if@de{Satz}{Theorem}}
+\newtheorem {conjecture}[theorem]{\if@de{Vermutung}{Conjecture}}
+\newtheorem*{conjecture*}        {\if@de{Vermutung}{Conjecture}}
+\newtheorem {corollary}[theorem]{\if@de{Korollar}{Corollary}}
+\newtheorem*{corollary*}        {\if@de{Korollar}{Corollary}}
+\newtheorem {lemma}[theorem]{Lemma}
+\newtheorem*{lemma*}        {Lemma}
+\newtheorem {proposition}[theorem]{Proposition}
+\newtheorem*{proposition*}        {Proposition}
 
-% Conjecture --------------------------------------------------------------------------------- {{{1
-\theoremstyle{plain}
-\newtheorem{conjecture}[theorem]{
-    \IfLanguageName{ngerman}{Vermutung}     % German
-                            {Conjecture}    % English
-}
-\newtheorem*{conjecture*}{
-    \IfLanguageName{ngerman}{Vermutung}     % German
-                            {Conjecture}    % English
-}
-
-% Corollary ---------------------------------------------------------------------------------- {{{1
-\theoremstyle{plain}
-\newtheorem{corollary}[theorem]{
-    \IfLanguageName{ngerman}{Korollar}      % German
-                            {Corollary}     % English
-}
-\newtheorem*{corollary*}{
-    \IfLanguageName{ngerman}{Korollar}      % German
-                            {Corollary}     % English
-}
-
-% Definiion ---------------------------------------------------------------------------------- {{{1
+% Definiton and example
 \theoremstyle{definition}
-\newtheorem{definition}[theorem]{
-    \IfLanguageName{ngerman}{Definition}    % German
-                            {Definition}    % English
-}
-\newtheorem*{definition*}{
-    \IfLanguageName{ngerman}{Definition}    % German
-                            {Definition}    % English
-}
+\newtheorem {definition}[theorem]{Definiton}
+\newtheorem*{definition*}        {Definiton}
+\newtheorem {example}[theorem]{\if@de{Beispiel}{Example}}
+\newtheorem*{example*}        {\if@de{Beispiel}{Example}}
+\newtheorem {examples}[theorem]{\if@de{Beispiele}{Examples}}
+\newtheorem*{examples*}        {\if@de{Beispiele}{Examples}}
 
-% Example ------------------------------------------------------------------------------------ {{{1
-\theoremstyle{definition}
-\newtheorem{example}[theorem]{
-    \IfLanguageName{ngerman}{Beispiel}      % German
-                            {Example}       % English
-}
-\newtheorem*{example*}{
-    \IfLanguageName{ngerman}{Beispiel}      % German
-                            {Example}       % English
-}
-\newtheorem{examples}[theorem]{
-    \IfLanguageName{ngerman}{Beispiele}     % German
-                            {Examples}      % English
-}
-\newtheorem*{examples*}{
-    \IfLanguageName{ngerman}{Beispiele}     % German
-                            {Examples}      % English
-}
-
-% Lemma -------------------------------------------------------------------------------------- {{{1
-\theoremstyle{plain}
-\newtheorem{lemma}[theorem]{
-    \IfLanguageName{ngerman}{Lemma}         % German
-                            {Lemma}         % English
-}
-\newtheorem*{lemma*}{
-    \IfLanguageName{ngerman}{Lemma}         % German
-                            {Lemma}         % English
-}
-
-% Proposition -------------------------------------------------------------------------------- {{{1
-\theoremstyle{plain}
-\newtheorem{proposition}[theorem]{
-    \IfLanguageName{ngerman}{Proposition}   % German
-                            {Proposition}   % English
-}
-\newtheorem*{proposition*}{
-    \IfLanguageName{ngerman}{Proposition}   % German
-                            {Proposition}   % English
-}
-
-% Remark ------------------------------------------------------------------------------------- {{{1
+% Remark
 \theoremstyle{remark}
-\newtheorem{remark}[theorem]{
-    \IfLanguageName{ngerman}{Anmerkung}     % German
-                            {Remark}        % English
-}
-\newtheorem*{remark*}{
-    \IfLanguageName{ngerman}{Anmerkung}     % German
-                            {Remark}        % English
-}
-\newtheorem{remarks}[theorem]{
-    \IfLanguageName{ngerman}{Anmerkungen}   % German
-                            {Remarks}       % English
-}
-\newtheorem*{remarks*}{
-    \IfLanguageName{ngerman}{Anmerkungen}   % German
-                            {Remarks}       % English
-}
-
-% }}}1
+\newtheorem {remark}[theorem]{\if@de{Anmerkung}{Remark}}
+\newtheorem*{remark*}        {\if@de{Anmerkung}{Remark}}
+\newtheorem {remarks}[theorem]{\if@de{Anmerkungen}{Remarks}}
+\newtheorem*{remarks*}        {\if@de{Anmerkungen}{Remarks}}
