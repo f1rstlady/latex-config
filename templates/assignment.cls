@@ -29,7 +29,6 @@
 \LoadClass{article}
 
 % Dependencies
-\RequirePackage{font}
 \RequirePackage{language}
 \RequirePackage{layout}
 \RequirePackage{textflow}
