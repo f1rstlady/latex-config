@@ -65,12 +65,6 @@
     \let\theta\@theta
     \let\vartheta\@vartheta
 }
-\DeclareOption{doublestruck=bbm}{       % Double struck symbols with the bbm package
-    \newcommand{\mathbb}{\mathbbm}
-}
-\DeclareOption{doublestruck=dsfont}{    % Double struck symbols with the dsfont package
-    \newcommand{\mathbb}{\mathds}
-}
 \DeclareOption*{
     \PackageWarning{math}{Unknown option '\CurrentOption'}
 }
@@ -90,10 +84,6 @@
 
 % Draw split-level fractions
 \RequirePackage{xfrac}
-
-% Double struck fonts
-\RequirePackage{dsfont}
-\RequirePackage{bbm}
 
 % Commutative diagrams with the tikz-cd package
 \RequirePackage{tikz}
