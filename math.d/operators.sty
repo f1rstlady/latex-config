@@ -6,8 +6,6 @@
 \newcommand{\one}{\mathbb{1}}           % Unit
 \DeclareMathOperator{\sgn}{sgn}         % Signum
 \DeclareMathOperator{\Hom}{Hom}         % Homomorphism algebra
-\newcommand{\tensor}{\otimes}           % Tensor product
-\newcommand{\bigtensor}{\bigotimes}     % Tensor product
 \DeclarePairedDelimiter{\iprod}{\langle}{\rangle} % Inner product
 \DeclareMathOperator{\Tor}{Tor}         % Tor group
 \DeclareMathOperator{\Ext}{Ext}         % Ext group
@@ -25,7 +23,6 @@
 % Analysis
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert} % Absolute
 \DeclarePairedDelimiter{\norm}{\lVert}{\rVert} % Norm
-\newcommand{\del}{\partial}             % Del
 \let\d\relax                            % Derivation sign d
 \DeclareMathOperator{\d}{d}
 \DeclareMathOperator{\D}{D}             % Big derivation sign D
@@ -36,21 +33,14 @@
     \frac{\d}{\d\!#1}
 }
 \DeclareMathOperator{\grad}{grad}       % Gradient
-\newcommand{\lapl}{\Delta}              % Laplace Operator
-\newcommand{\integral}{\int}            % Alias for the integral
 
 % Category theory
 \DeclareMathOperator*{\colim}{colim}    % Colimes
 
 % Set theory
-\newcommand{\blank}{-}                  % Blank
 \DeclareMathOperator{\id}{id}           % Identity map
 \DeclareMathOperator{\img}{im}          % Image of a map
 \DeclareMathOperator{\pr}{pr}           % Projection map
-\newcommand{\union}{\cup}               % Union
-\newcommand{\intersection}{\cap}        % Intersection
-\newcommand{\bigunion}{\bigcup}         % Big union
-\newcommand{\bigintersection}{\bigcap}  % Big intersection
 \DeclarePairedDelimiterX{\set}[1]\{\}{  % A \set command to draw sets with adjusted \mid
     \providecommand{\given}{}
     \renewcommand{\given}{
@@ -63,6 +53,5 @@
 }
 
 % Topology
-\DeclareMathOperator{\pt}{pt}           % One-point set
 \DeclareMathOperator{\interior}{int}    % Interior of a set
 \DeclareMathOperator{\supp}{supp}       % Support
