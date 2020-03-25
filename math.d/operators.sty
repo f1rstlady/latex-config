@@ -2,22 +2,13 @@
 % Operator definitins for different branches.
 %
 
-% For the \ifblank macro
-\RequirePackage{etoolbox}
-
 % Algebra
 \newcommand{\one}{\mathbb{1}}           % Unit
 \DeclareMathOperator{\sgn}{sgn}         % Signum
 \DeclareMathOperator{\Hom}{Hom}         % Homomorphism algebra
 \newcommand{\tensor}{\otimes}           % Tensor product
 \newcommand{\bigtensor}{\bigotimes}     % Tensor product
-\DeclarePairedDelimiterX{\iprod}[2]{\langle}{\rangle}{ % Inner product
-    \ifblank{#1}{
-        \ifblank{#2}{
-            \cdot,\cdot
-        }{#1,#2}
-    }{#1,#2}
-}
+\DeclarePairedDelimiter{\iprod}{\langle}{\rangle} % Inner product
 \DeclareMathOperator{\Tor}{Tor}         % Tor group
 \DeclareMathOperator{\Ext}{Ext}         % Ext group
 \DeclareMathOperator{\rk}{rk}           % Rank
@@ -33,9 +24,7 @@
 
 % Analysis
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert} % Absolute
-\DeclarePairedDelimiterX{\norm}[1]{\lVert}{\rVert}{ % Norm
-    \ifblank{#1}{\:\cdot\:}{#1}
-}
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert} % Norm
 \newcommand{\del}{\partial}             % Del
 \let\d\relax                            % Derivation sign d
 \DeclareMathOperator{\d}{d}
