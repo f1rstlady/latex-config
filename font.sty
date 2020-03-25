@@ -5,6 +5,10 @@
 % Set the font via fontspec
 \RequirePackage{fontspec}
 
+% Scale every font except the main font naturally to the main font
+\defaultfontfeatures{Scale = MatchLowercase}
+\defaultfontfeatures[\rmfamily]{Scale = 1}
+
 % Micro-typographic extensions
 \RequirePackage{microtype}
 
