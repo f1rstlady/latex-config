@@ -13,9 +13,6 @@
     \PassOptionsToClass{\CurrentOption}{article}
 }
 
-% Use A4 layout by default and English as language
-\ExecuteOptions{a4paper,english}
-
 \ProcessOptions*
 
 % Base class

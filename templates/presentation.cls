@@ -13,9 +13,6 @@
     \PassOptionsToClass{\CurrentOption}{beamer}
 }
 
-% Use English as default
-\ExecuteOptions{english}
-
 \ProcessOptions*
 
 % Base class
