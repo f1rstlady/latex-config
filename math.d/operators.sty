@@ -16,10 +16,8 @@
 \newcommand{\RenewMathOperator}{\forcsvlist{\@RenewMathOperator}}
 
 % Algebra
-\NewMathOperator{sgn,Hom,Tor,Ext,rk,coimg,coker,GL,SL,SO,U,SU}
-\RenewMathOperator{O}
+\NewMathOperator{sgn,Hom,Tor,Ext,rk,coimg,coker}
 \DeclarePairedDelimiter{\iprod}{\langle}{\rangle} % Inner product
-\newcommand{\one}{\mathbb{1}} % Unit
 
 % Analysis
 \NewMathOperator{D,grad}
@@ -37,7 +35,7 @@
 \RenewMathOperator{Re,Im}
 
 % Set theory
-\NewMathOperator{id,im,pr}
+\NewMathOperator{im}
 \DeclarePairedDelimiterX{\set}[1]\{\}{ % A \set command to draw sets with adjusted mid
     \providecommand{\given}{}
     \renewcommand{\given}{
