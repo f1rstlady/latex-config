@@ -2,10 +2,6 @@
 % The assignment class is a collection of settings used to submit assignments at university.
 %
 
-% Identification
-\NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{assignment}[2020/03/12 Assignment submission class]
-
 % Options
 \DeclareOption{english}{
     \PassOptionsToPackage{english}{language}
