@@ -21,10 +21,8 @@
 % Base class
 \LoadClass[10pt,xcolor=svgnames]{beamer}
 
-% Dependencies
-\RequirePackage{language}
-\RequirePackage{textflow}
-\RequirePackage{miscellaneous}
+% Basic settings
+\RequirePackage{language,textflow,miscellaneous}
 
 % Use Source Sans Pro as default, Fira Mono as monospaced font scaled to the main font
 \RequirePackage[Source Sans Pro]{font}

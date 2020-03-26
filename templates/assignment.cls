@@ -28,11 +28,8 @@
 % Base class
 \LoadClass{article}
 
-% Dependencies
-\RequirePackage{language}
-\RequirePackage{layout}
-\RequirePackage{textflow}
-\RequirePackage{miscellaneous}
+% Basic settings
+\RequirePackage{language,layout,textflow,miscellaneous}
 
 % Mathematical environment
 \RequirePackage{math}

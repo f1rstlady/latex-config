@@ -1,5 +1,5 @@
 %
-% Customised header.
+% Custom header.
 %
 
 % Pass options to the fancyhdr package
@@ -9,7 +9,7 @@
 
 \ProcessOptions*
 
-% Enable the package for fancy headers and footers
+% Enable custom headers and footers
 \RequirePackage{fancyhdr}
 \pagestyle{fancy}
 
@@ -22,7 +22,7 @@
 % Redefine the \geometry command to update the header
 \renewcommand{\geometry}[1]{
     \Gm@clean
-    \setkeys{Gm}{#1}%
+    \setkeys{Gm}{#1}
     \Gm@process
     \f@nch@setoffs
 }

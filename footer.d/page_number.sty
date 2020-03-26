@@ -2,13 +2,11 @@
 % Footer, that shows the page number.
 %
 
-% Determine the language to generate language specific output.
-\RequirePackage{iflang}
+% Dependencies
+\RequirePackage{iflang}   % Determine the language to generate language specific output.
+\RequirePackage{lastpage} % Get the number of the last page.
 
-% Get the number of the last page.
-\RequirePackage{lastpage}
-
-% Different languages.
+% The footer
 \fancyfoot[C]{
     \IfLanguageName{ngerman}{Seite:~\thepage~von~\pageref{LastPage}}    % German
                             {Page:~\thepage~of~\pageref{LastPage}}      % English

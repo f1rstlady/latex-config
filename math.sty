@@ -4,17 +4,12 @@
 
 % Basic packages
 \RequirePackage[intlimits]{mathtools} % intlimits: boundaries in integrals are placed under
-                                    % respectively above the integral sign
-\RequirePackage{amssymb}
-\RequirePackage{wasysym}            % Additional symbols
-\mathtoolsset{centercolon}          % Center the colon vertically
-\RequirePackage{mathdots}           % Improved dots
-
-% Draw split-level fractions
-\RequirePackage{xfrac}
-
-% Commutative diagrams with the tikz-cd package
-\RequirePackage{tikz}
+                                      % respectively above the integral sign
+\mathtoolsset{centercolon}            % Center the colon vertically
+\RequirePackage{amssymb,wasysym}      % Symbols
+\RequirePackage{mathdots}             % Improved dots
+\RequirePackage{xfrac}                % Split-level fractions
+\RequirePackage{tikz}                 % Commutative diagrams with tikz-cd
 \usetikzlibrary{cd}
 
 % Shortcut for epsilon
@@ -47,9 +42,9 @@
 \renewcommand{\ge}{\geqslant}
 
 % Aliases for frequently used sets
-\newcommand{\N}{\mathbb{N}} % Natural numbers
-\newcommand{\Z}{\mathbb{Z}} % Integers
-\newcommand{\Q}{\mathbb{Q}} % Rational numbers
-\newcommand{\R}{\mathbb{R}} % Real numbers
-\newcommand{\C}{\mathbb{C}} % Complex numbers
-\newcommand{\K}{\mathbb{K}} % Field R or C
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\K}{\mathbb{K}}
