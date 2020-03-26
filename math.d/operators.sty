@@ -2,47 +2,40 @@
 % Operator definitins for different branches.
 %
 
+% Commands to set new and renew math operators, operating on lists
+\newcommand{\@NewMathOperator}[1]{
+    \expandafter\DeclareMathOperator\csname #1\endcsname{#1}
+}
+\newcommand{\@RenewMathOperator}[1]{
+    \expandafter\let\csname #1\endcsname\relax
+    \@NewMathOperator{#1}
+}
+
+\RequirePackage{etoolbox}
+\newcommand{\NewMathOperator}{\forcsvlist{\@NewMathOperator}}
+\newcommand{\RenewMathOperator}{\forcsvlist{\@RenewMathOperator}}
+
 % Algebra
-\newcommand{\one}{\mathbb{1}}           % Unit
-\DeclareMathOperator{\sgn}{sgn}         % Signum
-\DeclareMathOperator{\Hom}{Hom}         % Homomorphism algebra
+\NewMathOperator{sgn,Hom,Tor,Ext,rk,coimg,coker,GL,SL,SO,U,SU}
+\RenewMathOperator{O}
 \DeclarePairedDelimiter{\iprod}{\langle}{\rangle} % Inner product
-\DeclareMathOperator{\Tor}{Tor}         % Tor group
-\DeclareMathOperator{\Ext}{Ext}         % Ext group
-\DeclareMathOperator{\rk}{rk}           % Rank
-\DeclareMathOperator{\Span}{span}       % Span
-\DeclareMathOperator{\coimg}{coimg}     % Coimage
-\DeclareMathOperator{\coker}{coker}     % Cokernel
-\DeclareMathOperator{\GL}{GL}           % General linear group
-\DeclareMathOperator{\SL}{SL}           % Special linear group
-\let\O\relax                            % Orthogonal group
-\DeclareMathOperator{\O}{O}
-\DeclareMathOperator{\SO}{SO}           % Special orthogonal group
-\DeclareMathOperator{\U}{U}             % Unitary group
-\DeclareMathOperator{\SU}{SU}           % Special unitary group
+\newcommand{\one}{\mathbb{1}} % Unit
 
 % Analysis
+\NewMathOperator{D,grad}
+\RenewMathOperator{d}
 \DeclarePairedDelimiter{\abs}{\lvert}{\rvert} % Absolute
 \DeclarePairedDelimiter{\norm}{\lVert}{\rVert} % Norm
-\let\d\relax                            % Derivation sign d
-\DeclareMathOperator{\d}{d}
-\DeclareMathOperator{\D}{D}             % Big derivation sign D
-\newcommand{\deldelt}[1][t]{            % Partial derivation in t
-    \frac{\del}{\del#1}
-}
-\newcommand{\ddt}[1][t]{                % Derivation in t
-    \frac{\d}{\d\!#1}
-}
-\DeclareMathOperator{\grad}{grad}       % Gradient
+\newcommand{\deldelt}[1][t]{\frac{\del}{\del#1}} % Partial derivation in t
+\newcommand{\ddt}[1][t]{\frac{\d}{\d\!#1}} % Derivation in t
+\let\integ\int % Integral by \integ
 
 % Category theory
-\DeclareMathOperator*{\colim}{colim}    % Colimes
+\DeclareMathOperator*{\colim}{colim} % Colimes
 
 % Set theory
-\DeclareMathOperator{\id}{id}           % Identity map
-\DeclareMathOperator{\img}{im}          % Image of a map
-\DeclareMathOperator{\pr}{pr}           % Projection map
-\DeclarePairedDelimiterX{\set}[1]\{\}{  % A \set command to draw sets with adjusted \mid
+\NewMathOperator{id,im,pr}
+\DeclarePairedDelimiterX{\set}[1]\{\}{ % A \set command to draw sets with adjusted mid
     \providecommand{\given}{}
     \renewcommand{\given}{
         \nonscript\:\delimsize\vert
@@ -54,5 +47,5 @@
 }
 
 % Topology
-\DeclareMathOperator{\interior}{int}    % Interior of a set
-\DeclareMathOperator{\supp}{supp}       % Support
+\NewMathOperator{supp}
+\RenewMathOperator{int}
