@@ -6,7 +6,7 @@
 \DeclareOption{noparindent}{                    % No paragraph indentation
     \setlength{\parindent}{0pt}
 }
-\DeclareOption{parskip}{                        % Gap between paragraphs
+\DeclareOption{pargap}{                         % Gap between paragraphs
     \setlength{\parskip}{1.7\medskipamount}
 }
 \DeclareOption{linespacing=single}{             % Single line spacing
@@ -18,10 +18,10 @@
 \DeclareOption{linespacing=double}{             % Double line spacing
     \PassOptionsToPackage{doublespacing}{setspace}
 }
-\DeclareOption{linebreak=fussy}{                % Fussy line breaking
+\DeclareOption{linebreaking=fussy}{             % Fussy line breaking
     \fussy
 }
-\DeclareOption{linebreak=sloppy}{               % Sloppy line breaking
+\DeclareOption{linebreaking=sloppy}{            % Sloppy line breaking
     \sloppy
 }
 \DeclareOption*{
