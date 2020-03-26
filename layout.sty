@@ -7,10 +7,7 @@
     \PassOptionsToPackage{\CurrentOption}{geometry}
 }
 
-% A4 as paper and layout by default
-\ExecuteOptions{a4paper,layout=a4paper}
-
 \ProcessOptions*
 
-% Use the geometry package to set the layout
-\RequirePackage{geometry}
+% Use the geometry package with A4 as paper size and layout as default
+\RequirePackage[paper=a4paper,layout=a4paper]{geometry}
