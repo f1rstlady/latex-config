@@ -2,78 +2,6 @@
 % Math configuration
 %
 
-% Save the values of possibly changed letters
-\let\@epsilon\epsilon
-\let\@varepsilon\varepsilon
-\let\@kappa\kappa
-\let\@varkappa\varkappa
-\let\@phi\phi
-\let\@varphi\varphi
-\let\@rho\rho
-\let\@varrho\varrho
-\let\@sigma\sigma
-\let\@varsigma\varsigma
-\let\@theta\theta
-\let\@vartheta\vartheta
-
-% Options
-\DeclareOption{varepsilon}{             % Change \varepsilon and \epsilon
-    \let\epsilon\@varepsilon
-    \let\varepsilon\@epsilon
-}
-\DeclareOption{novarepsilon}{           % Reset \varepsilon and \epsilon to their original values
-    \let\epsilon\@epsilon
-    \let\varepsilon\@varepsilon
-}
-\DeclareOption{varkappa}{               % Change \varkappa and \kappa
-    \let\kappa\@varkappa
-    \let\varkappa\@kappa
-}
-\DeclareOption{novarkappa}{             % Reset \varkappa and \kappa to their original values
-    \let\kappa\@kappa
-    \let\varkappa\@varkappa
-}
-\DeclareOption{varphi}{                 % Change \varphi and \phi
-    \let\phi\@varphi
-    \let\varphi\@phi
-}
-\DeclareOption{novarphi}{               % Reset \varphi and \phi to their original values
-    \let\phi\@phi
-    \let\varphi\@varphi
-}
-\DeclareOption{varrho}{                 % Change \varrho and \rho
-    \let\rho\@varrho
-    \let\varrho\@rho
-}
-\DeclareOption{novarrho}{               % Reset \varrho and \rho to their original values
-    \let\rho\@rho
-    \let\varrho\@varrho
-}
-\DeclareOption{varsigma}{               % Change \varsigma and \sigma
-    \let\sigma\@varsigma
-    \let\varsigma\@sigma
-}
-\DeclareOption{novarsigma}{             % Reset \varsigma and \sigma to their original values
-    \let\sigma\@sigma
-    \let\varsigma\@varsigma
-}
-\DeclareOption{vartheta}{               % Change \vartheta and \theta
-    \let\theta\@vartheta
-    \let\vartheta\@theta
-}
-\DeclareOption{novartheta}{             % Reset \vartheta and \theta to their original values
-    \let\theta\@theta
-    \let\vartheta\@vartheta
-}
-\DeclareOption*{
-    \PackageWarning{math}{Unknown option '\CurrentOption'}
-}
-
-% Change epsilon's and phi's by default
-\ExecuteOptions{varepsilon,varphi}
-
-\ProcessOptions*
-
 % Basic packages
 \RequirePackage[intlimits]{mathtools} % intlimits: boundaries in integrals are placed under
                                     % respectively above the integral sign
@@ -91,6 +19,15 @@
 
 % Shortcut for epsilon
 \newcommand{\eps}{\epsilon}
+
+% Swap \epsilon and \varepsilon, \phi and \varphi
+\newcommand{\@swap}[1]{
+    \expandafter\let\expandafter\@tmp\csname #1\endcsname
+    \expandafter\let\csname #1\expandafter\endcsname\csname var#1\endcsname
+    \expandafter\let\csname var#1\endcsname\@tmp
+}
+\@swap{epsilon}
+\@swap{phi}
 
 % Long \to arrow
 \newcommand{\longto}{\longrightarrow}
