@@ -2,15 +2,8 @@
 % Custom footer.
 %
 
-% Pass options to the fancyhdr package
-\DeclareOption*{
-    \PassOptionsToPackage{\CurentOption}{fancyhdr}
-}
-
-\ProcessOptions*
-
-% Enable custom headers and footers
-\RequirePackage{fancyhdr}
+% Enable custom headers and footers (pass all options to fancyhdr)
+\RequirePackageWithOptions{fancyhdr}
 \pagestyle{fancy}
 
 % Set width of footrule to 0.4pt

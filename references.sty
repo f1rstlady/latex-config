@@ -2,13 +2,6 @@
 % References, using the hyperref and nameref packages
 %
 
-% Pass options to the hyperref package
-\DeclareOption*{
-    \PassOptionsToPackage{\CurrentOption}{hyperref}
-}
-
-\ProcessOptions*
-
 % Basic packages
-\RequirePackage{hyperref} % Create references, inner and outer ones
-\RequirePackage{nameref}  % Reference the name, too
+\RequirePackageWithOptions{hyperref} % Create references, inner and outer ones
+\RequirePackage{nameref}             % Reference the name, too

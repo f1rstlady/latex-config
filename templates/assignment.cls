@@ -9,9 +9,6 @@
 \DeclareOption{german}{
     \PassOptionsToPackage{german}{language}
 }
-\DeclareOption{a4paper}{
-    \PassOptionsToClass{\CurrentOption}{article}
-}
 \DeclareOption*{
     \PassOptionsToClass{\CurrentOption}{article}
 }
