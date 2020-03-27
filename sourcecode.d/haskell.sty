@@ -1,7 +1,10 @@
 % Remove pseudo keywords like 'String'
 \lstdefinelanguage{Haskell}{
-    otherkeywords = {=>},
-    keywords = {abstype,if,then,else,case,class,data,default,deriving,hiding,if,in,infix,infixl,infixr,import,instance,let,module,newtype,of,qualified,type,where,do},
+    otherkeywords = {=>,->,<-,=,_,::,$,++,!!},
+    keywords = {case,infix,infixl,infixr,of,do},
+    morekeywords = [2]{as,class,data,default,deriving,hiding,import,in,instance,let,module,newtype,qualified,type,where},
+    morekeywords = [3]{=>,->,<-,=,_,:,::,$,++,!!},
+    morekeywords = [4]{if,then,else},
     string = [b]",
     comment = [l]--,
     morecomment = [n]{\{-}{-\}},
