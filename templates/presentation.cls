@@ -16,7 +16,7 @@
 \ProcessOptions*
 
 % Base class
-\LoadClass[10pt,xcolor=svgnames]{beamer}
+\LoadClass[10pt,xcolor=x11names]{beamer}
 
 % Basic settings
 \RequirePackage{language,textflow,miscellaneous}
