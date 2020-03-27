@@ -26,31 +26,7 @@
     emphstyle = \color{NavyBlue},
 }
 
-% Options
-\DeclareOption{style=context}{
-    \lstset{
-        backgroundcolor = \color{gray!10},
-        numbers = left,
-        numberstyle = \tiny\color{Gray0},
-        title = \lstname,
-        frame = lines,
-    }
-}
-\DeclareOption{style=nocontext}{
-    \lstset{
-        backgroundcolor = {},
-        numbers = none,
-        caption = {},
-        frame = none,
-    }
-}
-\DeclareOption*{
-    \lstset{\CurrentOption}
-}
-
-\ProcessOptions*
-
-% Style with context information
+% Styles with and without context information
 \lstdefinestyle{context}{
     backgroundcolor = \color{gray!10},
     numbers = left,
@@ -58,14 +34,25 @@
     title = \lstname,
     frame = lines,
 }
-
-% Style without context information
 \lstdefinestyle{nocontext}{
     backgroundcolor = {},
     numbers = none,
     caption = {},
     frame = none,
 }
+
+% Options
+\DeclareOption{style=context}{
+    \lstset{style=context}
+}
+\DeclareOption{style=nocontext}{
+    \lstset{style=nocontext}
+}
+\DeclareOption*{
+    \lstset{\CurrentOption}
+}
+
+\ProcessOptions*
 
 % Custom language definitions
 \RequirePackage{sourcecode.d/mips}
