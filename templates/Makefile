@@ -1,7 +1,7 @@
 COMPILER?=lualatex
 FLAGS=-halt-on-error -file-line-error -synctex=1
 
-.PHONY : all clean
+.PHONY : all clean cleanall
 
 all : main.pdf
 
