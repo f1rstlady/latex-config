@@ -19,10 +19,12 @@
 \LoadClass[10pt,xcolor=x11names]{beamer}
 
 % Basic settings
-\RequirePackage{language,textflow,miscellaneous}
+\RequirePackage{f1rstlady/language}
+\RequirePackage{f1rstlady/textflow}
+\RequirePackage{f1rstlady/miscellaneous}
 
 % Use Source Sans Pro as default, Fira Mono as monospaced font scaled to the main font
-\RequirePackage[Source Sans Pro]{font}
+\RequirePackage[Source Sans Pro]{f1rstlady/font}
 \setmonofont{Fira Mono}
 
 % Theming

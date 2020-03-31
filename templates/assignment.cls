@@ -19,19 +19,22 @@
 \LoadClass{article}
 
 % Basic settings
-\RequirePackage{language,layout,textflow,miscellaneous}
+\RequirePackage{f1rstlady/language}
+\RequirePackage{f1rstlady/layout}
+\RequirePackage{f1rstlady/textflow}
+\RequirePackage{f1rstlady/miscellaneous}
 
 % Mathematical environment
-\RequirePackage{math}
-\RequirePackage{math.d/operators}
-\RequirePackage{math.d/environments}
+\RequirePackage{f1rstlady/math}
+\RequirePackage{f1rstlady/math.d/operators}
+\RequirePackage{f1rstlady/math.d/environments}
 
 % Source code integration
-\RequirePackage[style=context]{sourcecode}
+\RequirePackage[style=context]{f1rstlady/sourcecode}
 
 % Page number as footer
-\RequirePackage{footer}
-\RequirePackage{footer.d/page_number}
+\RequirePackage{f1rstlady/footer}
+\RequirePackage{f1rstlady/footer.d/page_number}
 
 % Custom header holding university, course, author and title
 \RequirePackage{header}
