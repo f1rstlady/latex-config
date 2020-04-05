@@ -13,10 +13,10 @@
 \usetikzlibrary{cd}
 
 % Shortcut for epsilon
-\newcommand{\eps}{\epsilon}
+\newcommand*{\eps}{\epsilon}
 
 % Swap \epsilon and \varepsilon, \phi and \varphi
-\newcommand{\@swap}[1]{
+\newcommand*{\@swap}[1]{
     \expandafter\let\expandafter\@tmp\csname #1\endcsname
     \expandafter\let\csname #1\expandafter\endcsname\csname var#1\endcsname
     \expandafter\let\csname var#1\endcsname\@tmp
@@ -25,23 +25,23 @@
 \@swap{phi}
 
 % Over- and underbrace as command in LaTeX syntax and with spacing problems fixed
-\newcommand{\Overbrace}[2]{{\overbrace{#1}_{#2}}}
-\newcommand{\Underbrace}[2]{{\underbrace{#1}_{#2}}}
+\newcommand*{\Overbrace}[2]{{\overbrace{#1}_{#2}}}
+\newcommand*{\Underbrace}[2]{{\underbrace{#1}_{#2}}}
 
 % Less-equal and greater-equal with slanted line
-\renewcommand{\le}{\leqslant}
-\renewcommand{\ge}{\geqslant}
+\renewcommand*{\le}{\leqslant}
+\renewcommand*{\ge}{\geqslant}
 
 % Long \to arrow
-\newcommand{\longto}{\longrightarrow}
+\newcommand*{\longto}{\longrightarrow}
 
 % Identity map
-\newcommand{\id}{\text{id}}
+\newcommand*{\id}{\text{id}}
 
 % Aliases for frequently used sets
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{\mathbb{Z}}
-\newcommand{\Q}{\mathbb{Q}}
-\newcommand{\R}{\mathbb{R}}
-\newcommand{\C}{\mathbb{C}}
-\newcommand{\K}{\mathbb{K}}
+\newcommand*{\N}{\mathbb{N}}
+\newcommand*{\Z}{\mathbb{Z}}
+\newcommand*{\Q}{\mathbb{Q}}
+\newcommand*{\R}{\mathbb{R}}
+\newcommand*{\C}{\mathbb{C}}
+\newcommand*{\K}{\mathbb{K}}

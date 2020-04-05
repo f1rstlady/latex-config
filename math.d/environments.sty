@@ -4,7 +4,7 @@
 
 % Options
 \DeclareOption{filledqed}{                  % Filled square as qed symbol
-    \renewcommand{\qedsymbol}{\blacksquare}
+    \renewcommand*{\qedsymbol}{\blacksquare}
 }
 \DeclareOption*{
     \PassOptionsToPackage{\CurrentOption}{amsthm}
