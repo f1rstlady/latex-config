@@ -2,6 +2,9 @@
 % Custom layout.
 %
 
+% A4 as paper size and layout by default
+\PassOptionsToPackage{paper=a4paper,layout=a4paper}{geometry}
+
 % Options
 \DeclareOption*{
     \PassOptionsToPackage{\CurrentOption}{geometry}
@@ -9,5 +12,5 @@
 
 \ProcessOptions*
 
-% Use the geometry package with A4 as paper size and layout as default
-\RequirePackage[paper=a4paper,layout=a4paper]{geometry}
+% Basic packages
+\RequirePackage{geometry}
