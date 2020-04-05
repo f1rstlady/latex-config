@@ -18,15 +18,9 @@
 \DeclareOption{linespacing=double}{             % Double line spacing
     \PassOptionsToPackage{doublespacing}{setspace}
 }
-\DeclareOption{linebreaking=fussy}{             % Fussy line breaking
-    \fussy
-}
-\DeclareOption{linebreaking=sloppy}{            % Sloppy line breaking
-    \sloppy
-}
 
 % By default fussy line break and single line spacing.
-\ExecuteOptions{linebreak=fussy,linespacing=single}
+\ExecuteOptions{linespacing=single}
 
 \ProcessOptions*
 
