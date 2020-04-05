@@ -10,13 +10,13 @@
     \setlength{\parskip}{1.7\medskipamount}
 }
 \DeclareOption{linespacing=single}{             % Single line spacing
-    \PassOptionsToPackage{singlespacing}{setspace}
+    \AtEndOfPackage{\singlespacing}
 }
 \DeclareOption{linespacing=onehalf}{            % Onehalf line spacing
-    \PassOptionsToPackage{onehalfspacing}{setspace}
+    \AtEndOfPackage{\onehalfspacing}
 }
 \DeclareOption{linespacing=double}{             % Double line spacing
-    \PassOptionsToPackage{doublespacing}{setspace}
+    \AtEndOfPackage{\doublespacing}
 }
 
 % By default fussy line break and single line spacing.
