@@ -38,7 +38,7 @@
 
 % Custom head holding university, course, author and title
 \RequirePackage{head}
-\geometry{head=28pt}
+\geometry{head=3ex}
 
 \def\@university{~}
 \def\@course{~}
