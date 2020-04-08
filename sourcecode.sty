@@ -3,12 +3,6 @@
 %
 
 % Options
-\DeclareOption{style=context}{
-    \AtEndOfPackage{\lstset{style=context}}
-}
-\DeclareOption{style=nocontext}{
-    \AtEndOfPackage{\lstset{style=nocontext}}
-}
 \DeclareOption*{
     \expandafter\AtEndOfPackage\expandafter{%
         \expandafter\lstset\expandafter{\CurrentOption}
