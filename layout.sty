@@ -6,6 +6,9 @@
 \PassOptionsToPackage{paper=a4paper,layout=a4paper}{geometry}
 
 % Options
+\DeclareOption{dynamicwidth}{ % Adapt the width dynamically to the font
+    \PassOptionsToPackage{width = 36em}{geometry}
+}
 \DeclareOption*{
     \PassOptionsToPackage{\CurrentOption}{geometry}
 }
