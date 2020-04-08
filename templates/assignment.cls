@@ -32,12 +32,12 @@
 % Source code integration
 \RequirePackage[style=context]{f1rstlady/sourcecode}
 
-% Page number as footer
-\RequirePackage{f1rstlady/footer}
-\RequirePackage{f1rstlady/footer.d/page_number}
+% Page number as foot
+\RequirePackage{f1rstlady/foot}
+\RequirePackage{f1rstlady/foot.d/page_number}
 
-% Custom header holding university, course, author and title
-\RequirePackage{header}
+% Custom head holding university, course, author and title
+\RequirePackage{head}
 \geometry{head=28pt}
 
 \def\@university{~}

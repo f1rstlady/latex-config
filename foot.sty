@@ -1,15 +1,15 @@
 %
-% Custom footer.
+% Custom foot.
 %
 
-% Enable custom headers and footers (pass all options to fancyhdr)
+% Enable custom head and foot (pass all options to fancyhdr)
 \RequirePackageWithOptions{fancyhdr}
 \pagestyle{fancy}
 
-% Set width of footrule to 0.4pt
+% Set the width of footrule to 0.4pt
 \renewcommand*{\footrulewidth}{0.4pt}
 
-% Redefine the \geometry command to update the footer
+% Redefine the \geometry command to update the head and foot
 \renewcommand*{\geometry}[1]{
     \Gm@clean
     \setkeys{Gm}{#1}

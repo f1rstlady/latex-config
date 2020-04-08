@@ -1,18 +1,18 @@
 %
-% Custom header.
+% Custom head.
 %
 
-% Enable custom headers and footers (pass all options to fancyhdr)
+% Enable custom head and foot (pass all options to fancyhdr)
 \RequirePackageWithOptions{fancyhdr}
 \pagestyle{fancy}
 
-% Set header height and gap to body
+% Set the head height and the gap to the body
 \geometry{head=12pt,headsep=25pt}
 
-% Set width of the headrule to 0.4pt
+% Set the width of the headrule to 0.4pt
 \renewcommand*{\headrulewidth}{0.4pt}
 
-% Redefine the \geometry command to update the header
+% Redefine the \geometry command to update the head and foot
 \renewcommand*{\geometry}[1]{
     \Gm@clean
     \setkeys{Gm}{#1}
