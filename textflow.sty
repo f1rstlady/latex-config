@@ -4,27 +4,19 @@
 
 % Options
 \DeclareOption{noparindent}{                    % No paragraph indentation
-    \setlength{\parindent}{0em}
-}
+    \setlength{\parindent}{0em}}
 \DeclareOption{pargap}{                         % Gap between paragraphs
-    \setlength{\parskip}{1ex}
-}
+    \setlength{\parskip}{1ex}}
 \DeclareOption{linespacing=single}{             % Single line spacing
-    \AtEndOfPackage{\singlespacing}
-}
+    \AtEndOfPackage{\singlespacing}}
 \DeclareOption{linespacing=onehalf}{            % Onehalf line spacing
-    \AtEndOfPackage{\onehalfspacing}
-}
+    \AtEndOfPackage{\onehalfspacing}}
 \DeclareOption{linespacing=double}{             % Double line spacing
-    \AtEndOfPackage{\doublespacing}
-}
+    \AtEndOfPackage{\doublespacing}}
 
 \ProcessOptions*
 
 % Basic packages
 \RequirePackage{setspace} % Line spacing
 \RequirePackage{hyphenat} % Hyphenation of words containing analphabetic characters
-\RequirePackage[
-    babel = true,
-    tracking = true,
-]{microtype}              % Micro-typographic refindements
+\RequirePackage[babel=true,tracking=true]{microtype} % Micro-typographic refindements

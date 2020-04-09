@@ -4,14 +4,11 @@
 
 % Options
 \DeclareOption{english}{                            % English (british)
-    \PassOptionsToPackage{british}{babel}
-}
+    \PassOptionsToPackage{british}{babel}}
 \DeclareOption{german}{                             % German
-    \PassOptionsToPackage{ngerman}{babel}
-}
-\DeclareOption*{                                    % Other languages
-    \PassOptionsToPackage{\CurrentOption}{babel}
-}
+    \PassOptionsToPackage{ngerman}{babel}}
+\DeclareOption*{                                    % Other options
+    \PassOptionsToPackage{\CurrentOption}{babel}}
 
 % By default English as primary and German as secondary language
 \ExecuteOptions{german,english}
@@ -19,4 +16,4 @@
 \ProcessOptions*
 
 % Basic packages
-\RequirePackage[shorthands = off]{babel}
+\RequirePackage[shorthands=off]{babel}

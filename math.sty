@@ -19,8 +19,7 @@
 \newcommand*{\@swap}[1]{
     \expandafter\let\expandafter\@tmp\csname #1\endcsname
     \expandafter\let\csname #1\expandafter\endcsname\csname var#1\endcsname
-    \expandafter\let\csname var#1\endcsname\@tmp
-}
+    \expandafter\let\csname var#1\endcsname\@tmp}
 \@swap{epsilon}
 \@swap{phi}
 

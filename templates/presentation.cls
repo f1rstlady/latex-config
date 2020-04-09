@@ -4,14 +4,11 @@
 
 % Options
 \DeclareOption{english}{
-    \PassOptionsToPackage{english}{language}
-}
+    \PassOptionsToPackage{english}{language}}
 \DeclareOption{german}{
-    \PassOptionsToPackage{german}{language}
-}
+    \PassOptionsToPackage{german}{language}}
 \DeclareOption*{
-    \PassOptionsToClass{\CurrentOption}{beamer}
-}
+    \PassOptionsToClass{\CurrentOption}{beamer}}
 
 \ProcessOptions*
 
