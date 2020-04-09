@@ -3,12 +3,9 @@
 %
 
 % Options
-\DeclareOption{english}{
-    \PassOptionsToPackage{english}{language}}
-\DeclareOption{german}{
-    \PassOptionsToPackage{german}{language}}
-\DeclareOption*{
-    \PassOptionsToClass{\CurrentOption}{beamer}}
+\DeclareOption{english}{\PassOptionsToPackage{english}{language}}
+\DeclareOption{german}{\PassOptionsToPackage{german}{language}}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{beamer}}
 
 \ProcessOptions*
 

@@ -3,16 +3,8 @@
 %
 
 % Options
-\DeclareOption{noparindent}{                    % No paragraph indentation
-    \setlength{\parindent}{0em}}
-\DeclareOption{pargap}{                         % Gap between paragraphs
-    \setlength{\parskip}{1ex}}
-\DeclareOption{linespacing=single}{             % Single line spacing
-    \AtEndOfPackage{\singlespacing}}
-\DeclareOption{linespacing=onehalf}{            % Onehalf line spacing
-    \AtEndOfPackage{\onehalfspacing}}
-\DeclareOption{linespacing=double}{             % Double line spacing
-    \AtEndOfPackage{\doublespacing}}
+\DeclareOption{noparindent}{\setlength{\parindent}{0em}} % No paragraph indentation
+\DeclareOption{pargap}{\setlength{\parskip}{1ex}} % Gap between paragraphs
 
 \ProcessOptions*
 

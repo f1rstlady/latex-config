@@ -3,12 +3,9 @@
 %
 
 % Options
-\DeclareOption{english}{                            % English (british)
-    \PassOptionsToPackage{british}{babel}}
-\DeclareOption{german}{                             % German
-    \PassOptionsToPackage{ngerman}{babel}}
-\DeclareOption*{                                    % Other options
-    \PassOptionsToPackage{\CurrentOption}{babel}}
+\DeclareOption{english}{\PassOptionsToPackage{british}{babel}}
+\DeclareOption{german}{\PassOptionsToPackage{ngerman}{babel}}
+\DeclareOption*{\PassOptionsToPackage{\CurrentOption}{babel}}
 
 % By default English as primary and German as secondary language
 \ExecuteOptions{german,english}
