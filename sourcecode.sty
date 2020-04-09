@@ -2,17 +2,8 @@
 % Integration of source code with the listings package.
 %
 
-% Options
-\DeclareOption*{
-    \expandafter\AtEndOfPackage\expandafter{%
-        \expandafter\lstset\expandafter{\CurrentOption}
-    }
-}
-
-\ProcessOptions*
-
 % Basic packages
-\RequirePackage{listings}
+\RequirePackageWithOptions{listings}
 
 % Default settings
 \lstset{
