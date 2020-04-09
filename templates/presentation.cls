@@ -23,9 +23,10 @@
 \RequirePackage{f1rstlady/textflow}
 \RequirePackage{f1rstlady/miscellaneous}
 
-% Use Source Sans Pro as default, Fira Mono as monospaced font scaled to the main font
+% Use Source Sans Pro as default, Fira Mono as monospaced font
+\usefonttheme{professionalfonts}
 \RequirePackage{f1rstlady/font}
-\set@font{Source Sans Pro}
+\setsansfont{Source Sans Pro}
 \setmonofont{Fira Mono}
 
 % Theming

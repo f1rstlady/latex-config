@@ -2,17 +2,9 @@
 % Fonts.
 %
 
-% Set the font via fontspec
+% Basic packages
 \RequirePackageWithOptions{fontspec}
 
 % Scale every font except the main font naturally to the main font
 \defaultfontfeatures{Scale = MatchLowercase}
 \defaultfontfeatures[\rmfamily]{Scale = 1}
-
-% When using the beamer class, this workaround is necessary to set fonts (via fontspec)
-\@ifclassloaded{beamer}{
-    \usefonttheme{professionalfonts}
-    \def\set@font #1{\setmainfont{#1}\setsansfont{#1}}
-}{
-    \def\set@font{\setmainfont}
-}
