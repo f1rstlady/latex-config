@@ -2,20 +2,12 @@
 % Theorem environments
 %
 
-% Options
-\DeclareOption{filledqed}{ % Filled square as qed symbol
-    \renewcommand*{\qedsymbol}{\blacksquare}}
-\DeclareOption*{
-    \PassOptionsToPackage{\CurrentOption}{amsthm}}
-
-\ProcessOptions*
+% Basic packages
+\RequirePackageWithOptions{amsthm}
 
 % Determine the language to generate language specific output
 \RequirePackage{iflang}
 \def\if@de{\IfLanguageName{ngerman}}
-
-% Pull in the AMS theorems package
-\RequirePackage{amsthm}
 
 % Theorem, conjecture, corollary, lemma and proposition
 \theoremstyle{plain}
