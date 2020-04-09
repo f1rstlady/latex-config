@@ -2,17 +2,8 @@
 % Fonts.
 %
 
-% Optional arguments are set as font
-\DeclareOption*{
-    \expandafter\AtEndOfPackage\expandafter{%
-        \expandafter\set@font\expandafter{\CurrentOption}
-    }
-}
-
-\ProcessOptions*
-
 % Set the font via fontspec
-\RequirePackage{fontspec}
+\RequirePackageWithOptions{fontspec}
 
 % Scale every font except the main font naturally to the main font
 \defaultfontfeatures{Scale = MatchLowercase}
