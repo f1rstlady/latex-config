@@ -15,12 +15,10 @@
 \newcommand*{\eps}{\epsilon}
 
 % Swap \epsilon and \varepsilon, \phi and \varphi
-\newcommand*{\@swap}[1]{
-    \expandafter\let\expandafter\@tmp\csname #1\endcsname
-    \expandafter\let\csname #1\expandafter\endcsname\csname var#1\endcsname
-    \expandafter\let\csname var#1\endcsname\@tmp}
-\@swap{epsilon}
-\@swap{phi}
+\RequirePackage{etoolbox}
+\newcommand*{\@swap}[1]{\letcs{\@tmp}{#1}\csletcs{#1}{var#1}\cslet{var#1}{\@tmp}}
+\newcommand*{\swap}{\forcsvlist{\@swap}}
+\swap{epsilon,phi}
 
 % Over- and underbrace as command in LaTeX syntax and with spacing problems fixed
 \newcommand*{\Overbrace}[2]{{\overbrace{#1}_{#2}}}
