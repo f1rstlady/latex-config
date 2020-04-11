@@ -11,7 +11,6 @@
 
 % Algebra
 \NewMathOperator{sgn,Hom,Tor,Ext,rk,coimg,coker}
-\DeclarePairedDelimiter{\iprod}{\langle}{\rangle} % Inner product
 
 % Analysis
 \NewMathOperator{D,grad}
@@ -30,7 +29,7 @@
 
 % Set theory
 \NewMathOperator{im}
-\DeclarePairedDelimiterX{\set}[1]\{\}{ % A \set command to draw sets with adjusted mid
+\DeclarePairedDelimiterX{\set}[1]\lbrace\rbrace{ % A \set command to draw sets with adjusted mid
     \providecommand{\given}{}
     \renewcommand*{\given}{
         \nonscript\:\delimsize\vert
