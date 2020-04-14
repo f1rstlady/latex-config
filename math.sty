@@ -1,18 +1,13 @@
-%
-% Math configuration
-%
-
-% Basic packages
-\RequirePackage[intlimits]{mathtools} % intlimits: boundaries in integrals are placed under
+\RequirePackage[intlimits]{mathtools} % Boundaries in integrals are placed under
                                       % respectively above the integral sign
-\RequirePackage{amssymb,wasysym}      % Symbols
-\RequirePackage{mathdots}             % Improved dots
-\RequirePackage{xfrac}                % Split-level fractions
-\RequirePackage{tikz}                 % Commutative diagrams with tikz-cd
+\RequirePackage{amssymb,wasysym}
+\RequirePackage{mathdots} % Improved dots
+\RequirePackage{xfrac} % Split-level fractions
+\RequirePackage{tikz} % Commutative diagrams with tikz-cd
 \usetikzlibrary{cd}
 
-% Shortcut for epsilon
 \newcommand*{\eps}{\epsilon}
+\newcommand*{\longto}{\longrightarrow}
 
 % Swap \epsilon and \varepsilon, \phi and \varphi
 \RequirePackage{etoolbox}
@@ -20,7 +15,6 @@
 \newcommand*{\swap}{\forcsvlist{\@swap}}
 \swap{epsilon,phi}
 
-% Braces
 \DeclarePairedDelimiter{\ea}{\langle}{\rangle}
 \DeclarePairedDelimiter{\eb}{\lbrack}{\rbrack}
 \DeclarePairedDelimiter{\ec}{\lbrace}{\rbrace}
@@ -34,13 +28,8 @@
 \renewcommand*{\le}{\leqslant}
 \renewcommand*{\ge}{\geqslant}
 
-% Long \to arrow
-\newcommand*{\longto}{\longrightarrow}
-
-% Identity map
 \newcommand*{\id}{\mathrm{id}}
 
-% Aliases for frequently used sets
 \newcommand*{\N}{\mathbb{N}}
 \newcommand*{\Z}{\mathbb{Z}}
 \newcommand*{\Q}{\mathbb{Q}}

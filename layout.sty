@@ -1,15 +1,7 @@
-%
-% Custom layout.
-%
+\PassOptionsToPackage{paper=a4paper,layout=a4paper}{geometry} % A4 paper size and layout
 
-% A4 as paper size and layout by default
-\PassOptionsToPackage{paper=a4paper,layout=a4paper}{geometry}
-
-% Options
-\DeclareOption{dynamicwidth}{\PassOptionsToPackage{width=36em}{geometry}}
+\DeclareOption{dynamicwidth}{\PassOptionsToPackage{width=36em}{geometry}} % Adapth width to the font
 \DeclareOption*{\PassOptionsToPackage{\CurrentOption}{geometry}}
-
 \ProcessOptions*
 
-% Basic packages
 \RequirePackage{geometry}

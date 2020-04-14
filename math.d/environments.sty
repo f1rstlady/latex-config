@@ -1,15 +1,7 @@
-%
-% Theorem environments
-%
-
-% Basic packages
 \RequirePackageWithOptions{amsthm}
-
-% Determine the language to generate language specific output
 \RequirePackage{iflang}
 \def\if@de{\IfLanguageName{ngerman}}
 
-% Theorem, conjecture, corollary, lemma and proposition
 \theoremstyle{plain}
 \newtheorem {theorem} {\if@de{Satz}{Theorem}}
 \newtheorem*{theorem*}{\if@de{Satz}{Theorem}}
@@ -20,14 +12,12 @@
 \newtheorem {proposition}[theorem]{Proposition}
 \newtheorem*{proposition*}        {Proposition}
 
-% Definiton and example
 \theoremstyle{definition}
 \newtheorem {definition}[theorem]{Definiton}
 \newtheorem*{definition*}        {Definiton}
 \newtheorem {example}[theorem]{\if@de{Beispiel}{Example}}
 \newtheorem*{example*}        {\if@de{Beispiel}{Example}}
 
-% Remark
 \theoremstyle{remark}
 \newtheorem {remark}[theorem]{\if@de{Bemerkung}{Remark}}
 \newtheorem*{remark*}        {\if@de{Bemerkung}{Remark}}

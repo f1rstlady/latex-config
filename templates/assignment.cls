@@ -1,29 +1,18 @@
-%
-% The assignment class is a collection of settings used to submit assignments at university.
-%
-
-% Options
 \DeclareOption{english}{\PassOptionsToPackage{english}{language}}
 \DeclareOption{german}{\PassOptionsToPackage{german}{language}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
-
 \ProcessOptions*
 
-% Base class
 \LoadClass{article}
-
-% Basic settings
 \RequirePackage{f1rstlady/language}
 \RequirePackage{f1rstlady/layout}
 \RequirePackage{f1rstlady/textflow}
 \RequirePackage{f1rstlady/miscellaneous}
 
-% Mathematical environment
 \RequirePackage{f1rstlady/math}
 \RequirePackage{f1rstlady/math.d/operators}
 \RequirePackage{f1rstlady/math.d/environments}
 
-% Source code integration
 \RequirePackage[style=context]{f1rstlady/sourcecode}
 
 % Page number as foot
