@@ -1,6 +1,6 @@
 DOCNAME?=main
 COMPILER?=lualatex
-FLAGS=-halt-on-error -file-line-error -synctex=1
+FLAGS=--halt-on-error --file-line-error --synctex=1
 
 .PHONY : all clean cleanall $(DOCNAME).pdf
 
