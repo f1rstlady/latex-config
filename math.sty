@@ -27,9 +27,8 @@
 
 \newcommand*{\id}{\mathrm{id}}
 
-\newcommand*{\N}{\mathbb{N}}
-\newcommand*{\Z}{\mathbb{Z}}
-\newcommand*{\Q}{\mathbb{Q}}
-\newcommand*{\R}{\mathbb{R}}
-\newcommand*{\C}{\mathbb{C}}
-\newcommand*{\K}{\mathbb{K}}
+% Commands to set shortcuts for fields, operating on lists
+\newcommand*{\@newfield}[1]{
+    \expandafter\newcommand\expandafter*\expandafter{\csname #1\endcsname}{\mathbb{#1}}}
+\newcommand*{\newfield}{\forcsvlist{\@newfield}}
+\newfield{N,Z,Q,R,C,K}
