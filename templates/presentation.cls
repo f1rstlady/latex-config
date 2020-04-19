@@ -15,7 +15,6 @@
 % Basic settings
 \RequirePackage{f1rstlady/language}
 \RequirePackage{f1rstlady/textflow}
-\RequirePackage{f1rstlady/miscellaneous}
 
 % Use Source Sans Pro as default, Fira Mono as monospaced font
 \usefonttheme{professionalfonts}

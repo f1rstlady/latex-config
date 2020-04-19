@@ -1,29 +1,6 @@
 %
-% Miscellaneous settings, that are usually used.
+% Miscellaneous settings.
 %
 
-% Colors
-\RequirePackage[x11names]{xcolor}
-
 % Use shortcuts for specifying the labelling of enumerations.
-% When the beamer class is used, do not activate this since it uses the enumitem package which
-% conflicts which beamer's bulleting and enumeration style.
-\@ifclassloaded{beamer}
-    {}
-    {\RequirePackage[shortlabels]{enumitem}}
-
-% Lists and enumerations with multiple rows or columns
-\RequirePackage{multirow}
-\RequirePackage{multicol}
-
-% Framed, shaded and similarly outlined text boxes
-\RequirePackage{framed}
-
-% To put pages in landscape
-\RequirePackage{pdflscape}
-
-% Integration of graphics
-\RequirePackage{graphicx}
-
-% Advanced Quotations
-\RequirePackage{csquotes}
+\RequirePackage[shortlabels]{enumitem}
