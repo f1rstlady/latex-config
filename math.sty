@@ -25,8 +25,20 @@
 \renewcommand*{\le}{\leqslant}
 \renewcommand*{\ge}{\geqslant}
 
+% A \set command to draw sets with adjusted mid
+\DeclarePairedDelimiterX{\set}[1]\lbrace\rbrace{
+    \def\given{\nonscript\:\delimsize\vert \allowbreak\nonscript\:\mathopen{}}
+    #1}
+
 % Commands to set shortcuts for fields, operating on lists
 \newcommand*{\@newfield}[1]{
     \expandafter\newcommand\expandafter*\expandafter{\csname #1\endcsname}{\mathbb{#1}}}
 \newcommand*{\newfield}{\forcsvlist{\@newfield}}
 \newfield{N,Z,Q,R,C,K}
+
+% Commands to set new and renew math operators, operating on lists
+\newcommand*{\@newoperator}[1]{\expandafter\DeclareMathOperator\csname #1\endcsname{#1}}
+\newcommand*{\@renewoperator}[1]{\csundef{#1}\@newoperator{#1}}
+\newcommand*{\newoperator}{\forcsvlist{\@newoperator}}
+\newcommand*{\renewoperator}{\forcsvlist{\@renewoperator}}
+\renewoperator{Re,Im}
