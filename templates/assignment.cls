@@ -8,19 +8,15 @@
 \RequirePackage{f1rstlady/layout}
 \RequirePackage{f1rstlady/textflow}
 \RequirePackage{f1rstlady/miscellaneous}
-
 \RequirePackage{f1rstlady/math}
-\RequirePackage{f1rstlady/math.d/operators}
-\RequirePackage{f1rstlady/math.d/environments}
-
-\RequirePackage[style=context]{f1rstlady/sourcecode}
+\RequirePackage{f1rstlady/sourcecode}
 
 % Page number as foot
 \RequirePackage{f1rstlady/foot}
 \RequirePackage{f1rstlady/foot.d/page_number}
 
 % Custom head holding university, course, author and title
-\RequirePackage{head}
+\RequirePackage{f1rstlady/head}
 \geometry{head=3ex}
 
 \def\@university{~}
