@@ -8,5 +8,9 @@
 \renewcommand*{\headrulewidth}{0.4pt}
 
 % Redefine the \geometry command to update the head and foot
-\let\@geometry\geometry
-\renewcommand*{\geometry}[1]{\@geometry{#1}\f@nch@setoffs}
+\renewcommand*{\geometry}[1]{
+    \Gm@clean
+    \setkeys{Gm}{#1}
+    \Gm@process
+    \f@nch@setoffs
+}
