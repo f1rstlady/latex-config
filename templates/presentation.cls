@@ -7,11 +7,11 @@
 \RequirePackage{f1rstlady/language}
 \RequirePackage{f1rstlady/textflow}
 
-% Use Source Sans Pro as default, Fira Mono as monospaced font
+% Use Source Sans Pro as default, Source Code Pro as monospaced font
 \usefonttheme{professionalfonts}
 \RequirePackage{f1rstlady/font}
 \setsansfont{Source Sans Pro}
-\setmonofont{Fira Mono}
+\setmonofont{Source Code Pro}
 
 % Theming
 \usetheme{Madrid}
