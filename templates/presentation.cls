@@ -3,7 +3,7 @@
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{beamer}}
 \ProcessOptions*
 
-\LoadClass[10pt,xcolor=x11names]{beamer}
+\LoadClass[xcolor=x11names]{beamer}
 \RequirePackage{f1rstlady/language}
 \RequirePackage{f1rstlady/textflow}
 
