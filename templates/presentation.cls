@@ -17,7 +17,6 @@
 \setmonofont{Source Code Pro}
 
 % Theming
-\usetheme{Madrid}
 \usecolortheme{beaver}
 
 % vi: ft=tex
