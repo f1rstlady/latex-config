@@ -18,5 +18,11 @@
 
 % Theming
 \usecolortheme{beaver}
+\addtobeamertemplate{navigation symbols}{}{% frame numbers in the lower right corner
+    \usebeamerfont{footline}
+    \usebeamercolor[fg]{footline}
+    \hspace{1em}
+    \raisebox{0.5ex}[0ex][0ex]{\insertframenumber/\inserttotalframenumber}
+}
 
 % vi: ft=tex
