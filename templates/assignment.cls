@@ -1,5 +1,5 @@
-\DeclareOption{english}{\PassOptionsToPackage{english}{language}}
-\DeclareOption{german}{\PassOptionsToPackage{german}{language}}
+\DeclareOption{english}{\PassOptionsToPackage{english}{f1rstlady/language}}
+\DeclareOption{german}{\PassOptionsToPackage{german}{f1rstlady/language}}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions*
 
