@@ -34,5 +34,3 @@
 \fancyhead[L]{\@university\\\@course}
 \fancyhead[C]{\large\textbf{\@title}}
 \fancyhead[R]{\@author}
-
-% vi: ft=tex

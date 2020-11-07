@@ -24,5 +24,3 @@
     \hspace{1em}
     \raisebox{0.5ex}[0ex][0ex]{\insertframenumber/\inserttotalframenumber}
 }
-
-% vi: ft=tex
