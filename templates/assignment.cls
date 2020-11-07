@@ -1,11 +1,10 @@
 \DeclareOption{english}{\PassOptionsToPackage{english}{f1rstlady/language}}
 \DeclareOption{german}{\PassOptionsToPackage{german}{f1rstlady/language}}
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
+\DeclareOption*{\PassOptionsToClass{\CurrentOption}{scrartcl}}
 \ProcessOptions*
 
-\LoadClass{article}
+\LoadClass{scrartcl}
 \RequirePackage{f1rstlady/language}
-\RequirePackage{f1rstlady/layout}
 \RequirePackage{f1rstlady/textflow}
 \RequirePackage{f1rstlady/miscellaneous}
 \RequirePackage{f1rstlady/math}
