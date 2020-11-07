@@ -13,7 +13,10 @@
 
 % Page number as foot
 \RequirePackage{f1rstlady/foot}
-\RequirePackage{f1rstlady/foot.d/page_number}
+\RequirePackage{iflang,lastpage}
+\fancyfoot[C]{\IfLanguageName{ngerman}
+    {Seite:~\thepage~von~\pageref{LastPage}} % German
+    {Page:~\thepage~of~\pageref{LastPage}}}  % English
 
 % Custom head holding university, course, author and title
 \RequirePackage{f1rstlady/head}
