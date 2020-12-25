@@ -2,7 +2,7 @@ DOCUMENTS?=main.pdf
 COMPILER?=lualatex
 FLAGS?=--halt-on-error --file-line-error --synctex=1
 
-.PHONY : all clean cleanall $(DOCUMENTS)
+.PHONY : all clean cleanall
 
 all : $(DOCUMENTS)
 
