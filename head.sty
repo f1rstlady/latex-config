@@ -1,15 +1,9 @@
-\RequirePackageWithOptions{fancyhdr}
-\pagestyle{fancy}
+\RequirePackageWithOptions{scrlayer-scrpage}
+\pagestyle{scrheadings}
 
-% Set the head height and the gap to the body
-\geometry{head=3ex,headsep=5ex}
+% Include the head into the text body
+\KOMAoptions{headinclude=true}
+\recalctypearea
 
-% Set the width of the headrule to 0.4pt
-\renewcommand*{\headrulewidth}{0.4pt}
-
-% Redefine the \geometry command to update the head and foot
-\renewcommand*{\geometry}[1]{
-    \Gm@clean
-    \setkeys{Gm}{#1}
-    \Gm@process
-    \f@nch@setoffs}
+% Rule to separate the head
+\setheadsepline{0.7pt}

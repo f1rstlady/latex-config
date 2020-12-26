@@ -14,19 +14,18 @@
 % Page number as foot
 \RequirePackage{f1rstlady/foot}
 \RequirePackage{iflang,lastpage}
-\fancyfoot[C]{\IfLanguageName{ngerman}
+\chead{\IfLanguageName{ngerman}
     {Seite:~\thepage~von~\pageref{LastPage}} % German
     {Page:~\thepage~of~\pageref{LastPage}}}  % English
 
 % Custom head holding university, course, author and title
 \RequirePackage{f1rstlady/head}
-\geometry{head=3ex}
 
 \def\@university{~}
 \def\@course{~}
 \newcommand*{\university}[1]{\def\@university{#1}}
 \newcommand*{\course}[1]{\def\@course{#1}}
 
-\fancyhead[L]{\@university\\\@course}
-\fancyhead[C]{\large\textbf{\@title}}
-\fancyhead[R]{\@author}
+\ihead{\@university\\\@course}
+\chead{\large\textbf{\@title}}
+\ohead{\@author}
