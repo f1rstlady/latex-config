@@ -21,3 +21,7 @@
     \usebeamercolor[fg]{footline}
     \hspace{1em}
     \raisebox{0.5ex}[0ex][0ex]{\insertframenumber/\inserttotalframenumber}}
+
+% To set minor items in lists smaller and grey
+\RequirePackage{relsize}
+\newcommand*{\minor}[1]{\textcolor{grey!80}{\smaller #1}}
