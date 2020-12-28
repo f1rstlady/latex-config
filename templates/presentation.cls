@@ -11,8 +11,8 @@
 % Draw URLs in blue and all other links black
 \hypersetup{
     colorlinks,
-    linkcolor =,
-    urlcolor = DodgerBlue4}
+    allcolors = black,
+    urlcolor = RoyalBlue3}
 
 % Theming
 \usecolortheme{beaver}
