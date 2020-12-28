@@ -4,6 +4,7 @@
 \ProcessOptions*
 
 \LoadClass{scrartcl}
+\RequirePackage{f1rstlady/font}
 \RequirePackage{f1rstlady/language}
 \RequirePackage{f1rstlady/textflow}
 \RequirePackage{f1rstlady/miscellaneous}
