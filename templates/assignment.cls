@@ -1,6 +1,6 @@
-\DeclareOption{english}{\PassOptionsToPackage{english}{f1rstlady/language}}
-\DeclareOption{german}{\PassOptionsToPackage{german}{f1rstlady/language}}
-\DeclareOption*{\PassOptionsToClass{\CurrentOption}{scrartcl}}
+\DeclareOption{english} {\PassOptionsToPackage{english}{f1rstlady/language}}
+\DeclareOption{german}  {\PassOptionsToPackage{german}{f1rstlady/language}}
+\DeclareOption*         {\PassOptionsToClass{\CurrentOption}{scrartcl}}
 \ProcessOptions*
 
 \LoadClass{scrartcl}
