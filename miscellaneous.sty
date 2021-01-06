@@ -1,5 +1,6 @@
-% Use shortcuts for specifying the labelling of enumerations and enable inline lists
-\RequirePackage[shortlabels,inline]{enumitem}
+% Use shortcuts for specifying the labelling of enumerations and enable inline lists, but only if
+% the document class is not beamer.
+\@ifclassloaded{beamer}{}{\RequirePackage[shortlabels,inline]{enumitem}}
 
 % Give the source of an image in tiny, grey text
 \newcommand*{\source}[1]{\textcolor{grey!40}{\tiny{Quelle: #1}}}

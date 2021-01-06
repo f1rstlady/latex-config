@@ -7,6 +7,7 @@
 \RequirePackage{f1rstlady/font}
 \RequirePackage{f1rstlady/language}
 \RequirePackage{f1rstlady/textflow}
+\RequirePackage{f1rstlady/miscellaneous}
 
 % Draw URLs in blue and all other links black
 \hypersetup{
