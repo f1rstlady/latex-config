@@ -11,15 +11,13 @@
 \RequirePackage{f1rstlady/math}
 \RequirePackage{f1rstlady/sourcecode}
 
-% Page number as foot
-\RequirePackage{f1rstlady/foot}
+% Head holds university, course, author and title, page number as foot
+\RequirePackage[footsepline,headsepline,headinclude,headlines=2]{f1rstlady/headfoot}
+\addtokomafont{pagehead}{\normalshape}
 \RequirePackage{iflang,lastpage}
 \chead{\IfLanguageName{ngerman}
     {Seite:~\thepage~von~\pageref{LastPage}} % German
     {Page:~\thepage~of~\pageref{LastPage}}}  % English
-
-% Custom head holding university, course, author and title
-\RequirePackage{f1rstlady/head}
 
 \def\@university{~}
 \def\@course{~}
