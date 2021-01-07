@@ -3,7 +3,7 @@
 \DeclareOption*         {\PassOptionsToClass{\CurrentOption}{scrartcl}}
 \ProcessOptions*
 
-\LoadClass{scrartcl}
+\LoadClass[footsepline,headsepline,headinclude,headlines=2]{scrartcl}
 \RequirePackage{f1rstlady/font}
 \RequirePackage{f1rstlady/language}
 \RequirePackage{f1rstlady/textflow}
@@ -12,9 +12,9 @@
 \RequirePackage{f1rstlady/sourcecode}
 
 % Head holds university, course, author and title, page number as foot
-\RequirePackage[footsepline,headsepline,headinclude,headlines=2]{f1rstlady/headfoot}
+\RequirePackage{scrlayer-scrpage,iflang,lastpage}
+\pagestyle{scrheadings}
 \addtokomafont{pagehead}{\normalshape}
-\RequirePackage{iflang,lastpage}
 \chead{\IfLanguageName{ngerman}
     {Seite:~\thepage~von~\pageref{LastPage}} % German
     {Page:~\thepage~of~\pageref{LastPage}}}  % English
