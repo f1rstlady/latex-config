@@ -7,6 +7,7 @@
 \RequirePackage{f1rstlady/font}
 \RequirePackage{f1rstlady/language}
 \RequirePackage{f1rstlady/textflow}
+\RequirePackage{f1rstlady/references}
 \RequirePackage{f1rstlady/miscellaneous}
 \RequirePackage{f1rstlady/math}
 \RequirePackage{f1rstlady/sourcecode}
