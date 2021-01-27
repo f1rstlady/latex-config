@@ -38,8 +38,17 @@
 % Commands to set new and renew math operators, operating on lists
 \newcommand*{\@newoperator}[1]{\expandafter\DeclareMathOperator\csname #1\endcsname{#1}}
 \newcommand*{\@renewoperator}[1]{\csundef{#1}\@newoperator{#1}}
-\newcommand*{\newoperator}{\forcsvlist{\@newoperator}}
-\newcommand*{\renewoperator}{\forcsvlist{\@renewoperator}}
+\newcommand*{\@newoperatorwithlimits}[1]{
+    \expandafter\DeclareMathOperator\expandafter*\csname #1\endcsname{#1}}
+\newcommand*{\@renewoperatorwithlimits}[1]{\csundef{#1}\@newoperatorwithlimits{#1}}
+\newcommand*{\newoperator}{
+    \@ifstar
+        {\forcsvlist{\@newoperatorwithlimits}}
+        {\forcsvlist{\@newoperator}}}
+\newcommand*{\renewoperator}{
+    \@ifstar
+        {\forcsvlist{\@renewoperatorwithlimits}}
+        {\forcsvlist{\@renewoperator}}}
 \renewoperator{Re,Im}
 
 % Create a theorem environment: \newtheorem[<style>]{<env_name>}{<title>}.
