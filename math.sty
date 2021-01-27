@@ -30,8 +30,7 @@
 
 % Commands to set shortcuts for fields, operating on lists
 \newcommand*{\@newmathbb}[1]{
-    \expandafter\newcommand\expandafter*\expandafter{\csname #1\endcsname}{
-        \ensuremath{\mathbb{#1}}}}
+    \expandafter\newcommand\expandafter*\csname #1\endcsname{\ensuremath{\mathbb{#1}}}}
 \newcommand*{\newmathbb}{\forcsvlist{\@newmathbb}}
 \newmathbb{N,Z,Q,R,K}
 \AtEndPreamble{\csundef{C}\newmathbb{C}} % \C is alreday defined in hyperref
