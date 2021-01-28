@@ -3,7 +3,12 @@
 \DeclareOption*         {\PassOptionsToClass{\CurrentOption}{scrartcl}}
 \ProcessOptions*
 
-\LoadClass[footsepline,headsepline,headinclude,headlines=2]{scrartcl}
+\LoadClass
+    [ footsepline
+    , headsepline
+    , headinclude
+    , headlines = 2
+    ]{scrartcl}
 \RequirePackage{f1rstlady/font}
 \RequirePackage{f1rstlady/language}
 \RequirePackage{f1rstlady/textflow}
