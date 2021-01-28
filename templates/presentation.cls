@@ -18,12 +18,12 @@
 
 % Theming
 \usecolortheme{beaver}
+\RequirePackage{relsize}
 \addtobeamertemplate{navigation symbols}{}{% frame numbers in the lower right corner
     \usebeamerfont{footline}
     \usebeamercolor[fg]{footline}
     \hspace{1em}
-    \raisebox{0.5ex}[0ex][0ex]{\insertframenumber/\inserttotalframenumber}}
+    \raisebox{0.5ex}[0ex][0ex]{\larger[2]{\insertframenumber/\inserttotalframenumber}}}
 
 % To set minor items in lists smaller and grey
-\RequirePackage{relsize}
 \newcommand*{\minor}[1]{\textcolor{grey!80}{\smaller #1}}
