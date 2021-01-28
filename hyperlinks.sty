@@ -4,3 +4,17 @@
     \hypersetup{ unicode % Unicode encoding of PDF strings
                , bookmarksnumbered % Include section and chapter numbers in the bookmarks
     }}
+
+% Set the PDF title and author with \title and \author
+\renewcommand*{\title}[2][]{
+    \def\@title{#2}
+    \def\@setpdftitle{\hypersetup{pdftitle={\ifstrempty{#1}{#2}{#1}}}}
+    \ifdefequal{\@onlypreamble}{\@notprerr}
+        {\@setpdftitle}
+        {\AtEndPreamble{\@setpdftitle}}}
+\renewcommand*{\author}[2][]{
+    \def\@author{#1}
+    \def\@setpdfauthor{\hypersetup{pdfauthor={\ifstrempty{#1}{#2}{#1}}}}
+    \ifdefequal{\@onlypreamble}{\@notprerr}
+        {\@setpdfauthor}
+        {\AtEndPreamble{\@setpdfauthor}}}
