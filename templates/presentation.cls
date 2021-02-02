@@ -27,4 +27,4 @@
     \raisebox{0.5ex}[0ex][0ex]{\larger[2]{\insertframenumber/\inserttotalframenumber}}}
 
 % To set minor items in lists smaller and grey
-\newcommand*{\minor}[1]{\textcolor{grey!80}{\smaller #1}}
+\newcommand*{\minor}[1]{\textcolor{black!50}{\smaller #1}}
