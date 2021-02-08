@@ -1,9 +1,11 @@
+\PassOptionsToClass{10pt,xcolor=x11names}{beamer}
+
 \DeclareOption{english} {\PassOptionsToPackage{english}{f1rstlady/language}}
 \DeclareOption{german}  {\PassOptionsToPackage{german}{f1rstlady/language}}
 \DeclareOption*         {\PassOptionsToClass{\CurrentOption}{beamer}}
 \ProcessOptions*
 
-\LoadClass[10pt,xcolor=x11names]{beamer}
+\LoadClass{beamer}
 \RequirePackage{f1rstlady/font}
 \RequirePackage{f1rstlady/language}
 \RequirePackage{f1rstlady/textflow}

@@ -1,14 +1,16 @@
-\DeclareOption{english} {\PassOptionsToPackage{english}{f1rstlady/language}}
-\DeclareOption{german}  {\PassOptionsToPackage{german}{f1rstlady/language}}
-\DeclareOption*         {\PassOptionsToClass{\CurrentOption}{scrartcl}}
-\ProcessOptions*
-
-\LoadClass
+\PassOptionsToClass
     [ footsepline
     , headsepline
     , headinclude
     , headlines = 2
     ]{scrartcl}
+
+\DeclareOption{english} {\PassOptionsToPackage{english}{f1rstlady/language}}
+\DeclareOption{german}  {\PassOptionsToPackage{german}{f1rstlady/language}}
+\DeclareOption*         {\PassOptionsToClass{\CurrentOption}{scrartcl}}
+\ProcessOptions*
+
+\LoadClass{scrartcl}
 \RequirePackage{f1rstlady/font}
 \RequirePackage{f1rstlady/language}
 \RequirePackage{f1rstlady/textflow}

@@ -1,7 +1,9 @@
+\PassOptionsToPackage{shorthands=off}{babel} % Turn off shorthands (e.g. "u)
+
 \DeclareOption{english} {\PassOptionsToPackage{british}{babel}}
 \DeclareOption{german}  {\PassOptionsToPackage{ngerman}{babel}}
 \DeclareOption*         {\PassOptionsToPackage{\CurrentOption}{babel}}
 \ExecuteOptions{english,german} % German as primary, English as secondary language
 \ProcessOptions*
 
-\RequirePackage[shorthands=off]{babel} % Turn off shorthands (e.g. "u)
+\RequirePackage{babel}
