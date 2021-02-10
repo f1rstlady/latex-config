@@ -4,3 +4,8 @@
 \RequirePackage{etoolbox} % Defer loading of newtxmath as it collides with amssymb and amsthm
 \AtEndPreamble{
     \RequirePackage[libertine,vvarbb]{newtxmath}}
+
+% Make typewriter text smaller since Source Code Pro is not properly scaled by `MatchLowercase`
+\RequirePackage{relsize}
+\let\origttfamily\ttfamily % Save the original definition
+\renewcommand{\ttfamily}{\origttfamily\smaller[0.5]}
