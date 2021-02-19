@@ -20,7 +20,9 @@
     }
 
 % Theming
-\usecolortheme{beaver}
+\definecolor{darkred}{rgb}{0.8,0,0}
+\setbeamercolor{alerted text}{fg=darkred!80!gray}
+
 \RequirePackage{relsize}
 \addtobeamertemplate{navigation symbols}{}{% frame numbers in the lower right corner
     \usebeamerfont{footline}
