@@ -1,9 +1,13 @@
+\PassOptionsToPackage
+    { unicode % Unicode encoding of PDF strings
+    , bookmarksnumbered % Include section and chapter numbers in the bookmarks
+    , linkcolor = red!90!black % Dim the link and cite colors
+    , citecolor = green!80!black
+    , colorlinks % Colour the links instead of drawing a border around them
+    }{hyperref}
+
 \RequirePackage{etoolbox} % hyperref has to be loaded last
-\AtEndPreamble{
-    \RequirePackage{hyperref}
-    \hypersetup{ unicode % Unicode encoding of PDF strings
-               , bookmarksnumbered % Include section and chapter numbers in the bookmarks
-    }}
+\AtEndPreamble{\RequirePackage{hyperref}}
 
 % Set the PDF title and author with \title and \author
 \renewcommand*{\title}[2][]{
