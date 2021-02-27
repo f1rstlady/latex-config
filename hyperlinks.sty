@@ -6,6 +6,9 @@
     , colorlinks % Colour the links instead of drawing a border around them
     }{hyperref}
 
+\DeclareOption*{\PassOptionsToPackage{\CurrentOption}{hyperref}}
+\ProcessOptions*
+
 \RequirePackage{etoolbox} % hyperref has to be loaded last
 \AtEndPreamble{\RequirePackage{hyperref}}
 
