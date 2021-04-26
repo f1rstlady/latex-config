@@ -11,6 +11,7 @@
 
 \RequirePackage{etoolbox} % hyperref has to be loaded last
 \AtEndPreamble{\RequirePackage{hyperref}}
+\RequirePackage{xcolor}
 
 % Set the PDF title and author with \title and \author
 \renewcommand*{\title}[2][]{
@@ -20,7 +21,7 @@
         {\@setpdftitle}
         {\AtEndPreamble{\@setpdftitle}}}
 \renewcommand*{\author}[2][]{
-    \def\@author{#1}
+    \def\@author{#2}
     \def\@setpdfauthor{\hypersetup{pdfauthor={\ifstrempty{#1}{#2}{#1}}}}
     \ifdefequal{\@onlypreamble}{\@notprerr}
         {\@setpdfauthor}
