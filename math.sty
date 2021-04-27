@@ -54,20 +54,3 @@
         {\forcsvlist{\@renewoperatorwithlimits}}
         {\forcsvlist{\@renewoperator}}}
 \renewoperator{Re,Im}
-
-% Create a theorem environment: \newtheorem[<style>]{<env_name>}{<title>}.
-\let\@newtheorem\newtheorem
-\renewcommand{\newtheorem}[3][plain]{
-    \theoremstyle{#1}
-    \@newtheorem{#2}[theorem]{#3}
-    \@newtheorem*{#2*}{#3}}
-
-\RequirePackage{iflang}
-\@newtheorem {theorem} {\IfLanguageName{ngerman}{Satz}{Theorem}}
-\@newtheorem*{theorem*}{\IfLanguageName{ngerman}{Satz}{Theorem}}
-\newtheorem{corollary}{\IfLanguageName{ngerman}{Korollar}{Corollary}}
-\newtheorem{lemma}{Lemma}
-\newtheorem{proposition}{Proposition}
-\newtheorem[definition]{definition}{Definition}
-\newtheorem[definition]{example}{\IfLanguageName{ngerman}{Beispiel}{Example}}
-\newtheorem[remark]{remark}{\IfLanguageName{ngerman}{Bemerkung}{Remark}}
