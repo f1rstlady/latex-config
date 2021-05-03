@@ -5,3 +5,16 @@
 
 \RequirePackage[shortcuts]{extdash} % Hyphenation of words containing dashes
 \RequirePackage[babel=true,tracking=true]{microtype} % Micro-typographic refinements
+
+% Shortcuts for common abbreviations
+\RequirePackage{iflang}
+\newcommand*{\eg}{%
+    \IfLanguageName{ngerman}
+        {z.\,B\@ifnextchar.{}{.\ }} % German
+        {e.\,g\@ifnextchar.{}{.\ }} % English
+}
+\newcommand*{\ie}{%
+    \IfLanguageName{ngerman}
+        {d.\,h\@ifnextchar.{}{.\ }} % German
+        {i.\,e\@ifnextchar.{}{.\ }} % English
+}
