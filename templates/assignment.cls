@@ -17,7 +17,6 @@
 \RequirePackage{f1rstlady/hyperlinks}
 \RequirePackage{f1rstlady/miscellaneous}
 \RequirePackage{f1rstlady/math}
-\RequirePackage{f1rstlady/sourcecode}
 
 % Head holds university, course, author and title, page number as foot
 \RequirePackage{scrlayer-scrpage,iflang,lastpage}
