@@ -31,8 +31,7 @@
     #1}
 
 % Define macros for blackboard symbols, operating on lists : \newmathbb{A,B,C} -> \A \B \C
-\newcommand*{\@newmathbb}[1]{
-    \expandafter\newcommand\expandafter*\csname #1\endcsname{\ensuremath{\mathbb{#1}}}}
+\newcommand*{\@newmathbb}[1]{\csdef{#1}{\ensuremath{\mathbb{#1}}}}
 \newcommand*{\newmathbb}{\forcsvlist{\@newmathbb}}
 \newmathbb{N,Z,Q,R,K}
 \AtEndPreamble{\csundef{C}\newmathbb{C}} % \C is alreday defined in hyperref
