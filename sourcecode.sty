@@ -1,4 +1,4 @@
-\RequirePackage[newfloat]{minted}
+\LoadPackageWithOptions[newfloat]{minted}
 \setminted
     { style = lovelace % good styles: friendly, trac, vs, tango, stata, sas, lovelace, algol_nu, bw
     , fontsize = \small
@@ -14,7 +14,7 @@
     }
 
 % Mimic the listings package with a background colour set
-\RequirePackage{mdframed}
+\LoadPackage{mdframed}
 \renewenvironment{minted@colorbg}[1]{
     \begin{mdframed}
         [ backgroundcolor = #1
