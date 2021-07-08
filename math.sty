@@ -34,7 +34,10 @@
 \newcommand*{\@newmathbb}[1]{\csdef{#1}{\ensuremath{\mathbb{#1}}}}
 \newcommand*{\newmathbb}{\forcsvlist{\@newmathbb}}
 \newmathbb{N,Z,Q,R,K}
-\AtEndPreamble{\csundef{C}\newmathbb{C}} % \C is alreday defined in hyperref
+\csundef{C}\newmathbb{C}
+\RequirePackage{scrlfile} % \C is alreday defined in hyperref
+\BeforePackage{hyperref}{\csundef{C}}
+\AfterPackage{hyperref}{\csundef{C}\newmathbb{C}}
 
 % Define math operators, operating on lists: \newoperator{det,rk,sgn} -> \det \rk \sgn.  To redefine
 % macro, prepend the prefix 're', i.e. use \renewmathoperator.  To define operators with limits,
