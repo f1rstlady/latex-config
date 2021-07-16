@@ -1,6 +1,6 @@
 DOCUMENTS?=main.pdf
 COMPILER?=lualatex
-FLAGS?=--halt-on-error --file-line-error --synctex=1
+FLAGS?=--interaction=nonstopmode --file-line-error --synctex=1
 
 .PHONY : all clean cleanall
 
