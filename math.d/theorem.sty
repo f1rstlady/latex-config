@@ -1,7 +1,6 @@
-\DeclareOption* {\PassOptionsToPackage{\CurrentOption}{amsthm}}
-\ProcessOptions*
+\RequirePackage{f1rstlady/prelude}
 
-\RequirePackage{amsthm}
+\LoadPackageWithOptions{amsthm}
 
 % Create a theorem environment with \newtheorem[<style>]{<env_name>}{<title>}.
 \let\@newtheorem\newtheorem
@@ -10,7 +9,6 @@
     \@newtheorem{#2}[theorem]{#3}
     \@newtheorem*{#2*}{#3}}
 
-\RequirePackage{iflang}
 \@newtheorem             {theorem}     {\IfLanguageName{ngerman}{Satz}{Theorem}}
 \@newtheorem*            {theorem*}    {\IfLanguageName{ngerman}{Satz}{Theorem}}
 \newtheorem              {corollary}   {\IfLanguageName{ngerman}{Korollar}{Corollary}}

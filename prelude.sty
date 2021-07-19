@@ -1,0 +1,31 @@
+% Macros to load packages and classes with senseful handling of options.
+\newcommand*{\LoadPackage}[2][]{
+    \PassOptionsToPackage{#1}{#2}
+    \RequirePackage{#2}
+}
+
+\newcommand*{\LoadPackageWithOptions}[2][]{
+    \PassOptionsToPackage{#1}{#2}
+    \DeclareOption*{\PassOptionsToPackage{\CurrentOption}{#2}}
+    \ProcessOptions*
+    \RequirePackage{#2}
+}
+
+\let\@LoadClass\LoadClass
+\renewcommand*{\LoadClass}[2][]{
+    \PassOptionsToClass{#1}{#2}
+    \@LoadClass{#2}
+}
+
+\let\@LoadClassWithOptions\LoadClassWithOptions
+\renewcommand*{\LoadClassWithOptions}[2][]{
+    \PassOptionsToClass{#1}{#2}
+    \DeclareOption{english} {\PassOptionsToPackage{english}{f1rstlady/language}}
+    \DeclareOption{german}  {\PassOptionsToPackage{german}{f1rstlady/language}}
+    \DeclareOption*         {\PassOptionsToClass{\CurrentOption}{#2}}
+    \ProcessOptions*
+    \@LoadClass{#2}
+}
+
+% Load commonly used packages
+\LoadPackage{etoolbox,iflang}

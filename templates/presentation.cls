@@ -1,16 +1,14 @@
-\PassOptionsToClass{10pt,xcolor=x11names}{beamer}
+\RequirePackage{f1rstlady/prelude}
 
-\DeclareOption{english} {\PassOptionsToPackage{english}{f1rstlady/language}}
-\DeclareOption{german}  {\PassOptionsToPackage{german}{f1rstlady/language}}
-\DeclareOption*         {\PassOptionsToClass{\CurrentOption}{beamer}}
-\ProcessOptions*
-
-\LoadClass{beamer}
-\RequirePackage{f1rstlady/font}
-\RequirePackage{f1rstlady/language}
-\RequirePackage{f1rstlady/textflow}
-\RequirePackage{f1rstlady/hyperlinks.d/email}
-\RequirePackage{f1rstlady/miscellaneous}
+\LoadClassWithOptions
+    [ 10pt
+    , xcolor = x11names
+    ]{beamer}
+\LoadPackage{f1rstlady/font}
+\LoadPackage{f1rstlady/language}
+\LoadPackage{f1rstlady/textflow}
+\LoadPackage{f1rstlady/hyperlinks.d/email}
+\LoadPackage{f1rstlady/miscellaneous}
 
 % Draw URLs in blue and all other links black
 \hypersetup
@@ -23,7 +21,7 @@
 \definecolor{darkred}{rgb}{0.8,0,0}
 \setbeamercolor{alerted text}{fg=darkred!80!gray}
 
-\RequirePackage{relsize}
+\LoadPackage{relsize}
 \addtobeamertemplate{navigation symbols}{}{% frame numbers in the lower right corner
     \usebeamerfont{footline}
     \usebeamercolor[fg]{footline}

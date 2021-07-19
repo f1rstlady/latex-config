@@ -1,3 +1,5 @@
+\RequirePackage{f1rstlady/prelude}
+
 \PassOptionsToPackage
     { unicode % Unicode encoding of PDF strings
     , bookmarksnumbered % Include section and chapter numbers in the bookmarks
@@ -9,9 +11,8 @@
 \DeclareOption*{\PassOptionsToPackage{\CurrentOption}{hyperref}}
 \ProcessOptions*
 
-\RequirePackage{etoolbox} % hyperref has to be loaded last
-\AtEndPreamble{\RequirePackage{hyperref}}
-\RequirePackage{xcolor}
+\AtEndPreamble{\LoadPackage{hyperref}} % hyperref has to be loaded last
+\LoadPackage{xcolor}
 
 % Set the PDF title and author with \title and \author
 \renewcommand*{\title}[2][]{
@@ -27,4 +28,4 @@
         {\@setpdfauthor}
         {\AtEndPreamble{\@setpdfauthor}}}
 
-\RequirePackage{f1rstlady/hyperlinks.d/email}
+\LoadPackage{f1rstlady/hyperlinks.d/email}

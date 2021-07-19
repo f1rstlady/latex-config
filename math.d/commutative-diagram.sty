@@ -1,5 +1,4 @@
-\DeclareOption* {\PassOptionsToPackage{\CurrentOption}{tikz-cd}}
-\ProcessOptions*
+\RequirePackage{f1rstlady/prelude}
 
-\RequirePackage{tikz-cd}
+\LoadPackageWithOptions{tikz-cd}
 \tikzcdset{every arrow/.append style=-{Glyph[glyph math command=rightarrow]}}

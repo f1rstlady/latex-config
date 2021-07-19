@@ -1,13 +1,11 @@
-% Boundaries in integrals are placed under respectively above the integral sign
-\PassOptionsToPackage{intlimits}{mathtools}
+\RequirePackage{f1rstlady/prelude}
 
-\DeclareOption* {\PassOptionsToPackage{\CurrentOption}{mathtools}}
-\ProcessOptions*
-
-\RequirePackage{mathtools}
+\LoadPackageWithOptions
+    [ intlimits % Boundaries in integrals are placed under respectively above the integral sign
+    ]{mathtools}
 \mathtoolsset{centercolon} % Center align the colons in := and =:
-\RequirePackage{amssymb}
-\RequirePackage{mathdots} % Improved dots
+\LoadPackage{amssymb}
+\LoadPackage{mathdots} % Improved dots
 
 \allowdisplaybreaks % Allow to break pages in display math
 
@@ -15,7 +13,6 @@
 \newcommand*{\Tau}{\mathcal{T}} % Capital tau
 
 % Swap \epsilon and \varepsilon, \phi and \varphi
-\RequirePackage{etoolbox}
 \newcommand*{\@swap}[1]{\letcs{\@tmp}{#1}\csletcs{#1}{var#1}\cslet{var#1}{\@tmp}}
 \newcommand*{\swap}{\forcsvlist{\@swap}}
 \swap{epsilon,phi}
@@ -39,7 +36,7 @@
 \newcommand*{\newmathbb}{\forcsvlist{\@newmathbb}}
 \newmathbb{N,Z,Q,R,K}
 \csundef{C}\newmathbb{C}
-\RequirePackage{scrlfile} % \C is alreday defined in hyperref
+\LoadPackage{scrlfile} % \C is alreday defined in hyperref
 \BeforePackage{hyperref}{\csundef{C}}
 \AfterPackage{hyperref}{\csundef{C}\newmathbb{C}}
 

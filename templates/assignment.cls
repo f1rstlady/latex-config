@@ -1,25 +1,20 @@
-\PassOptionsToClass
-    { footsepline
+\RequirePackage{f1rstlady/prelude}
+
+\LoadClassWithOptions
+    [ footsepline
     , headsepline
     , headinclude
     , headlines = 2
-    }{scrartcl}
-
-\DeclareOption{english} {\PassOptionsToPackage{english}{f1rstlady/language}}
-\DeclareOption{german}  {\PassOptionsToPackage{german}{f1rstlady/language}}
-\DeclareOption*         {\PassOptionsToClass{\CurrentOption}{scrartcl}}
-\ProcessOptions*
-
-\LoadClass{scrartcl}
-\RequirePackage{f1rstlady/font}
-\RequirePackage{f1rstlady/language}
-\RequirePackage{f1rstlady/textflow}
-\RequirePackage{f1rstlady/hyperlinks}
-\RequirePackage{f1rstlady/miscellaneous}
-\RequirePackage{f1rstlady/math}
+    ]{scrartcl}
+\LoadPackage{f1rstlady/font}
+\LoadPackage{f1rstlady/language}
+\LoadPackage{f1rstlady/textflow}
+\LoadPackage{f1rstlady/hyperlinks}
+\LoadPackage{f1rstlady/miscellaneous}
+\LoadPackage{f1rstlady/math}
 
 % Head holds university, course, author and title, page number as foot
-\RequirePackage{scrlayer-scrpage,iflang,lastpage}
+\LoadPackage{scrlayer-scrpage,lastpage}
 \pagestyle{scrheadings}
 \addtokomafont{pagehead}{\normalshape}
 \chead{\IfLanguageName{ngerman}

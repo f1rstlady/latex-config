@@ -1,11 +1,12 @@
-\RequirePackage[shortcuts]{extdash} % Hyphenation of words containing dashes
-\RequirePackage[babel=true,tracking=true]{microtype} % Micro-typographic refinements
+\RequirePackage{f1rstlady/prelude}
+
+\LoadPackage[shortcuts]{extdash} % Hyphenation of words containing dashes
+\LoadPackage[babel=true,tracking=true]{microtype} % Micro-typographic refinements
 
 % Create language- and punctuation-aware macros for abbreviations like e.g. etc. by:
 % \abbreviate{eg}{zB}.  This creates a macro \eg, that expands to e.g. or z.B. dependent on the
 % language set.  Furthermore a macro \Eg for the title case variant is defined, that expands to E.g.
 % or Z.B. dependent on the language set.
-\RequirePackage{etoolbox,iflang}
 \newcommand*{\abbreviate}[2]{
     \edef\@abbr {\IfLanguageName{ngerman}{#2}{#1}}
 

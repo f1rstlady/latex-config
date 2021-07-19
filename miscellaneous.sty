@@ -1,15 +1,17 @@
+\RequirePackage{f1rstlady/prelude}
+
 % Use shortcuts for specifying the labelling of enumerations and enable inline lists, but only if
 % the document class is not beamer.
-\@ifclassloaded{beamer}{}{\RequirePackage[shortlabels,inline]{enumitem}}
+\@ifclassloaded{beamer}{}{\LoadPackage[shortlabels,inline]{enumitem}}
 
 % Give the source of an image in tiny, grey text
 \newcommand*{\source}[1]{\textcolor{grey!40}{\tiny{Quelle: #1}}}
 
 % Tables with proper spacing, without vertical rules and double rules
-\RequirePackage{booktabs}
+\LoadPackage{booktabs}
 
 % Punctuation-aware \dots
-\RequirePackage{ellipsis}
+\LoadPackage{ellipsis}
 
 % References depending on the placement of \ref relative \label
-\RequirePackage[nospace]{varioref}
+\LoadPackage[nospace]{varioref}
