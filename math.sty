@@ -1,8 +1,12 @@
-\RequirePackage[intlimits]{mathtools} % Boundaries in integrals are placed under
-                                      % respectively above the integral sign
+% Boundaries in integrals are placed under respectively above the integral sign
+\PassOptionsToPackage{intlimits}{mathtools}
+
+\DeclareOption* {\PassOptionsToPackage{\CurrentOption}{mathtools}}
+\ProcessOptions*
+
+\RequirePackage{mathtools}
 \mathtoolsset{centercolon} % Center align the colons in := and =:
 \RequirePackage{amssymb}
-\RequirePackage{amsthm}
 \RequirePackage{mathdots} % Improved dots
 
 \allowdisplaybreaks % Allow to break pages in display math

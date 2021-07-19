@@ -1,3 +1,8 @@
+\DeclareOption* {\PassOptionsToPackage{\CurrentOption}{amsthm}}
+\ProcessOptions*
+
+\RequirePackage{amsthm}
+
 % Create a theorem environment with \newtheorem[<style>]{<env_name>}{<title>}.
 \let\@newtheorem\newtheorem
 \renewcommand{\newtheorem}[3][plain]{

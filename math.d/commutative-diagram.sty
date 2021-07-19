@@ -1,2 +1,5 @@
+\DeclareOption* {\PassOptionsToPackage{\CurrentOption}{tikz-cd}}
+\ProcessOptions*
+
 \RequirePackage{tikz-cd}
 \tikzcdset{every arrow/.append style=-{Glyph[glyph math command=rightarrow]}}

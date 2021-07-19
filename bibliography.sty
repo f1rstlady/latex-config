@@ -1,3 +1,6 @@
+\DeclareOption* {\PassOptionsToPackage{\CurrentOption}{biblatex}}
+\ProcessOptions*
+
 \RequirePackage{csquotes,xpatch} % See section "1.5.2 Recommended Packages" of the documentation
 \RequirePackage{biblatex}
 \addbibresource{bibliography.bib}
