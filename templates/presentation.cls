@@ -1,5 +1,3 @@
-\RequirePackage{f1rstlady/prelude}
-
 \LoadClassWithOptions
     [ 10pt
     , xcolor = x11names
