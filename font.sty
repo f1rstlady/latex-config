@@ -5,8 +5,3 @@
 \LoadPackage[scale=MatchLowercase,semibold]{sourcecodepro}
 \AtEndPreamble{ % Defer loading of newtxmath as it collides with amssymb and amsthm
     \LoadPackage[libertine,vvarbb]{newtxmath}}
-
-% Make typewriter text smaller since Source Code Pro is not properly scaled by `MatchLowercase`
-\LoadPackage{relsize}
-\let\origttfamily\ttfamily % Save the original definition
-\renewcommand{\ttfamily}{\origttfamily\smaller[0.5]}
