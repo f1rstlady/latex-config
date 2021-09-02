@@ -3,16 +3,13 @@
 \LoadPackage{xcolor}
 \LoadPackageWithOptions[newfloat]{minted}
 \setminted
-    { style = lovelace % good styles: friendly, trac, vs, tango, stata, sas, lovelace, algol_nu, bw
+    { style = algol_nu % good styles: friendly, trac, vs, tango, stata, sas, lovelace, algol_nu, bw
     , autogobble % Automatically remove common whitespace
-    , numbers = left
+    , xleftmargin = 1em
     , numbersep = 5pt
     , bgcolor = gray!10
     }
-\setmintedinline
-    { numbers = none
-    , bgcolor = {}
-    }
+\setmintedinline{bgcolor = {}}
 
 % Mimic the listings package with a background colour set
 \LoadPackage{mdframed}
@@ -20,11 +17,6 @@
     \begin{mdframed}
         [ backgroundcolor = #1
         , hidealllines = true
-        , topline = true
-        , bottomline = true
-        , skipabove = \smallskipamount
-        , skipabove = \smallskipamount
-        , innerleftmargin = 1pt
         ]
 }{
     \end{mdframed}
