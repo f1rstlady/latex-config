@@ -1,3 +1,5 @@
+\RequirePackage{f1rstlady/prelude}
+
 \LoadClassWithOptions
     [ parskip = half
     , fromemail
