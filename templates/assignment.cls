@@ -5,7 +5,7 @@
     , headsepline
     , headinclude
     , headlines = 2
-    ]{scrartcl}
+    ]{scrarticle}
 \LoadPackage{f1rstlady/font}
 \LoadPackage{f1rstlady/language}
 \LoadPackage{f1rstlady/textflow}
