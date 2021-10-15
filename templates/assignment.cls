@@ -3,8 +3,7 @@
 \LoadClassWithOptions
     [ footsepline
     , headsepline
-    , headinclude
-    , headlines = 2
+    , headlines = 3
     ]{scrarticle}
 \LoadPackage{f1rstlady/font}
 \LoadPackage{f1rstlady/language}
@@ -19,7 +18,6 @@
     , headsepline
     ]{scrlayer-scrpage}
 \LoadPackage{lastpage}
-\pagestyle{scrheadings}
 \addtokomafont{pagehead}{\normalshape}
 \cfoot{\IfLanguageName{ngerman}
     {Seite:~\thepage~von~\pageref{LastPage}} % German
