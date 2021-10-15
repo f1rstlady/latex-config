@@ -17,7 +17,7 @@
 \LoadPackage{scrlayer-scrpage,lastpage}
 \pagestyle{scrheadings}
 \addtokomafont{pagehead}{\normalshape}
-\chead{\IfLanguageName{ngerman}
+\cfoot{\IfLanguageName{ngerman}
     {Seite:~\thepage~von~\pageref{LastPage}} % German
     {Page:~\thepage~of~\pageref{LastPage}}}  % English
 
