@@ -14,7 +14,11 @@
 \LoadPackage{f1rstlady/math}
 
 % Head holds university, course, author and title, page number as foot
-\LoadPackage{scrlayer-scrpage,lastpage}
+\LoadPackage
+    [ footsepline
+    , headsepline
+    ]{scrlayer-scrpage}
+\LoadPackage{lastpage}
 \pagestyle{scrheadings}
 \addtokomafont{pagehead}{\normalshape}
 \cfoot{\IfLanguageName{ngerman}
