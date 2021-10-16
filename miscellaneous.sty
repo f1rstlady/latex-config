@@ -10,6 +10,12 @@
 % Tables with proper spacing, without vertical rules and double rules
 \LoadPackage{booktabs}
 
+% Math mode in tables by specifying the columns with uppercase letters
+\LoadPackage{array}
+\newcolumntype{L}{>{$}l<{$}}
+\newcolumntype{C}{>{$}c<{$}}
+\newcolumntype{R}{>{$}r<{$}}
+
 % Punctuation-aware \dots
 \LoadPackage{ellipsis}
 
