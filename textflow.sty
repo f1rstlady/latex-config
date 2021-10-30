@@ -4,10 +4,10 @@
 \LoadPackage[babel=true,tracking=true]{microtype} % Micro-typographic refinements
 
 % Create language- and punctuation-aware macros for abbreviations like e.g. etc. by:
-% \abbreviate{eg}{zB}.  This creates a macro \eg, that expands to e.g. or z.B. dependent on the
+% \newabbreviation{eg}{zB}.  This creates a macro \eg, that expands to e.g. or z.B. dependent on the
 % language set.  Furthermore a macro \Eg for the title case variant is defined, that expands to E.g.
 % or Z.B. dependent on the language set.
-\newcommand*{\abbreviate}[2]{
+\newcommand*{\newabbreviation}[2]{
     \edef\@abbr {\IfLanguageName{ngerman}{#2}{#1}}
 
     \edef\@exec {\csdef{#1}{\noexpand\@abbreviate\@abbr\noexpand\@nil}} \@exec
@@ -30,5 +30,5 @@
         {.\,\@abbreviate #2\@nil}%
 }
 
-\abbreviate{eg}{zB}
-\abbreviate{ie}{dh}
+\newabbreviation{eg}{zB}
+\newabbreviation{ie}{dh}
