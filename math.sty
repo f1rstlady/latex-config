@@ -44,6 +44,10 @@
     \def\given{\nonscript\:\delimsize\vert \allowbreak\nonscript\:\mathopen{}}
     #1}
 
+% Define macros for \mathrm{}-strings, operating on lists : \newmathrm{A,B,C} -> \A \B \C
+\newcommand*{\@newmathrm}[1]{\csdef{#1}{\mathrm{#1}}}
+\newcommand*{\newmathrm}{\forcsvlist{\@newmathrm}}
+
 % Define macros for blackboard symbols, operating on lists : \newmathbb{A,B,C} -> \A \B \C
 \newcommand*{\@newmathbb}[1]{\csdef{#1}{\mathbb{#1}}}
 \newcommand*{\newmathbb}{\forcsvlist{\@newmathbb}}
