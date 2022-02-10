@@ -3,9 +3,9 @@
 % Set Libertine as roman font, Biolinum as sans font, TX as math font and Jetbrains Mono as mono
 % font if available.  If it is unavailable, use Sourcecode Pro.
 \LoadPackage[mono=false]{libertine}
-\LoadPackage{fontspec}
 \IfFontExistsTF{Jetbrains Mono}
-    {\setmonofont[Scale=MatchLowercase]{Jetbrains Mono}}
-    {\LoadPackage[scale=MatchLowercase,semibold]{sourcecodepro}}
+    {\LoadPackage{fontspec}
+     \setmonofont[Scale=MatchLowercase]{Jetbrains Mono}}
+    {\renewcommand*{\ttdefault}{lmtt}}
 \AtEndPreamble{ % Defer loading of newtxmath as it collides with amssymb and amsthm
     \LoadPackage[libertine,vvarbb]{newtxmath}}
