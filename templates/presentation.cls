@@ -21,12 +21,10 @@
 \definecolor{darkred}{rgb}{0.8,0,0}
 \setbeamercolor{alerted text}{fg=darkred!80!gray}
 
-\LoadPackage{relsize}
-\addtobeamertemplate{navigation symbols}{}{% frame numbers in the lower right corner
-    \usebeamerfont{footline}
-    \usebeamercolor[fg]{footline}
-    \hspace{1em}
-    \raisebox{0.5ex}[0ex][0ex]{\larger[2]{\insertframenumber/\inserttotalframenumber}}}
+\setbeamertemplate{navigation symbols}{% frame numbers in the lower right corner, nothing else
+    \normalsize
+    \textcolor{blue}{\insertframenumber}
+    \hspace{0.3em}\vspace{1ex}}
 
 % To set minor items in lists smaller and grey
 \newcommand*{\minor}[1]{\textcolor{black!50}{\smaller #1}}
