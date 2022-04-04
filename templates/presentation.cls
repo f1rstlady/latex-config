@@ -22,7 +22,7 @@
 \setbeamercolor{alerted text}{fg=darkred!80!gray}
 
 \setbeamertemplate{navigation symbols}{% frame numbers in the lower right corner, nothing else
-    \normalsize
+    \small
     \textcolor{blue}{\insertframenumber}
     \hspace{0.3em}\vspace{1ex}}
 
