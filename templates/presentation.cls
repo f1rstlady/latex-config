@@ -27,4 +27,5 @@
     \hspace{0.3em}\vspace{1ex}}
 
 % To set minor items in lists smaller and grey
+\RequirePackage{relsize}
 \newcommand*{\minor}[1]{\textcolor{black!50}{\smaller #1}}
