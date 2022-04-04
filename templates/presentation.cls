@@ -14,7 +14,7 @@
 \hypersetup
     { colorlinks
     , allcolors = black
-    , urlcolor = RoyalBlue3
+    , urlcolor = magenta
     }
 
 % Theming
