@@ -12,7 +12,9 @@
 
 % Draw URLs in blue and all other links black
 \hypersetup
-    { colorlinks
+    { unicode,
+    , bookmarksnumbered % Include section and chapter numbers in the bookmarks
+    , colorlinks
     , allcolors = black
     , urlcolor = magenta
     }
