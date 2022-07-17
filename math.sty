@@ -3,8 +3,10 @@
 \LoadPackageWithOptions
     [ intlimits % Boundaries in integrals are placed under respectively above the integral sign
     ]{mathtools}
-\LoadPackage{amssymb}
-\LoadPackage{mathdots} % Improved dots
+\LoadPackage
+    { amssymb
+    , mathdots % Improved dots
+    }
 
 \allowdisplaybreaks % Allow to break pages in display math
 
@@ -26,7 +28,11 @@
 \newcommand*{\Tau}{\mathcal{T}} % Capital tau
 
 % Swap \epsilon and \varepsilon, \phi and \varphi
-\newcommand*{\@swap}[1]{\letcs{\@tmp}{#1}\csletcs{#1}{var#1}\cslet{var#1}{\@tmp}}
+\newcommand*{\@swap}[1]{
+    \letcs{\@tmp}{#1}
+    \csletcs{#1}{var#1}
+    \cslet{var#1}{\@tmp}
+}
 \newcommand*{\swap}{\forcsvlist{\@swap}}
 \swap{epsilon,phi}
 
@@ -41,36 +47,63 @@
 
 % A \set command to draw sets with adjusted mid
 \DeclarePairedDelimiterX{\set}[1]\lbrace\rbrace{
-    \def\given{\nonscript\:\delimsize\vert \allowbreak\nonscript\:\mathopen{}}
-    #1}
+    \def\given{
+        \nonscript\:\delimsize\vert \allowbreak\nonscript\:\mathopen{}
+    }
+    #1
+}
 
 % Define macros for \mathrm{}-strings, operating on lists : \newmathrm{A,B,C} -> \A \B \C
-\newcommand*{\@newmathrm}[1]{\csdef{#1}{\mathrm{#1}}}
+\newcommand*{\@newmathrm}[1]{
+    \csdef{#1}{\mathrm{#1}}
+}
 \newcommand*{\newmathrm}{\forcsvlist{\@newmathrm}}
 
 % Define macros for blackboard symbols, operating on lists : \newmathbb{A,B,C} -> \A \B \C
-\newcommand*{\@newmathbb}[1]{\csdef{#1}{\mathbb{#1}}}
+\newcommand*{\@newmathbb}[1]{
+    \csdef{#1}{\mathbb{#1}}
+}
 \newcommand*{\newmathbb}{\forcsvlist{\@newmathbb}}
 \newmathbb{N,Z,Q,R,K}
-\csundef{C}\newmathbb{C}
-\LoadPackage{scrlfile} % \C is alreday defined in hyperref
-\BeforePackage{hyperref}{\csundef{C}}
-\AfterPackage{hyperref}{\csundef{C}\newmathbb{C}}
+
+% \C needs special care since it is already defined in hyperref.
+\BeforePackage{hyperref}{
+    \csundef{C}
+}
+\AfterPackage*{hyperref}{
+    \csundef{C}
+    \newmathbb{C}
+}
 
 % Define math operators, operating on lists: \newoperator{det,rk,sgn} -> \det \rk \sgn.  To redefine
 % macro, prepend the prefix 're', i.e. use \renewmathoperator.  To define operators with limits,
 % use the starred variant \newmathoperator*.
-\newcommand*{\@newoperator}[1]{\expandafter\DeclareMathOperator\csname #1\endcsname{#1}}
-\newcommand*{\@renewoperator}[1]{\csundef{#1}\@newoperator{#1}}
+\newcommand*{\@newoperator}[1]{
+    \expandafter\DeclareMathOperator\csname #1\endcsname{#1}
+}
+\newcommand*{\@renewoperator}[1]{
+    \csundef{#1}
+    \@newoperator{#1}
+}
 \newcommand*{\@newoperatorwithlimits}[1]{
-    \expandafter\DeclareMathOperator\expandafter*\csname #1\endcsname{#1}}
-\newcommand*{\@renewoperatorwithlimits}[1]{\csundef{#1}\@newoperatorwithlimits{#1}}
+    \expandafter\DeclareMathOperator\expandafter*\csname #1\endcsname{#1}
+}
+\newcommand*{\@renewoperatorwithlimits}[1]{
+    \csundef{#1}
+    \@newoperatorwithlimits{#1}
+}
 \newcommand*{\newoperator}{
-    \@ifstar
-        {\forcsvlist{\@newoperatorwithlimits}}
-        {\forcsvlist{\@newoperator}}}
+    \@ifstar {%
+        \forcsvlist{\@newoperatorwithlimits}%
+    }{%
+        \forcsvlist{\@newoperator}%
+    }%
+}
 \newcommand*{\renewoperator}{
-    \@ifstar
-        {\forcsvlist{\@renewoperatorwithlimits}}
-        {\forcsvlist{\@renewoperator}}}
+    \@ifstar{%
+        \forcsvlist{\@renewoperatorwithlimits}%
+    }{%
+        \forcsvlist{\@renewoperator}%
+    }%
+}
 \renewoperator{Re,Im}

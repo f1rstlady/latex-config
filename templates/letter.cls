@@ -6,8 +6,10 @@
     , fromphone
     , frommobilephone
     ]{scrlttr2}
-\LoadPackage{font}
-\LoadPackage{language}
-\LoadPackage{textflow}
+\LoadPackage
+    { font
+    , language
+    , textflow
+    }
 
 \LoadLetterOption{data}

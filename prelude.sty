@@ -6,7 +6,9 @@
 
 \newcommand*{\LoadPackageWithOptions}[2][]{
     \PassOptionsToPackage{#1}{#2}
-    \DeclareOption*{\PassOptionsToPackage{\CurrentOption}{#2}}
+    \DeclareOption*{
+        \PassOptionsToPackage{\CurrentOption}{#2}
+    }
     \ProcessOptions*
     \RequirePackage{#2}
 }
@@ -20,12 +22,22 @@
 \let\@LoadClassWithOptions\LoadClassWithOptions
 \renewcommand*{\LoadClassWithOptions}[2][]{
     \PassOptionsToClass{#1}{#2}
-    \DeclareOption{english} {\PassOptionsToPackage{english}{f1rstlady/language}}
-    \DeclareOption{german}  {\PassOptionsToPackage{german}{f1rstlady/language}}
-    \DeclareOption*         {\PassOptionsToClass{\CurrentOption}{#2}}
+    \DeclareOption{english}{
+        \PassOptionsToPackage{english}{f1rstlady/language}
+    }
+    \DeclareOption{german}{
+        \PassOptionsToPackage{german}{f1rstlady/language}
+    }
+    \DeclareOption*{
+        \PassOptionsToClass{\CurrentOption}{#2}
+    }
     \ProcessOptions*
     \@LoadClass{#2}
 }
 
 % Load commonly used packages
-\LoadPackage{etoolbox,iflang}
+\LoadPackage
+    { etoolbox
+    , iflang
+    , scrlfile
+    }

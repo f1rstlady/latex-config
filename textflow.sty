@@ -1,7 +1,15 @@
 \RequirePackage{f1rstlady/prelude}
 
-\LoadPackage[shortcuts]{extdash} % Hyphenation of words containing dashes
-\LoadPackage[babel=true,tracking=true]{microtype} % Micro-typographic refinements
+% Micro-typographic refinements
+\LoadPackage
+    [ babel = true
+    , tracking = true
+    ]{microtype}
+
+% Hyphenation of words containing dashes
+\LoadPackage
+    [ shortcuts
+    ]{extdash}
 
 % Create language- and punctuation-aware macros for abbreviations like e.g. etc. by:
 % \newabbreviation{eg}{zB}.  This creates a macro \eg, that expands to e.g. or z.B. dependent on the

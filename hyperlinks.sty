@@ -8,24 +8,43 @@
     , colorlinks % Colour the links instead of drawing a border around them
     }{hyperref}
 
-\DeclareOption*{\PassOptionsToPackage{\CurrentOption}{hyperref}}
+\DeclareOption*{
+    \PassOptionsToPackage{\CurrentOption}{hyperref}
+}
 \ProcessOptions*
 
-\AtEndPreamble{\LoadPackage{hyperref}} % hyperref has to be loaded last
+\AtEndPreamble{ % hyperref has to be loaded last
+    \LoadPackage{hyperref}
+}
 \LoadPackage{xcolor}
 
 % Set the PDF title and author with \title and \author
 \renewcommand*{\title}[2][]{
     \def\@title{#2}
-    \def\@setpdftitle{\hypersetup{pdftitle={\ifstrempty{#1}{#2}{#1}}}}
-    \ifdefequal{\@onlypreamble}{\@notprerr}
-        {\@setpdftitle}
-        {\AtEndPreamble{\@setpdftitle}}}
+    \def\@setpdftitle{
+        \hypersetup
+            { pdftitle = {\ifstrempty{#1}{#2}{#1}}
+            }
+    }
+    \ifdefequal{\@onlypreamble}{\@notprerr}{
+        \@setpdftitle
+    }{
+        \AtEndPreamble{\@setpdftitle}
+    }
+}
+
 \renewcommand*{\author}[2][]{
     \def\@author{#2}
-    \def\@setpdfauthor{\hypersetup{pdfauthor={\ifstrempty{#1}{#2}{#1}}}}
-    \ifdefequal{\@onlypreamble}{\@notprerr}
-        {\@setpdfauthor}
-        {\AtEndPreamble{\@setpdfauthor}}}
+    \def\@setpdfauthor{
+        \hypersetup
+            { pdfauthor = {\ifstrempty{#1}{#2}{#1}}
+            }
+    }
+    \ifdefequal{\@onlypreamble}{\@notprerr}{
+        \@setpdfauthor
+    }{
+        \AtEndPreamble{\@setpdfauthor}
+    }
+}
 
 \LoadPackage{f1rstlady/hyperlinks.d/email}

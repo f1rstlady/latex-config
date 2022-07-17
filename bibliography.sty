@@ -1,6 +1,12 @@
 \RequirePackage{f1rstlady/prelude}
 
-\LoadPackage{csquotes,xpatch} % See section "1.5.2 Recommended Packages" of the documentation
+% See section "1.5.2 Recommended Packages" of the documentation
+\LoadPackage
+    { csquotes
+    , xpatch
+    }
+
 \LoadPackageWithOptions{biblatex}
 \addbibresource{bibliography.bib}
+
 \SetCiteCommand{\autocite} % Use \autocite for quotes

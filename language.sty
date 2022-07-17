@@ -1,9 +1,13 @@
 \RequirePackage{f1rstlady/prelude}
 
-\DeclareOption{english} {\PassOptionsToPackage{british}{babel}
-                         \PassOptionsToPackage{english}{varioref}}
-\DeclareOption{german}  {\PassOptionsToPackage{ngerman}{babel}
-                         \PassOptionsToPackage{ngerman}{varioref}}
+\DeclareOption{english}{
+    \PassOptionsToPackage{british}{babel}
+    \PassOptionsToPackage{english}{varioref}
+}
+\DeclareOption{german}{
+    \PassOptionsToPackage{ngerman}{babel}
+    \PassOptionsToPackage{ngerman}{varioref}
+}
 \ExecuteOptions{english,german} % German as primary, English as secondary language
 
 \LoadPackageWithOptions

@@ -2,11 +2,18 @@
 
 % Use shortcuts for specifying the labelling of enumerations and enable inline lists, but only if
 % the document class is not beamer.
-\@ifclassloaded{beamer}{}{\LoadPackage[shortlabels,inline]{enumitem}}
+\@ifclassloaded{beamer}{}{
+    \LoadPackage
+        [ shortlabels
+        , inline
+        ]{enumitem}
+}
 
 % Give the source of an image in tiny, grey text
 \LoadPackage{xcolor}
-\newcommand*{\source}[1]{\textcolor{grey!40}{\tiny{Quelle: #1}}}
+\newcommand*{\source}[1]{
+    \textcolor{grey!40}{\tiny{Quelle: #1}}
+}
 
 % Tables with proper spacing, without vertical rules and double rules
 \LoadPackage{booktabs}
@@ -24,4 +31,7 @@
 \LoadPackage[nospace]{varioref}
 
 % Insert todo notes with \todo
-\LoadPackage[obeyFinal,textsize=scriptsize]{todonotes}
+\LoadPackage
+    [ obeyFinal
+    , textsize = scriptsize
+    ]{todonotes}
