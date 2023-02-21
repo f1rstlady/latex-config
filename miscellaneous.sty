@@ -31,10 +31,19 @@
 \LoadPackage[nospace]{varioref}
 
 % Insert todo notes with \todo
-\LoadPackage
-    [ obeyFinal
-    , textsize = scriptsize
-    ]{todonotes}
+\@ifclassloaded{beamer}{
+    \LoadPackage{ifdraft}
+    \ifoptionfinal{
+        \newcommand*{\todo}{}
+    }{
+        \newcommand*{\todo}[1]{\alert{\textbf{TODO:}}\ #1}
+    }
+}{
+    \LoadPackage
+        [ obeyFinal
+        , textsize = scriptsize
+        ]{todonotes}
+}
 
 % Context-sensitive quotes
 \LoadPackage{csquotes}
