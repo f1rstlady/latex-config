@@ -12,13 +12,9 @@
     , f1rstlady/miscellaneous
     }
 
-% Draw URLs in blue and all other links black
 \hypersetup
     { unicode,
     , bookmarksnumbered % Include section and chapter numbers in the bookmarks
-    , colorlinks
-    , allcolors = black
-    , urlcolor = magenta
     }
 
 % Theming
@@ -29,6 +25,17 @@
     \small
     \textcolor{blue}{\insertframenumber}
     \hspace{0.3em}\vspace{1ex}
+}
+
+\setbeamercolor{block title}{
+    use = structure,
+    fg = white,
+    bg = structure.fg!75!black
+}
+\setbeamercolor{block body}{
+    parent = normal text,
+    use = block title,
+    bg = block title.bg!10!bg
 }
 
 % To set minor items in lists smaller and grey
