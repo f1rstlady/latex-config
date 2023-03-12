@@ -17,13 +17,17 @@
     , bookmarksnumbered % Include section and chapter numbers in the bookmarks
     }
 
-% Theming
 \definecolor{darkred}{rgb}{0.8,0,0}
 \setbeamercolor{alerted text}{fg=darkred!80!gray}
 
-\setbeamertemplate{navigation symbols}{% frame numbers in the lower right corner, nothing else
+% frame numbers in the lower right corner, nothing else
+\setbeamercolor{navigation symbols}{
+    use = structure,
+    fg = structure.fg
+}
+\setbeamertemplate{navigation symbols}{
     \small
-    \textcolor{blue}{\insertframenumber}
+    \insertframenumber
     \hspace{0.3em}\vspace{1ex}
 }
 
