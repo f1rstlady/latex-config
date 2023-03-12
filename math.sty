@@ -11,17 +11,25 @@
 \allowdisplaybreaks % Allow to break pages in display math
 
 % A `:=` with colon and equality sign vertically aligned
-\newcommand*{\defeq}{
+\newcommand*{\defequal}{
     \mathrel{
         \rlap{\raisebox{0.3ex}{$\m@th\cdot$}}
               \raisebox{-0.3ex}{$\m@th\cdot$}
     }=
 }
-\newcommand*{\eqdef}{
+\newcommand*{\equaldef}{
     =\mathrel{
         \rlap{\raisebox{0.3ex}{$\m@th\cdot$}}
               \raisebox{-0.3ex}{$\m@th\cdot$}
     }
+}
+
+% A `:<=>` with proper spacing
+\newcommand*{\defequiv}{
+    \mathrel{:\Leftrightarrow}
+}
+\newcommand*{\equivdef}{
+    \mathrel{\Leftrightarrow:}
 }
 
 \newcommand*{\longto}{\longrightarrow}
