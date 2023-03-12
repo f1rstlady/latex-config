@@ -20,6 +20,8 @@
 \definecolor{darkred}{rgb}{0.8,0,0}
 \setbeamercolor{alerted text}{fg=darkred!80!gray}
 
+\setbeamertemplate{section in toc}[sections numbered]
+
 % frame numbers in the lower right corner, nothing else
 \setbeamercolor{navigation symbols}{
     use = structure,
