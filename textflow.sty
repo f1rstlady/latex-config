@@ -11,8 +11,9 @@
     [ shortcuts
     ]{extdash}
 
-% Create language-aware macros for abbreviations like e.g. by: \newabbreviation{eg}{zB}.  This
-% creates a macro \eg/, that expands to e.g. or z.B. dependent on the language set.
+% Create language-aware macros for abbreviations with correct spacing like e.g. by:
+% \newabbreviation{eg}{zB}.  This creates a macro \eg/, that expands to `e.\,g.\@` or `z.\,B.\@`
+% dependent on the language set.
 \newcommand*{\newabbreviation}[2]{
     \bgroup
         \edef\@abbr {\IfLanguageName{ngerman}{#2}{#1}}
