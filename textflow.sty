@@ -11,22 +11,19 @@
     [ shortcuts
     ]{extdash}
 
-% Create language- and punctuation-aware macros for abbreviations like e.g. etc. by:
-% \newabbreviation{eg}{zB}.  This creates a macro \eg, that expands to e.g. or z.B. dependent on the
-% language set.
+% Create language-aware macros for abbreviations like e.g. by: \newabbreviation{eg}{zB}.  This
+% creates a macro \eg/, that expands to e.g. or z.B. dependent on the language set.
 \newcommand*{\newabbreviation}[2]{
     \bgroup
         \edef\@abbr {\IfLanguageName{ngerman}{#2}{#1}}
         \edef\@exec {
-            \gdef\csname #1\endcsname{\expandafter\@abbreviate\@abbr\@nil}
+            \gdef\csname #1\endcsname/{\expandafter\@abbreviate\@abbr\@nil}
         }
         \@exec
     \egroup
 }
 \def\@abbreviate #1#2\@nil{%
-    #1\ifstrempty{#2}%
-        {\@ifnextchar.{}{.\@ }}%
-        {.\,\@abbreviate #2\@nil}%
+    #1.\ifstrempty{#2}{\@}{\,\@abbreviate #2\@nil}%
 }
 
 \newabbreviation{eg}{zB}
