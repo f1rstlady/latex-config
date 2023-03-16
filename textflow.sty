@@ -13,12 +13,13 @@
 
 % Create language-aware macros for abbreviations with correct spacing like e.g. by:
 % \newabbreviation{eg}{zB}.  This creates a macro \eg/, that expands to `e.\,g.\@` or `z.\,B.\@`
-% dependent on the language set.
+% depending on the active language.
 \newcommand*{\newabbreviation}[2]{
     \bgroup
-        \edef\@abbr {\IfLanguageName{ngerman}{#2}{#1}}
         \edef\@exec {
-            \gdef\csname #1\endcsname/{\expandafter\@abbreviate\@abbr\@nil}
+            \gdef\csname #1\endcsname/{%
+                \noexpand\IfLanguageName{ngerman}{\@abbreviate#2\@nil}{\@abbreviate#1\@nil}%
+            }
         }
         \@exec
     \egroup
