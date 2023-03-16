@@ -15,12 +15,13 @@
 % \newabbreviation{eg}{zB}.  This creates a macro \eg, that expands to e.g. or z.B. dependent on the
 % language set.
 \newcommand*{\newabbreviation}[2]{
-    \edef\@abbr {\IfLanguageName{ngerman}{#2}{#1}}
-
-    \edef\@exec {
-        \csdef{#1}{\expandafter\@abbreviate\@abbr\@nil}
-    }
-    \@exec
+    \bgroup
+        \edef\@abbr {\IfLanguageName{ngerman}{#2}{#1}}
+        \edef\@exec {
+            \gdef\csname #1\endcsname{\expandafter\@abbreviate\@abbr\@nil}
+        }
+        \@exec
+    \egroup
 }
 \def\@abbreviate #1#2\@nil{%
     #1\ifstrempty{#2}%
