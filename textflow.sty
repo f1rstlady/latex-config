@@ -25,7 +25,7 @@
 }
 \def\@abbreviate #1#2\@nil{%
     #1\ifstrempty{#2}%
-        {\@ifnextchar.{}{.\ }}%
+        {\@ifnextchar.{}{.\@ }}%
         {.\,\@abbreviate #2\@nil}%
 }
 
