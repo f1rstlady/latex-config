@@ -13,24 +13,11 @@
 
 % Create language- and punctuation-aware macros for abbreviations like e.g. etc. by:
 % \newabbreviation{eg}{zB}.  This creates a macro \eg, that expands to e.g. or z.B. dependent on the
-% language set.  Furthermore a macro \Eg for the title case variant is defined, that expands to E.g.
-% or Z.B. dependent on the language set.
+% language set.
 \newcommand*{\newabbreviation}[2]{
     \edef\@abbr {\IfLanguageName{ngerman}{#2}{#1}}
 
     \edef\@exec {\csdef{#1}{\noexpand\@abbreviate\@abbr\noexpand\@nil}} \@exec
-
-    \edef\@tempa{\@car #1\@nil} % Name of control sequence in title case
-    \edef\@tempb{\@cdr #1\@nil}
-    \uppercase\expandafter{\expandafter\def\expandafter\@tempa\expandafter{\@tempa}}
-    \edef\@cs {\@tempa\@tempb}
-
-    \edef\@tempa{\expandafter\@car\@abbr\@nil} % Abbreviation in title case
-    \edef\@tempb{\expandafter\@cdr\@abbr\@nil}
-    \uppercase\expandafter{\expandafter\def\expandafter\@tempa\expandafter{\@tempa}}
-    \edef\@abbr {\@tempa\@tempb}
-
-    \edef\@exec {\csdef{\@cs}{\noexpand\@abbreviate\@abbr\noexpand\@nil}} \@exec
 }
 \def\@abbreviate #1#2\@nil{%
     #1\ifstrempty{#2}%
