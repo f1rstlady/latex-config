@@ -1,12 +1,12 @@
 \RequirePackage{f1rstlady/prelude}
 
-\LoadPackageWithOptions
-    [ intlimits % Boundaries in integrals are placed under respectively above the integral sign
-    ]{mathtools}
-\LoadPackage
-    { amssymb
-    , mathdots % Improved dots
-    }
+\LoadPackageWithOptions[
+    intlimits % Boundaries in integrals are placed under respectively above the integral sign
+]{mathtools}
+\LoadPackage{
+    amssymb,
+    mathdots % Improved dots
+}
 
 \allowdisplaybreaks % Allow to break pages in display math
 
@@ -101,7 +101,7 @@
     \@newoperatorwithlimits{#1}
 }
 \newcommand*{\newoperator}{
-    \@ifstar {%
+    \@ifstar{%
         \forcsvlist{\@newoperatorwithlimits}%
     }{%
         \forcsvlist{\@newoperator}%

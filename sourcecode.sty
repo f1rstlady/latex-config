@@ -2,22 +2,22 @@
 
 \LoadPackage{xcolor}
 \LoadPackageWithOptions[newfloat]{minted}
-\setminted
-    { style = algol_nu % good styles: friendly, trac, vs, tango, stata, sas, lovelace, algol_nu, bw
-    , autogobble % Automatically remove common whitespace
-    , xleftmargin = 1em
-    , numbersep = 5pt
-    , bgcolor = gray!10
-    }
+\setminted{
+    style = algol_nu % good styles: friendly, trac, vs, tango, stata, sas, lovelace, algol_nu, bw,
+    autogobble % Automatically remove common whitespace,
+    xleftmargin = 1em,
+    numbersep = 5pt,
+    bgcolor = gray!10
+}
 \setmintedinline{bgcolor = {}}
 
 % Mimic the listings package with a background colour set
 \LoadPackage{mdframed}
 \renewenvironment{minted@colorbg}[1]{
-    \begin{mdframed}
-        [ backgroundcolor = #1
-        , hidealllines = true
-        ]
+    \begin{mdframed}[
+        backgroundcolor = #1,
+        hidealllines = true
+    ]
 }{
     \end{mdframed}
 }

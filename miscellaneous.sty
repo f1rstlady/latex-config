@@ -3,10 +3,10 @@
 % Use shortcuts for specifying the labelling of enumerations and enable inline lists (does not work
 % for beamer).
 \@ifclassloaded{beamer}{}{
-    \LoadPackage
-        [ shortlabels
-        , inline
-        ]{enumitem}
+    \LoadPackage[
+        shortlabels,
+        inline
+    ]{enumitem}
 }
 
 % Give the source of an image in tiny, grey text
@@ -28,7 +28,9 @@
 \LoadPackage{ellipsis}
 
 % References depending on the placement of \ref relative \label
-\LoadPackage[nospace]{varioref}
+\LoadPackage[
+    nospace
+]{varioref}
 
 % Insert todo notes with \todo
 \@ifclassloaded{beamer}{
@@ -39,10 +41,10 @@
         \newcommand*{\todo}[1]{\alert{\textbf{TODO:}}\ #1}
     }
 }{
-    \LoadPackage
-        [ obeyFinal
-        , textsize = scriptsize
-        ]{todonotes}
+    \LoadPackage[
+        obeyFinal,
+        textsize = scriptsize
+    ]{todonotes}
 }
 
 % Context-sensitive quotes

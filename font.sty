@@ -1,22 +1,24 @@
 \RequirePackage{f1rstlady/prelude}
 
 % Libertine as roman font, Biolinum as sans font.
-\LoadPackage
-    [ mono = false
-    ]{libertine}
+\LoadPackage[
+    mono = false
+]{libertine}
 
 % If available, set Jetbrains Mono as mono font.  Otherwise, use Latin Modern's mono font.
 \IfFontExistsTF{Jetbrains Mono}{
     \LoadPackage{fontspec}
-    \setmonofont[Scale=MatchLowercase]{Jetbrains Mono}
+    \setmonofont[
+        Scale = MatchLowercase
+    ]{Jetbrains Mono}
 }{
     \renewcommand*{\ttdefault}{lmtt}
 }
 
 % TX as math font.
 \AtEndPreamble{ % Defer loading of newtxmath as it collides with amssymb and amsthm
-    \LoadPackage
-        [ libertine
-        , vvarbb
-        ]{newtxmath}
+    \LoadPackage[
+        libertine,
+        vvarbb
+    ]{newtxmath}
 }

@@ -1,24 +1,24 @@
 \RequirePackage{f1rstlady/prelude}
 
-\LoadClassWithOptions
-    [ footsepline
-    , headsepline
-    , headlines = 3
-    ]{scrarticle}
-\LoadPackage
-    { f1rstlady/font
-    , f1rstlady/language
-    , f1rstlady/textflow
-    , f1rstlady/hyperlinks
-    , f1rstlady/miscellaneous
-    , f1rstlady/math
-    }
+\LoadClassWithOptions[
+    footsepline,
+    headsepline,
+    headlines = 3
+]{scrarticle}
+\LoadPackage{
+    f1rstlady/font,
+    f1rstlady/language,
+    f1rstlady/textflow,
+    f1rstlady/hyperlinks,
+    f1rstlady/miscellaneous,
+    f1rstlady/math
+}
 
 % Head holds university, course, author and title, page number as foot
-\LoadPackage
-    [ footsepline
-    , headsepline
-    ]{scrlayer-scrpage}
+\LoadPackage[
+    footsepline,
+    headsepline
+]{scrlayer-scrpage}
 \LoadPackage{lastpage}
 \addtokomafont{pagehead}{\normalshape}
 \addtokomafont{pagefoot}{\normalshape}

@@ -2,21 +2,21 @@
 
 \LoadClassWithOptions{scrarticle}
 
-\LoadPackage
-    { f1rstlady/font
-    , f1rstlady/language
-    , f1rstlady/hyperlinks
-    , f1rstlady/miscellaneous
-    , f1rstlady/textflow
-    }
+\LoadPackage{
+    f1rstlady/font,
+    f1rstlady/language,
+    f1rstlady/hyperlinks,
+    f1rstlady/miscellaneous,
+    f1rstlady/textflow
+}
 
-\LoadPackage
-    [ top    = 6mm
-    , bottom = 6mm
-    , left   = 6mm
-    , right  = 6mm
-    , landscape
-    ]{geometry}
+\LoadPackage[
+    top    = 6mm,
+    bottom = 6mm,
+    left   = 6mm,
+    right  = 6mm,
+    landscape
+]{geometry}
 
 \pagestyle{empty}
 
@@ -45,10 +45,10 @@
 }
 
 % No vertical space and less indent in lists.
-\setlist
-    { nosep
-    , leftmargin = 1.2em
-    }
+\setlist{
+    nosep,
+    leftmargin = 1.2em
+}
 
 % Split the document into five columns
 \LoadPackage{multicol}

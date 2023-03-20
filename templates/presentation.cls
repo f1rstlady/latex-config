@@ -1,21 +1,21 @@
 \RequirePackage{f1rstlady/prelude}
 
-\LoadClassWithOptions
-    [ 10pt
-    , xcolor = x11names
-    ]{beamer}
-\LoadPackage
-    { f1rstlady/font
-    , f1rstlady/language
-    , f1rstlady/textflow
-    , f1rstlady/hyperlinks.d/email
-    , f1rstlady/miscellaneous
-    }
+\LoadClassWithOptions[
+    10pt,
+    xcolor = x11names
+]{beamer}
+\LoadPackage{
+    f1rstlady/font,
+    f1rstlady/language,
+    f1rstlady/textflow,
+    f1rstlady/hyperlinks.d/email,
+    f1rstlady/miscellaneous
+}
 
-\hypersetup
-    { unicode,
-    , bookmarksnumbered % Include section and chapter numbers in the bookmarks
-    }
+\hypersetup{
+    unicode,
+    bookmarksnumbered % Include section and chapter numbers in the bookmarks
+}
 
 \definecolor{darkred}{rgb}{0.8,0,0}
 \setbeamercolor{alerted text}{fg=darkred!80!gray}
