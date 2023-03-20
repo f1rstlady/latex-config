@@ -1,13 +1,2 @@
-\RequirePackage{f1rstlady/prelude}
-
-\DeclareOption{english}{
-    \PassOptionsToPackage{british}{babel}
-}
-\DeclareOption{german}{
-    \PassOptionsToPackage{ngerman}{babel}
-}
-\ExecuteOptions{english,german} % German as primary, English as secondary language
-
-\LoadPackageWithOptions[
-    shorthands = off % Turn off shorthands (e.g. "u)
-]{babel}
+\LoadPackageWithOptions{polyglossia}
+\setdefaultlanguage{german}

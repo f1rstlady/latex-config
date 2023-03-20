@@ -22,7 +22,7 @@
 \LoadPackage{lastpage}
 \addtokomafont{pagehead}{\normalshape}
 \addtokomafont{pagefoot}{\normalshape}
-\cfoot{\IfLanguageName{ngerman}
+\cfoot{\IfLanguageName{german}
     {Seite:~\thepage~von~\pageref{LastPage}} % German
     {Page:~\thepage~of~\pageref{LastPage}}}  % English
 
