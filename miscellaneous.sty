@@ -25,7 +25,9 @@
 \newcolumntype{R}{>{$}r<{$}}
 
 % Punctuation-aware \dots
-\LoadPackage{ellipsis}
+\AtEndPreamble{ % load after hyperref, since both redefine \textellipsis
+    \LoadPackage{ellipsis}
+}
 
 % References depending on the placement of \ref relative \label
 \LoadPackage[
