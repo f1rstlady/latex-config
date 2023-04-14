@@ -7,9 +7,9 @@
     frommobilephone
 ]{scrlttr2}
 \LoadPackage{
-    font,
-    language,
-    textflow
+    f1rstlady/font,
+    f1rstlady/language,
+    f1rstlady/textflow
 }
 
 \LoadLetterOption{data}
