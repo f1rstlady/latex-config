@@ -17,6 +17,8 @@
     bookmarksnumbered % Include section and chapter numbers in the bookmarks
 }
 
+\LoadPackage{luacolor}
+
 \definecolor{darkred}{rgb}{0.8,0,0}
 \setbeamercolor{alerted text}{fg=darkred!80!gray}
 
