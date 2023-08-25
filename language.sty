@@ -1,2 +1,6 @@
 \LoadPackageWithOptions{polyglossia}
 \setdefaultlanguage{german}
+
+\AtEndPreamble{ % Wait for the final language settings
+    \RequirePackage{selnolig}
+}
