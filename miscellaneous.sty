@@ -9,20 +9,8 @@
     ]{enumitem}
 }
 
-% Give the source of an image in tiny, grey text
-\LoadPackage{xcolor,luacolor}
-\newcommand*{\source}[1]{
-    \textcolor{grey!40}{\tiny{Quelle: #1}}
-}
-
 % Tables with proper spacing, without vertical rules and double rules
 \LoadPackage{booktabs}
-
-% Math mode in tables by specifying the columns with uppercase letters
-\LoadPackage{array}
-\newcolumntype{L}{>{$}l<{$}}
-\newcolumntype{C}{>{$}c<{$}}
-\newcolumntype{R}{>{$}r<{$}}
 
 % Punctuation-aware \dots
 \AtEndPreamble{ % load after hyperref, since both redefine \textellipsis
