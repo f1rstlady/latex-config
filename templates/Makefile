@@ -12,3 +12,6 @@ clean :
 
 cleanall : clean
 	rm -f $(DOCUMENTS)
+
+install: $(DOCUMENTS)
+	install -Dt ${out} $^
