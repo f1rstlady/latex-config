@@ -1,4 +1,4 @@
-DOCUMENTS?=main.pdf
+DOCUMENTS ?= main.pdf
 
 .PHONY : all clean cleanall
 
