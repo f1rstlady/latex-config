@@ -5,15 +5,11 @@
     mono = false
 ]{libertine}
 
-% If available, set Jetbrains Mono as mono font.  Otherwise, use Latin Modern's mono font.
+% Inconsolata as monospaced font.
 \LoadPackage{fontspec}
-\IfFontExistsTF{Jetbrains Mono}{
-    \setmonofont[
-        Scale = MatchLowercase
-    ]{Jetbrains Mono}
-}{
-    \renewcommand*{\ttdefault}{lmtt}
-}
+\setmonofont[
+    StylisticSet = 3
+]{inconsolata}
 
 % TX as math font.
 \AtEndPreamble{ % Defer loading of newtxmath as it collides with amssymb and amsthm
