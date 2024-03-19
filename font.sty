@@ -1,5 +1,18 @@
 \RequirePackage{f1rstlady/prelude}
 
+% Defer loading of newtxmath as it collides with amssymb and amsthm
+\AtEndPreamble{
+
+% Note that the order in which packages are loaded matters.
+% See https://github.com/borisveytsman/acmart/issues/402
+% and https://github.com/borisveytsman/acmart/issues/410
+
+% TX as math font.
+\LoadPackage[
+    libertine,
+    vvarbb
+]{newtxmath}
+
 % Libertine as roman font, Biolinum as sans font.
 \LoadPackage[
     mono = false
@@ -11,10 +24,4 @@
     StylisticSet = 3
 ]{inconsolata}
 
-% TX as math font.
-\AtEndPreamble{ % Defer loading of newtxmath as it collides with amssymb and amsthm
-    \LoadPackage[
-        libertine,
-        vvarbb
-    ]{newtxmath}
-}
+} % \AtEndPreamble
