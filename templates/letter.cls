@@ -2,9 +2,9 @@
 
 \LoadClassWithOptions[
     parskip = half,
-    fromemail,
-    fromphone,
-    frommobilephone
+    fromemail = on,
+    fromphone = on,
+    frommobilephone = on,
 ]{scrlttr2}
 \LoadPackage{
     f1rstlady/font,
