@@ -2,6 +2,7 @@
 
 \LoadClassWithOptions[
     parskip = half,
+    foldmarks = p,
     fromemail = on,
     fromphone = on,
     frommobilephone = on,
