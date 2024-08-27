@@ -10,6 +10,9 @@ let
     inherit sha256;
   };
 
+  TEXMFHOME = ".cache";
+  TEXMFVAR = "${TEXMFHOME}/texmf-var";
+
 in { pkgs ? import nixpkgs { } }:
 
 let
@@ -20,10 +23,9 @@ let
     src = ./.;
     nativeBuildInputs = with pkgs;
       [ (texliveBasic.withPackages (import ./f1rstlady/dependencies.nix)) ];
+    inherit TEXMFHOME TEXMFVAR;
     buildPhase = ''
-      mkdir -p .cache/texmf-var
-      export TEXMFHOME=.cache
-      export TEXMFVAR=.cache/texmf-var
+      mkdir -p $TEXMFVAR
       make
     '';
     installPhase = ''
@@ -43,7 +45,11 @@ let
       texlab
       yamlfmt
     ];
-    shellHook = "pre-commit install -f";
+    inherit TEXMFHOME TEXMFVAR;
+    shellHook = ''
+      mkdir -p $TEXMFVAR
+      pre-commit install -f
+    '';
   };
 
 in if lib.inNixShell then devShell else document
