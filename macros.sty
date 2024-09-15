@@ -1,0 +1,9 @@
+% Create abbreviating macros. `\new\textit{important,definition}` is equivalent to
+% `\def\important{\textit{important}}` and `\def\definition{\textit{definition}}`.
+\newcommand*{\new}[2]{
+    \newcommand*{\@new}[1]{
+        \csdef{##1}{#1{##1}}
+    }
+    \forcsvlist{\@new}{#2}
+    \undef\@new
+}

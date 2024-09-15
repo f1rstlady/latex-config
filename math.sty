@@ -1,4 +1,5 @@
 \RequirePackage{f1rstlady/prelude}
+\RequirePackage{f1rstlady/macros}
 
 \LoadPackageWithOptions[
     intlimits % Boundaries in integrals are placed under respectively above the integral sign
@@ -59,28 +60,6 @@
         \nonscript\:\delimsize\vert \allowbreak\nonscript\:\mathopen{}
     }
     #1
-}
-
-% Define macros for \mathrm{}-strings, operating on lists : \newmathrm{A,B,C} -> \A \B \C
-\newcommand*{\@newmathrm}[1]{
-    \csdef{#1}{\mathrm{#1}}
-}
-\newcommand*{\newmathrm}{\forcsvlist{\@newmathrm}}
-
-% Define macros for blackboard symbols, operating on lists : \newmathbb{A,B,C} -> \A \B \C
-\newcommand*{\@newmathbb}[1]{
-    \csdef{#1}{\mathbb{#1}}
-}
-\newcommand*{\newmathbb}{\forcsvlist{\@newmathbb}}
-\newmathbb{N,Z,Q,R,K}
-
-% \C needs special care since it is already defined in hyperref.
-\BeforePackage{hyperref}{
-    \csundef{C}
-}
-\AfterPackage*{hyperref}{
-    \csundef{C}
-    \newmathbb{C}
 }
 
 % Define math operators, operating on lists: \newoperator{det,rk,sgn} -> \det \rk \sgn.  To redefine
