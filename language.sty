@@ -1,5 +1,15 @@
 \LoadPackageWithOptions{polyglossia}
-\setdefaultlanguage{german}
+
+\DeclareOption{english}{
+    \setdefaultlanguage[variant=british]{english}
+}
+\DeclareOption{german}{
+    \setdefaultlanguage{german}
+}
+\DeclareOption*{
+    \PackageWarning{language}{Unknown option ‘\CurrentOption’}
+}
+\ProcessOptions*
 
 \AtEndPreamble{ % Wait for the final language settings
     \RequirePackage{selnolig}

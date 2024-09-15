@@ -22,17 +22,7 @@
 \let\@LoadClassWithOptions\LoadClassWithOptions
 \renewcommand*{\LoadClassWithOptions}[2][]{
     \PassOptionsToClass{#1}{#2}
-    \DeclareOption{english}{
-        \PassOptionsToPackage{english}{f1rstlady/language}
-    }
-    \DeclareOption{german}{
-        \PassOptionsToPackage{german}{f1rstlady/language}
-    }
-    \DeclareOption*{
-        \PassOptionsToClass{\CurrentOption}{#2}
-    }
-    \ProcessOptions*
-    \@LoadClass{#2}
+    \@LoadClassWithOptions{#2}
 }
 
 % Load commonly used packages
