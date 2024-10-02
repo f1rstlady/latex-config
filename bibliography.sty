@@ -9,7 +9,61 @@
 \LoadPackageWithOptions{biblatex}
 \addbibresource{bibliography.bib}
 
-\SetCiteCommand{\autocite} % Use \autocite for quotes
+\SetCiteCommand{\autocite} % Use \autocite for citation
 
 % Break long URLs, has to be loaded after biblatex
 \LoadPackage{xurl}
+
+%% Link not only the entry id, but the whole label.
+%% See https://tex.stackexchange.com/questions/1687/hyperlink-name-with-biblatex-authoryear
+%\DeclareCiteCommand{\cite}
+%  {\usebibmacro{prenote}}
+%  {\usebibmacro{citeindex}%
+%   \printtext[bibhyperref]{\usebibmacro{cite}}}
+%  {\multicitedelim}
+%  {\usebibmacro{postnote}}
+%
+%\DeclareCiteCommand*{\cite}
+%  {\usebibmacro{prenote}}
+%  {\usebibmacro{citeindex}%
+%   \printtext[bibhyperref]{\usebibmacro{citeyear}}}
+%  {\multicitedelim}
+%  {\usebibmacro{postnote}}
+%
+%\DeclareCiteCommand{\parencite}[\mkbibparens]
+%  {\usebibmacro{prenote}}
+%  {\usebibmacro{citeindex}%
+%    \printtext[bibhyperref]{\usebibmacro{cite}}}
+%  {\multicitedelim}
+%  {\usebibmacro{postnote}}
+%
+%\DeclareCiteCommand*{\parencite}[\mkbibparens]
+%  {\usebibmacro{prenote}}
+%  {\usebibmacro{citeindex}%
+%    \printtext[bibhyperref]{\usebibmacro{citeyear}}}
+%  {\multicitedelim}
+%  {\usebibmacro{postnote}}
+%
+%\DeclareCiteCommand{\footcite}[\mkbibfootnote]
+%  {\usebibmacro{prenote}}
+%  {\usebibmacro{citeindex}%
+%  \printtext[bibhyperref]{ \usebibmacro{cite}}}
+%  {\multicitedelim}
+%  {\usebibmacro{postnote}}
+%
+%\DeclareCiteCommand{\footcitetext}[\mkbibfootnotetext]
+%  {\usebibmacro{prenote}}
+%  {\usebibmacro{citeindex}%
+%   \printtext[bibhyperref]{\usebibmacro{cite}}}
+%  {\multicitedelim}
+%  {\usebibmacro{postnote}}
+%
+%\DeclareCiteCommand{\textcite}
+%  {\boolfalse{cbx:parens}}
+%  {\usebibmacro{citeindex}%
+%   \printtext[bibhyperref]{\usebibmacro{textcite}}}
+%  {\ifbool{cbx:parens}
+%     {\bibcloseparen\global\boolfalse{cbx:parens}}
+%     {}%
+%   \multicitedelim}
+%  {\usebibmacro{textcite:postnote}}
