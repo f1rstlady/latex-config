@@ -1,8 +1,10 @@
-{
-  pkgs = pkgs: with pkgs; [
-    python3Packages.pygments
-  ];
-  texlivePkgs = texlivePkgs: with texlivePkgs; [
+pkgs: { texDeps ? _: [] }:
+
+with pkgs; [
+
+  python3Packages.pygments
+
+  (texliveBasic.withPackages (tpkgs: with tpkgs; [
     amscls
     amsfonts
     beamer
@@ -48,5 +50,6 @@
     xcolor
     xurl
     zref
-  ];
-}
+  ] ++ texDeps tpkgs))
+
+]

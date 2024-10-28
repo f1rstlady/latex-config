@@ -21,8 +21,7 @@ let
   document = stdenvNoCC.mkDerivation {
     name = projectName;
     src = ./.;
-    nativeBuildInputs = with pkgs;
-      [ (texliveBasic.withPackages (import ./f1rstlady/dependencies.nix)) ];
+    nativeBuildInputs = import ./f1rstlady/dependencies.nix pkgs { };
     inherit TEXMFHOME TEXMFVAR;
     buildPhase = ''
       mkdir -p $TEXMFVAR
